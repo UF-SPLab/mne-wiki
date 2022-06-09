@@ -1,0 +1,10 @@
+---
+title: "Why Code?"
+description: "Rationale for scripting with MNE-Python"
+author: "Ryan Mears"
+date: "6/8/2022"
+---
+
+This talk introduced advantages and potential obstacles to using script-based pipelines. We discussed how capabilities of scientific python ecosystem are leveraged and organized in MNE in order to compose reproducible analysis pipelines that are easy to understand and efficient to use. The extensive documentation of the MNE website provides instructions for installation and configuration. Extensive examples and tutorials on the MNE documentation website allows users to benefit directly by searching, downloading, testing and incrementally adapting code.
+
+[Introduction to Scripting with MNE-Python](https://csea-lab.github.io/mne-python-intro-slides/MNE-pres.html#/title-slide)

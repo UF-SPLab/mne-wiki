@@ -1,24 +1,10 @@
 [
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "Since this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "mne-wiki",
     "section": "",
-    "text": "news\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2022\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJun 5, 2022\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "Rationale for scripting with MNE-Python\n\n\n\n\n\n\nJun 8, 2022\n\n\nRyan Mears\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2022\n\n\nAK\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -26,5 +12,19 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "posts/why-code/index.html",
+    "href": "posts/why-code/index.html",
+    "title": "Why Code?",
+    "section": "",
+    "text": "Introduction to Scripting with MNE-Python"
+  },
+  {
+    "objectID": "posts/csea-matlab-tutorial-links/index.html",
+    "href": "posts/csea-matlab-tutorial-links/index.html",
+    "title": "CSEA MatLab tutorials",
+    "section": "",
+    "text": "Matlab Livescripts examples Folder\nThe following examples are in the GitHub folder:\n\nCrossfreq_coupling.mlx\nFourier_demo.mlx\nGrangerCausality.mlx\nHilbertPhaseDemo.mlx\nIRF_findsingletrialbetas.mlx\nMNE_SourceEstimation.mlx\nMicroSaCondiSpas.mlx\nde_convolution.mlx\nfilters.mlx\nwavelet_walkthru.mlx"
   }
 ]
