@@ -1,19 +1,21 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - "CSEA-Logo-png"
 
 website:
-  title: "mne-wiki"
+  title: "CSEA-Wiki"
   navbar:
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/csea-lab
       - icon: twitter
         href: https://twitter.com
 format:
   html:
-    theme: cosmo
+    theme: spacelab
     css: styles.css
 
 

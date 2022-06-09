@@ -12,13 +12,13 @@ This is a post with executable code.
 
 The following examples are in the GitHub folder:
 
--   [Crossfreq_coupling.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/)
--   [Fourier_demo.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/)
--   [GrangerCausality.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/)
--   [HilbertPhaseDemo.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/)
--   [IRF_findsingletrialbetas.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/)
--   [MNE_SourceEstimation.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/)
--   [MicroSaCondiSpas.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/)
--   [de_convolution.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/)
--   [filters.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/)
--   [wavelet_walkthru.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/)
+-   [Crossfreq_coupling.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/Crossfreq_coupling.mlx)
+-   [Fourier_demo.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/Fourier_demo.mlx)
+-   [GrangerCausality.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/GrangerCausality.mlx)
+-   [HilbertPhaseDemo.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/HilbertPhaseDemo.mlx)
+-   [IRF_findsingletrialbetas.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/IRF_findsingletrialbetas.mlx)
+-   [MNE_SourceEstimation.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/MNE_SourceEstimation.mlx)
+-   [MicroSaCondiSpas.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/MicroSaCondiSpas.mlx)
+-   [de_convolution.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/de_convolution.mlx)
+-   [filters.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/filters.mlx)
+-   [wavelet_walkthru.mlx](https://github.com/csea-lab/csea-lab/blob/master/Libas/LiveScripts/wavelet_walkthru.mlx)
