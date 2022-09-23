@@ -1,0 +1,8 @@
+---
+title: "R-tour in 6 pages"
+description: "Post description"
+author: "R Mears"
+date: "7/18/2022"
+---
+
+[RCSTour6p](https://csea-lab.github.io/rstudio_tidyverse/RCSTour6p.html#/r2rpm6p)

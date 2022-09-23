@@ -1,0 +1,8 @@
+---
+title: "Introduction to GitHub for Open Science"
+description: "Post description"
+author: "R Mears"
+date: "7/11/2022"
+---
+
+[Open Science With GitHub: An Introduction](https://csea-lab.github.io/github-collaboration-slides/git-collab-slides.html#/title-slide)

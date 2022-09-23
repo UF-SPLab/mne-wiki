@@ -1,6 +1,6 @@
 ---
-title: "Welcome To My Blog"
-author: "Tristan O'Malley"
+title: "Welcome To the Wiki"
+author: "R Mears"
 date: "2022-06-05"
 categories: [news]
 draft: true

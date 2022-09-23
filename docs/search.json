@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "CSEA-Wiki",
-    "section": "",
-    "text": "Rationale for scripting with MNE-Python\n\n\n\n\n\n\nJun 8, 2022\n\n\nRyan Mears\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2022\n\n\nAK\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
-  },
-  {
     "objectID": "posts/why-code/index.html",
     "href": "posts/why-code/index.html",
     "title": "Why Code?",
@@ -26,5 +12,40 @@
     "title": "CSEA MatLab tutorials",
     "section": "",
     "text": "Matlab Livescripts examples Folder\nThe following examples are in the GitHub folder:\n\nCrossfreq_coupling.mlx\nFourier_demo.mlx\nGrangerCausality.mlx\nHilbertPhaseDemo.mlx\nIRF_findsingletrialbetas.mlx\nMNE_SourceEstimation.mlx\nMicroSaCondiSpas.mlx\nde_convolution.mlx\nfilters.mlx\nwavelet_walkthru.mlx"
+  },
+  {
+    "objectID": "posts/MNE-Python-EEG/index.html",
+    "href": "posts/MNE-Python-EEG/index.html",
+    "title": "MNE-Python: EEG",
+    "section": "",
+    "text": "MNE-Python: EEG Analysis"
+  },
+  {
+    "objectID": "posts/6p-RTour/index.html",
+    "href": "posts/6p-RTour/index.html",
+    "title": "R-tour in 6 pages",
+    "section": "",
+    "text": "RCSTour6p"
+  },
+  {
+    "objectID": "posts/open-sci-github-intro/index.html",
+    "href": "posts/open-sci-github-intro/index.html",
+    "title": "Introduction to GitHub for Open Science",
+    "section": "",
+    "text": "Open Science With GitHub: An Introduction"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "UF-Open-Science-Wiki",
+    "section": "",
+    "text": "Post description\n\n\n\n\n\n\nJul 18, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost description\n\n\n\n\n\n\nJul 11, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost description\n\n\n\n\n\n\nJun 22, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRationale for scripting with MNE-Python\n\n\n\n\n\n\nJun 8, 2022\n\n\nRyan Mears\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2022\n\n\nAK\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
   }
 ]

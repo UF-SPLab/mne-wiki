@@ -1,0 +1,8 @@
+---
+title: "MNE-Python: EEG"
+description: "Post description"
+author: "R Mears"
+date: "6/22/2022"
+---
+
+[MNE-Python: EEG Analysis](https://csea-lab.github.io/mne-python-intro-slides/MNE_tutorial1.html#/title-slide)

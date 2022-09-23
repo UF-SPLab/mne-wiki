@@ -2,17 +2,18 @@ project:
   type: website
   output-dir: docs
   resources:
-    - "CSEA-Logo-png"
+    - "SPL-Logo.png"
 
 website:
-  title: "CSEA-Wiki"
+  title: "UF-Open-Science-Wiki"
+  image: "SPL-Logo.png"
   navbar:
+    logo: "SPL-Logo.png"
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/csea-lab
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/UF-SPLab
+
 format:
   html:
     theme: spacelab
