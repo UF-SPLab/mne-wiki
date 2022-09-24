@@ -2,7 +2,7 @@
 title: "CSEA MatLab tutorials"
 author: "AK"
 date: "2022-06-08"
-categories: [news, code, analysis]
+categories: [code, analysis, Matlab, EEG]
 image: "image.jpg"
 ---
 
