@@ -1,6 +1,6 @@
 ---
 title: "MNE-Python: EEG"
-description: "Post description"
+description: "Introduction to Analysis Pipelines for EEG"
 author: "R Mears"
 date: "6/22/2022"
 ---
