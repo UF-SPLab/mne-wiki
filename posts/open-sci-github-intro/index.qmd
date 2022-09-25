@@ -2,7 +2,7 @@
 title: "Introduction to GitHub for Open Science"
 description: "Introduction to Version control for doing open science"
 author: "R Mears"
-categories: [code, development, organization, version control]
+categories: [code, development, organization, version control, slides]
 date: "7/11/2022"
 ---
 

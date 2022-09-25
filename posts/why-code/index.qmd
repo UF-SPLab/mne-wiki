@@ -2,6 +2,7 @@
 title: "Why Code?"
 description: "Rationale for scripting with MNE-Python"
 author: "Ryan Mears"
+categories: [Python, code, pipeline, workflow, MNE, EEG, slides]
 date: "6/8/2022"
 ---
 
