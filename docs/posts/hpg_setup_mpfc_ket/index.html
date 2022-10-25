@@ -149,10 +149,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p><img src="hpgai.png" class="img-fluid"><br>
+<a href="https://help.rc.ufl.edu/doc/UFRC_Help_and_Documentation">UF Research Computing Help &amp; Documentation (link)</a></p>
+<section id="navigate-to-hipergator-through-openondemand" class="level2">
+<h2 class="anchored" data-anchor-id="navigate-to-hipergator-through-openondemand">Navigate to HiPerGator through OpenOnDemand</h2>
 <ul>
 <li><p>To start off, type in your browser: <code>https://ood.rc.ufl.edu</code></p></li>
-<li><p>From this website type Florida in the institution and select “University of Florida” from the dropdown menu.</p></li>
+<li><p>If this is the first time going to OpenOnDemand in your browser there will be a page re-direct to InCommon.org</p></li>
+<li><p><img src="incommon.png" class="img-fluid"></p></li>
+<li><p>From this re-direct website type Florida in the institution and select “University of Florida” from the dropdown menu.</p></li>
 <li><p>From here you would login with 2-factor authentication as you typically would for Canvas.</p></li>
+<li><p><img src="hpg2-factor.png" class="img-fluid"></p></li>
 <li><p>After OpenOnDemand successfully loads select the <strong>Files</strong> dropdown</p></li>
 <li><p><img src="ood_hpg_main.png" class="img-fluid"></p></li>
 <li><p>Select <strong>/blue/psy4911</strong></p></li>
@@ -161,38 +168,64 @@ ul.task-list li input[type="checkbox"] {
 <li><p><img src="open_terminal.png" class="img-fluid"></p></li>
 <li><p>Type a symlink command in the terminal: <code>ln -s /blue/psy4911 blue_psy4911</code></p></li>
 <li><p><img src="blue_shortct.png" class="img-fluid"></p></li>
-<li><p>Confirm that the shortcut was made: <code>find . -maxdepth l type l -ls</code><br>
+<li><p>Confirm that the shortcut was made by typing: <code>find . -maxdepth l type l -ls</code><br>
 </p></li>
-<li><p><img src="blue_shortcut.png" class="img-fluid"><br>
-</p></li>
-<li><p>Create a folder for downloading files and examples to your blue drive for learning DeepLabCut<br>
-</p></li>
-<li><p>I made a folder named <em>try-dlc</em> (if you’re not sure how to navigate to a directory from the command line here’s a reference to check out: )<br>
-</p></li>
-<li><p><img src="make-new-folder.png" class="img-fluid"><br>
-</p></li>
-<li><p><img src="make_try_dlc.png" class="img-fluid"><br>
-</p></li>
-<li><p>The easiest way to start out in terminal from OOD is to click on the folder that you made</p></li>
-<li><p><img src="nav2try-dlc.png" class="img-fluid"></p></li>
-<li><p>…then from that location click <strong>Open in Terminal</strong></p></li>
-<li><p><img src="try_dlc_term.png" class="img-fluid"></p></li>
-<li><p>From the chosen folder on your <strong>blue_4911</strong> folder install DeepLabCut using the following commands in terminal:</p>
+<li><p><img src="blue_shortcut.png" class="img-fluid"></p></li>
+</ul>
+</section>
+<section id="create-a-folder-for-downloading-files-and-examples-to-your-blue-drive-for-learning-deeplabcut" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-folder-for-downloading-files-and-examples-to-your-blue-drive-for-learning-deeplabcut">Create a folder for downloading files and examples to your blue drive for learning DeepLabCut</h2>
+<ul>
+<li>There are two ways to navigate the blue drive filesystem: OpenOnDemand GUI &amp; Terminal (command line)
+<ul>
+<li>if you’re not sure how to navigate to a directory from the command line go to these links:
+<ul>
+<li><a href="https://linuxcommand.org/lc3_lts0020.php">Intro to command line</a></li>
+<li><a href="http://www.hpc-carpentry.org/hpc-shell/02-navigation/index.html">Command line tips</a></li>
+<li><a href="https://datacarpentry.org/shell-genomics/02-the-filesystem/index.html">Understanding file paths from the command line</a></li>
+</ul></li>
+</ul></li>
+<li>Create a new folder so that you can do DeepLabCut tutorials and examples</li>
+<li><img src="make-new-folder.png" class="img-fluid"><br>
+</li>
+<li>Navigate to your blue drive personal folder “/blue/psy4911/<em>yourname</em>/” then make a folder named <em>try-dlc</em></li>
+<li><img src="make_try_dlc.png" class="img-fluid"><br>
+</li>
+<li>The easiest way to start out in terminal from OOD is to click on the folder that you made</li>
+<li><img src="nav2try-dlc.png" class="img-fluid"></li>
+<li>…then from that location click <strong>Open in Terminal</strong></li>
+<li><img src="try_dlc_term.png" class="img-fluid"></li>
+</ul>
+</section>
+<section id="clone-all-example-material-from-github-to-a-folder-on-your-blue-drive" class="level2">
+<h2 class="anchored" data-anchor-id="clone-all-example-material-from-github-to-a-folder-on-your-blue-drive">Clone all example material from GitHub to a folder on your Blue Drive</h2>
+<ul>
+<li>From the chosen folder on your <strong>/blue/psy4911/</strong><em>yourname</em><strong>/</strong> folder install DeepLabCut using the following commands in terminal:
 <ul>
 <li><code>module load conda</code></li>
 <li><code>git clone https://github.com/DeepLabCut/DeepLabCut.git</code><br>
 </li>
-<li></li>
+<li>Navigate to the new folder /blue/psy4911/<strong><em>yourname</em></strong>/<em>DeepLabCut/</em> by typing <code>cd DeepLabCut/deeplabcut</code></li>
+<li>to run from the command line type <code>module load deeplabcut/2.2.1</code></li>
+<li>then type <code>ipython</code></li>
+<li>if you type <code>?deeplabcut</code> on the command line you can see that everything in DeepLabCut 2.0 is available from the command line</li>
+<li>type <code>exit()</code> to leave ipython</li>
 </ul></li>
-<li><p><img src="install_dlc_in_testfolder.png" class="img-fluid"></p></li>
-<li><p>To Run Napari from the remote GUI on HPG:<br>
-</p></li>
-<li><p><code>module spider Napari</code></p></li>
-<li><p><code>module load napari/0.4.7</code></p></li>
-<li><p><code>Napari</code></p></li>
+</ul>
+<p><img src="module_dlc.png" class="img-fluid"></p>
+<section id="next-go-to-the-hipergator-deeplabcut-jupyter-notebooks-tutorial" class="level3">
+<h3 class="anchored" data-anchor-id="next-go-to-the-hipergator-deeplabcut-jupyter-notebooks-tutorial">NEXT go to the HiPerGator DeepLabCut Jupyter Notebooks tutorial…</h3>
+<ul>
+<li>To Run Napari from the remote GUI on HPG start HiperGator Desktop then open a terminal on the desktop and type:<br>
+</li>
+<li><code>module spider Napari</code></li>
+<li><code>module load napari/0.4.7</code></li>
+<li><code>Napari</code></li>
 </ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

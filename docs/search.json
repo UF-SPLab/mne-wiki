@@ -25,7 +25,28 @@
     "href": "posts/hpg_setup_mpfc_ket/index.html",
     "title": "Setup HiPerGator for DeepLabCut",
     "section": "",
-    "text": "To start off, type in your browser: https://ood.rc.ufl.edu\nFrom this website type Florida in the institution and select “University of Florida” from the dropdown menu.\nFrom here you would login with 2-factor authentication as you typically would for Canvas.\nAfter OpenOnDemand successfully loads select the Files dropdown\n\nSelect /blue/psy4911\n\nNext, when you are in the correct location you can open a terminal to create a shortcut so that you can always find your blue-folder\n\nType a symlink command in the terminal: ln -s /blue/psy4911 blue_psy4911\n\nConfirm that the shortcut was made: find . -maxdepth l type l -ls\n\n\n\nCreate a folder for downloading files and examples to your blue drive for learning DeepLabCut\n\nI made a folder named try-dlc (if you’re not sure how to navigate to a directory from the command line here’s a reference to check out: )\n\n\n\n\n\nThe easiest way to start out in terminal from OOD is to click on the folder that you made\n\n…then from that location click Open in Terminal\n\nFrom the chosen folder on your blue_4911 folder install DeepLabCut using the following commands in terminal:\n\nmodule load conda\ngit clone https://github.com/DeepLabCut/DeepLabCut.git\n\n\n\n\nTo Run Napari from the remote GUI on HPG:\n\nmodule spider Napari\nmodule load napari/0.4.7\nNapari"
+    "text": "UF Research Computing Help & Documentation (link)"
+  },
+  {
+    "objectID": "posts/hpg_setup_mpfc_ket/index.html#navigate-to-hipergator-through-openondemand",
+    "href": "posts/hpg_setup_mpfc_ket/index.html#navigate-to-hipergator-through-openondemand",
+    "title": "Setup HiPerGator for DeepLabCut",
+    "section": "Navigate to HiPerGator through OpenOnDemand",
+    "text": "Navigate to HiPerGator through OpenOnDemand\n\nTo start off, type in your browser: https://ood.rc.ufl.edu\nIf this is the first time going to OpenOnDemand in your browser there will be a page re-direct to InCommon.org\n\nFrom this re-direct website type Florida in the institution and select “University of Florida” from the dropdown menu.\nFrom here you would login with 2-factor authentication as you typically would for Canvas.\n\nAfter OpenOnDemand successfully loads select the Files dropdown\n\nSelect /blue/psy4911\n\nNext, when you are in the correct location you can open a terminal to create a shortcut so that you can always find your blue-folder\n\nType a symlink command in the terminal: ln -s /blue/psy4911 blue_psy4911\n\nConfirm that the shortcut was made by typing: find . -maxdepth l type l -ls"
+  },
+  {
+    "objectID": "posts/hpg_setup_mpfc_ket/index.html#create-a-folder-for-downloading-files-and-examples-to-your-blue-drive-for-learning-deeplabcut",
+    "href": "posts/hpg_setup_mpfc_ket/index.html#create-a-folder-for-downloading-files-and-examples-to-your-blue-drive-for-learning-deeplabcut",
+    "title": "Setup HiPerGator for DeepLabCut",
+    "section": "Create a folder for downloading files and examples to your blue drive for learning DeepLabCut",
+    "text": "Create a folder for downloading files and examples to your blue drive for learning DeepLabCut\n\nThere are two ways to navigate the blue drive filesystem: OpenOnDemand GUI & Terminal (command line)\n\nif you’re not sure how to navigate to a directory from the command line go to these links:\n\nIntro to command line\nCommand line tips\nUnderstanding file paths from the command line\n\n\nCreate a new folder so that you can do DeepLabCut tutorials and examples\n\n\nNavigate to your blue drive personal folder “/blue/psy4911/yourname/” then make a folder named try-dlc\n\n\nThe easiest way to start out in terminal from OOD is to click on the folder that you made\n\n…then from that location click Open in Terminal"
+  },
+  {
+    "objectID": "posts/hpg_setup_mpfc_ket/index.html#clone-all-example-material-from-github-to-a-folder-on-your-blue-drive",
+    "href": "posts/hpg_setup_mpfc_ket/index.html#clone-all-example-material-from-github-to-a-folder-on-your-blue-drive",
+    "title": "Setup HiPerGator for DeepLabCut",
+    "section": "Clone all example material from GitHub to a folder on your Blue Drive",
+    "text": "Clone all example material from GitHub to a folder on your Blue Drive\n\nFrom the chosen folder on your /blue/psy4911/yourname/ folder install DeepLabCut using the following commands in terminal:\n\nmodule load conda\ngit clone https://github.com/DeepLabCut/DeepLabCut.git\n\nNavigate to the new folder /blue/psy4911/yourname/DeepLabCut/ by typing cd DeepLabCut/deeplabcut\nto run from the command line type module load deeplabcut/2.2.1\nthen type ipython\nif you type ?deeplabcut on the command line you can see that everything in DeepLabCut 2.0 is available from the command line\ntype exit() to leave ipython\n\n\n\n\nNEXT go to the HiPerGator DeepLabCut Jupyter Notebooks tutorial…\n\nTo Run Napari from the remote GUI on HPG start HiperGator Desktop then open a terminal on the desktop and type:\n\nmodule spider Napari\nmodule load napari/0.4.7\nNapari"
   },
   {
     "objectID": "posts/6p-RTour/index.html",
