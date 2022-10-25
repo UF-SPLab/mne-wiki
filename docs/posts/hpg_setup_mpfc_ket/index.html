@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ryan Mears">
-<meta name="dcterms.date" content="2022-06-08">
-<meta name="description" content="Rationale for scripting with MNE-Python">
+<meta name="author" content="R Mears">
+<meta name="dcterms.date" content="2022-10-24">
+<meta name="description" content="Tips to setup your account so that you can use DeepLabCut">
 
-<title>UF-Open-Science-Wiki - Why Code?</title>
+<title>UF-Open-Science-Wiki - Setup HiPerGator for DeepLabCut</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -104,20 +104,16 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Why Code?</h1>
+      <h1 class="title">Setup HiPerGator for DeepLabCut</h1>
                   <div>
         <div class="description">
-          Rationale for scripting with MNE-Python
+          Tips to setup your account so that you can use DeepLabCut
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">Python</div>
                 <div class="quarto-category">code</div>
-                <div class="quarto-category">pipeline</div>
-                <div class="quarto-category">workflow</div>
-                <div class="quarto-category">MNE</div>
-                <div class="quarto-category">EEG</div>
-                <div class="quarto-category">slides</div>
+                <div class="quarto-category">AI</div>
               </div>
                   </div>
   </div>
@@ -128,14 +124,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Ryan Mears </p>
+               <p>R Mears </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 8, 2022</p>
+        <p class="date">October 24, 2022</p>
       </div>
     </div>
     
@@ -153,8 +149,48 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This talk introduced advantages and potential obstacles to using script-based pipelines. We discussed how capabilities of scientific python ecosystem are leveraged and organized in MNE in order to compose reproducible analysis pipelines that are easy to understand and efficient to use. The extensive documentation of the MNE website provides instructions for installation and configuration. Extensive examples and tutorials on the MNE documentation website allows users to benefit directly by searching, downloading, testing and incrementally adapting code.</p>
-<p><a href="https://csea-lab.github.io/mne-python-intro-slides/MNE-pres.html#/title-slide">Introduction to Scripting with MNE-Python</a></p>
+<ul>
+<li><p>To start off, type in your browser: <code>https://ood.rc.ufl.edu</code></p></li>
+<li><p>From this website type Florida in the institution and select “University of Florida” from the dropdown menu.</p></li>
+<li><p>From here you would login with 2-factor authentication as you typically would for Canvas.</p></li>
+<li><p>After OpenOnDemand successfully loads select the <strong>Files</strong> dropdown</p></li>
+<li><p><img src="ood_hpg_main.png" class="img-fluid"></p></li>
+<li><p>Select <strong>/blue/psy4911</strong></p></li>
+<li><p><img src="ood_bluefolder.png" class="img-fluid"></p></li>
+<li><p>Next, when you are in the correct location you can open a terminal to create a shortcut so that you can always find your blue-folder</p></li>
+<li><p><img src="open_terminal.png" class="img-fluid"></p></li>
+<li><p>Type a symlink command in the terminal: <code>ln -s /blue/psy4911 blue_psy4911</code></p></li>
+<li><p><img src="blue_shortct.png" class="img-fluid"></p></li>
+<li><p>Confirm that the shortcut was made: <code>find . -maxdepth l type l -ls</code><br>
+</p></li>
+<li><p><img src="blue_shortcut.png" class="img-fluid"><br>
+</p></li>
+<li><p>Create a folder for downloading files and examples to your blue drive for learning DeepLabCut<br>
+</p></li>
+<li><p>I made a folder named <em>try-dlc</em> (if you’re not sure how to navigate to a directory from the command line here’s a reference to check out: )<br>
+</p></li>
+<li><p><img src="make-new-folder.png" class="img-fluid"><br>
+</p></li>
+<li><p><img src="make_try_dlc.png" class="img-fluid"><br>
+</p></li>
+<li><p>The easiest way to start out in terminal from OOD is to click on the folder that you made</p></li>
+<li><p><img src="nav2try-dlc.png" class="img-fluid"></p></li>
+<li><p>…then from that location click <strong>Open in Terminal</strong></p></li>
+<li><p><img src="try_dlc_term.png" class="img-fluid"></p></li>
+<li><p>From the chosen folder on your <strong>blue_4911</strong> folder install DeepLabCut using the following commands in terminal:</p>
+<ul>
+<li><code>module load conda</code></li>
+<li><code>git clone https://github.com/DeepLabCut/DeepLabCut.git</code><br>
+</li>
+<li></li>
+</ul></li>
+<li><p><img src="install_dlc_in_testfolder.png" class="img-fluid"></p></li>
+<li><p>To Run Napari from the remote GUI on HPG:<br>
+</p></li>
+<li><p><code>module spider Napari</code></p></li>
+<li><p><code>module load napari/0.4.7</code></p></li>
+<li><p><code>Napari</code></p></li>
+</ul>
 
 
 

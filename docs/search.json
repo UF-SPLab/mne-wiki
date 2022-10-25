@@ -4,14 +4,14 @@
     "href": "posts/why-code/index.html",
     "title": "Why Code?",
     "section": "",
-    "text": "Introduction to Scripting with MNE-Python"
+    "text": "This talk introduced advantages and potential obstacles to using script-based pipelines. We discussed how capabilities of scientific python ecosystem are leveraged and organized in MNE in order to compose reproducible analysis pipelines that are easy to understand and efficient to use. The extensive documentation of the MNE website provides instructions for installation and configuration. Extensive examples and tutorials on the MNE documentation website allows users to benefit directly by searching, downloading, testing and incrementally adapting code.\nIntroduction to Scripting with MNE-Python"
   },
   {
     "objectID": "posts/csea-matlab-tutorial-links/index.html",
     "href": "posts/csea-matlab-tutorial-links/index.html",
     "title": "CSEA MatLab tutorials",
     "section": "",
-    "text": "Matlab Livescripts examples Folder\nThe following examples are in the GitHub folder:\n\nCrossfreq_coupling.mlx\nFourier_demo.mlx\nGrangerCausality.mlx\nHilbertPhaseDemo.mlx\nIRF_findsingletrialbetas.mlx\nMNE_SourceEstimation.mlx\nMicroSaCondiSpas.mlx\nde_convolution.mlx\nfilters.mlx\nwavelet_walkthru.mlx"
+    "text": "This is a post with executable code.\nMatlab Livescripts examples Folder\nThe following examples are in the GitHub folder:\n\nCrossfreq_coupling.mlx\nFourier_demo.mlx\nGrangerCausality.mlx\nHilbertPhaseDemo.mlx\nIRF_findsingletrialbetas.mlx\nMNE_SourceEstimation.mlx\nMicroSaCondiSpas.mlx\nde_convolution.mlx\nfilters.mlx\nwavelet_walkthru.mlx"
   },
   {
     "objectID": "posts/MNE-Python-EEG/index.html",
@@ -19,6 +19,13 @@
     "title": "MNE-Python: EEG",
     "section": "",
     "text": "MNE-Python: EEG Analysis"
+  },
+  {
+    "objectID": "posts/hpg_setup_mpfc_ket/index.html",
+    "href": "posts/hpg_setup_mpfc_ket/index.html",
+    "title": "Setup HiPerGator for DeepLabCut",
+    "section": "",
+    "text": "To start off, type in your browser: https://ood.rc.ufl.edu\nFrom this website type Florida in the institution and select “University of Florida” from the dropdown menu.\nFrom here you would login with 2-factor authentication as you typically would for Canvas.\nAfter OpenOnDemand successfully loads select the Files dropdown\n\nSelect /blue/psy4911\n\nNext, when you are in the correct location you can open a terminal to create a shortcut so that you can always find your blue-folder\n\nType a symlink command in the terminal: ln -s /blue/psy4911 blue_psy4911\n\nConfirm that the shortcut was made: find . -maxdepth l type l -ls\n\n\n\nCreate a folder for downloading files and examples to your blue drive for learning DeepLabCut\n\nI made a folder named try-dlc (if you’re not sure how to navigate to a directory from the command line here’s a reference to check out: )\n\n\n\n\n\nThe easiest way to start out in terminal from OOD is to click on the folder that you made\n\n…then from that location click Open in Terminal\n\nFrom the chosen folder on your blue_4911 folder install DeepLabCut using the following commands in terminal:\n\nmodule load conda\ngit clone https://github.com/DeepLabCut/DeepLabCut.git\n\n\n\n\nTo Run Napari from the remote GUI on HPG:\n\nmodule spider Napari\nmodule load napari/0.4.7\nNapari"
   },
   {
     "objectID": "posts/6p-RTour/index.html",
@@ -53,7 +60,7 @@
     "href": "index.html",
     "title": "UF-Open-Science-Wiki",
     "section": "",
-    "text": "R\n\n\ncode\n\n\ndata wrangling\n\n\nslides\n\n\n\n\nIntroduction to Using R and Tidyverse\n\n\n\n\n\n\nJul 18, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\n\n\nIntroduction to Version control for doing open science\n\n\n\n\n\n\nJul 11, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nIntroduction to Analysis Pipelines for EEG\n\n\n\n\n\n\nJun 22, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nRationale for scripting with MNE-Python\n\n\n\n\n\n\nJun 8, 2022\n\n\nRyan Mears\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\nMatlab\n\n\nEEG\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2022\n\n\nAK\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 1, 2022\n\n\nRPM\n\n\n\n\n\n\nNo matching items"
+    "text": "Setup HiPerGator for DeepLabCut\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\n\n\nTips to setup your account so that you can use DeepLabCut\n\n\n\n\n\n\nOct 24, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR-tour in 6 pages\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\ndata wrangling\n\n\nslides\n\n\n\n\nIntroduction to Using R and Tidyverse\n\n\n\n\n\n\nJul 18, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\n\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\n\n\nIntroduction to Version control for doing open science\n\n\n\n\n\n\nJul 11, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMNE-Python: EEG\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nIntroduction to Analysis Pipelines for EEG\n\n\n\n\n\n\nJun 22, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Code?\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nRationale for scripting with MNE-Python\n\n\n\n\n\n\nJun 8, 2022\n\n\nRyan Mears\n\n\n\n\n\n\n  \n\n\n\n\nCSEA MatLab tutorials\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\nMatlab\n\n\nEEG\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2022\n\n\nAK\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\n\n\n\n\n\n\nJun 1, 2022\n\n\nRPM\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",

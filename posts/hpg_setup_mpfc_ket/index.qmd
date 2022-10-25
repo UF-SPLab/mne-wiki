@@ -1,0 +1,43 @@
+---
+title: "Setup HiPerGator for DeepLabCut"
+description: "Tips to setup your account so that you can use DeepLabCut"
+author: "R Mears"
+categories: [Python, code, AI]
+date: "10/24/2022"
+---
+
+- To start off, type in your browser: `https://ood.rc.ufl.edu`
+- From this website type Florida in the institution and select "University of Florida" from the dropdown menu.
+- From here you would login with 2-factor authentication as you typically would for Canvas.
+- After OpenOnDemand successfully loads select the **Files** dropdown
+- ![](ood_hpg_main.png)
+- Select **/blue/psy4911** 
+- ![](ood_bluefolder.png)
+- Next, when you are in the correct location you can open a terminal to create a shortcut so that you can always find your blue-folder
+- ![](open_terminal.png)  
+
+- Type a symlink command in the terminal: `ln -s /blue/psy4911 blue_psy4911`
+
+- ![](blue_shortct.png)
+- Confirm that the shortcut was made: `find . -maxdepth l type l -ls`  
+- ![](blue_shortcut.png)  
+- Create a folder for downloading files and examples to your blue drive for learning DeepLabCut  
+- I made a folder named *try-dlc* (if you're not sure how to navigate to a directory from the command line here's a reference to check out: )   
+- ![](make-new-folder.png)  
+- ![](make_try_dlc.png)  
+- The easiest way to start out in terminal from OOD is to click on the folder that you made 
+- ![](nav2try-dlc.png)
+- ...then from that location click **Open in Terminal**
+- ![](try_dlc_term.png)
+- From the chosen folder on your **blue_4911** folder install DeepLabCut using the following commands in terminal: 
+   - `module load conda`
+   - `git clone https://github.com/DeepLabCut/DeepLabCut.git`  
+   - 
+- ![](install_dlc_in_testfolder.png)
+
+- To Run Napari from the remote GUI on HPG:  
+- `module spider Napari`
+- `module load napari/0.4.7`
+- `Napari`
+
+
