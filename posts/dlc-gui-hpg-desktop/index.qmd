@@ -1,0 +1,103 @@
+---
+title: "DeepLabCut GUI on HiPerGator Desktop"
+description: "**Steps to start DeepLabCut in graphical user interface mode**: </br>1. Log on to HiPerGator (HPG) </br> 2. Use HPG OpenOnDemand to start the *Interactive App*: *HiPerGator Desktop* </br> 3. Open *Terminal* to enter 3 lines of command-line code to start DLC GUI </br> 4. Point DLC to a *config.yaml* file in existing project </br> 5. Point DLC to a *labeled videos* directory and *load* the images"
+author: "R. Mears"
+date: "11/19/2022"
+---
+
+![](HPG_Desktop_2DLC/dlc-gui.png)
+
+# Steps to start DeepLabCut in graphical user interface mode:
+
+1. [Log on to HiPerGator (HPG)](#log-on-to-hipergator-hpg)
+2. [Use HPG OpenOnDemand to start the *Interactive App*: *HiPerGator Desktop*](#use-hpg-openondemand-to-start-the-interactive-app-hipergator-desktop)   
+3. [Open *Terminal* to enter 3 lines of command-line code to start DLC GUI](#open-terminal-to-enter-3-lines-of-command-line-code-to-start-dlc-gui)  
+4. [Point DLC to a *config.yaml* file in existing project](#point-dlc-to-a-config.yaml-file-in-existing-project)  
+5. [Point DLC to a *labeled videos* directory and *load* the images](#point-dlc-to-a-labeled-videos-directory-and-load-the-images)   
+
+
+## Log on to HiPerGator (HPG) OpenOnDemand
+
+Use a Chrome Browser for best results.  
+*Importantly,* [go to (linked UFRC page) for details & video on HiPerGator-OpenOnDemand](https://help.rc.ufl.edu/doc/Open_OnDemand)
+
+**Type this address in the navigation bar**:
+- `https://ondemand.rc.ufl.edu`
+
+
+
+You will need to type then select `University of Florida` for your home organization.
+
+![](HPG_Desktop_2DLC/incommon.png)
+
+Use 2-factor authentication just like Canvas or Gatormail.
+
+![](HPG_Desktop_2DLC/hpg2-factor.png)
+
+
+
+## Use HPG OpenOnDemand to start the *Interactive App*: *HiPerGator Desktop* 
+
+When options for the desktop are available (see 2nd next figure below):  
+
+- **10** or more Gb of Max Memory (third text box)  
+- 1 to 4 hours for Time Requested (4th text box)  
+- select *Default* Cluster Partition (5th box dropdown)  
+   - **BUT,** If you're training the model with GPU settings select the *GPU* cluster partition. [*ONLY for neural-network training; Use the Default cluster partition for image labeling and adjusting labels. We have limited GPU resources.*]   
+      - However, with *GPU* selected you will also need to type `gpu:a100:1` in the Generic Resource Request field (2nd text box from bottom of page.)  
+
+After you have typed the settings click blue **Launch** button(s) as they appear (see the bottom of 2rd & 3rd figures, below)
+
+![](HPG_Desktop_2DLC/2-inertactApps.png)  
+![](HPG_Desktop_2DLC/3-hpg-desktop-settings.png)  
+
+![](HPG_Desktop_2DLC/4-hpg-desktop-open.png)  
+
+ 
+
+
+## Open *Terminal* to enter 3 lines of command-line code to start DLC GUI 
+
+- Click on **Applications**
+   - In HiPerGator Linux Desktop, the *Applications* button is on the top-left corner.
+- Click on **Terminal Emulator** 
+
+![](HPG_Desktop_2DLC/5-hpg-desktop-terminal.png) 
+In the **Terminal** (i.e., black, command line interface) type the following 3 lines:
+
+- `cd blue_psy4911`
+- `module load deeplabcut`
+- `python -m deeplabcut`
+
+![](HPG_Desktop_2DLC/6-cmd-3lines.png)  
+
+
+## Point DLC to a *config.yaml* file in existing project 
+
+- Click on tab, **Manage Project**, when the DeepLabCut GUI appears.
+- Then, click **Load existing project** & **Browse** in order to find *config.yaml* settings file. 
+- The folder location is something like:
+   - */blue/psy4911/<yourname>/try-dlc/DeepLabCut/examples/openfield-Pranav-2018-10-30/config.yaml*  
+- Once you select *config.yaml*  click the open button and the click ok again.
+
+![](HPG_Desktop_2DLC/7-manage-proj.png)  
+
+![](HPG_Desktop_2DLC/8-load-existing-browse-to-config-file.png)   
+![](HPG_Desktop_2DLC/9-config-ok-2x.png) 
+
+## Point DLC to a *labeled videos* directory and *load* the "images"
+
+![](HPG_Desktop_2DLC/10-label-data.png)
+
+![](HPG_Desktop_2DLC/11-label-data-select-config.png)
+
+![](HPG_Desktop_2DLC/12-label-data-load-frames.png)
+
+
+![](HPG_Desktop_2DLC/13-label-data-next.png)
+
+
+
+
+
+

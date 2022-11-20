@@ -77,11 +77,46 @@
     "text": "This is a test post."
   },
   {
+    "objectID": "posts/dlc-gui-hpg-desktop/index.html#log-on-to-hipergator-hpg-openondemand",
+    "href": "posts/dlc-gui-hpg-desktop/index.html#log-on-to-hipergator-hpg-openondemand",
+    "title": "DeepLabCut GUI on HiPerGator Desktop",
+    "section": "Log on to HiPerGator (HPG) OpenOnDemand",
+    "text": "Log on to HiPerGator (HPG) OpenOnDemand\nUse a Chrome Browser for best results.\nImportantly, go to (linked UFRC page) for details & video on HiPerGator-OpenOnDemand\nType this address in the navigation bar: - https://ondemand.rc.ufl.edu\nYou will need to type then select University of Florida for your home organization.\n\nUse 2-factor authentication just like Canvas or Gatormail."
+  },
+  {
+    "objectID": "posts/dlc-gui-hpg-desktop/index.html#use-hpg-openondemand-to-start-the-interactive-app-hipergator-desktop",
+    "href": "posts/dlc-gui-hpg-desktop/index.html#use-hpg-openondemand-to-start-the-interactive-app-hipergator-desktop",
+    "title": "DeepLabCut GUI on HiPerGator Desktop",
+    "section": "Use HPG OpenOnDemand to start the Interactive App: HiPerGator Desktop",
+    "text": "Use HPG OpenOnDemand to start the Interactive App: HiPerGator Desktop\nWhen options for the desktop are available (see 2nd next figure below):\n\n10 or more Gb of Max Memory (third text box)\n\n1 to 4 hours for Time Requested (4th text box)\n\nselect Default Cluster Partition (5th box dropdown)\n\nBUT, If you’re training the model with GPU settings select the GPU cluster partition. [ONLY for neural-network training; Use the Default cluster partition for image labeling and adjusting labels. We have limited GPU resources.]\n\nHowever, with GPU selected you will also need to type gpu:a100:1 in the Generic Resource Request field (2nd text box from bottom of page.)\n\n\n\nAfter you have typed the settings click blue Launch button(s) as they appear (see the bottom of 2rd & 3rd figures, below)"
+  },
+  {
+    "objectID": "posts/dlc-gui-hpg-desktop/index.html#open-terminal-to-enter-3-lines-of-command-line-code-to-start-dlc-gui",
+    "href": "posts/dlc-gui-hpg-desktop/index.html#open-terminal-to-enter-3-lines-of-command-line-code-to-start-dlc-gui",
+    "title": "DeepLabCut GUI on HiPerGator Desktop",
+    "section": "Open Terminal to enter 3 lines of command-line code to start DLC GUI",
+    "text": "Open Terminal to enter 3 lines of command-line code to start DLC GUI\n\nClick on Applications\n\nIn HiPerGator Linux Desktop, the Applications button is on the top-left corner.\n\nClick on Terminal Emulator\n\n In the Terminal (i.e., black, command line interface) type the following 3 lines:\n\ncd blue_psy4911\nmodule load deeplabcut\npython -m deeplabcut"
+  },
+  {
+    "objectID": "posts/dlc-gui-hpg-desktop/index.html#point-dlc-to-a-config.yaml-file-in-existing-project",
+    "href": "posts/dlc-gui-hpg-desktop/index.html#point-dlc-to-a-config.yaml-file-in-existing-project",
+    "title": "DeepLabCut GUI on HiPerGator Desktop",
+    "section": "Point DLC to a config.yaml file in existing project",
+    "text": "Point DLC to a config.yaml file in existing project\n\nClick on tab, Manage Project, when the DeepLabCut GUI appears.\nThen, click Load existing project & Browse in order to find config.yaml settings file.\nThe folder location is something like:\n\n/blue/psy4911//try-dlc/DeepLabCut/examples/openfield-Pranav-2018-10-30/config.yaml\n\n\nOnce you select config.yaml click the open button and the click ok again."
+  },
+  {
+    "objectID": "posts/dlc-gui-hpg-desktop/index.html#point-dlc-to-a-labeled-videos-directory-and-load-the-images",
+    "href": "posts/dlc-gui-hpg-desktop/index.html#point-dlc-to-a-labeled-videos-directory-and-load-the-images",
+    "title": "DeepLabCut GUI on HiPerGator Desktop",
+    "section": "Point DLC to a labeled videos directory and load the “images”",
+    "text": "Point DLC to a labeled videos directory and load the “images”"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "UF-Open-Science-Wiki",
     "section": "",
-    "text": "Setup HiPerGator for DeepLabCut\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\n\n\nTips to setup your account so that you can use DeepLabCut\n\n\n\n\n\n\nOct 24, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR-tour in 6 pages\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\ndata wrangling\n\n\nslides\n\n\n\n\nIntroduction to Using R and Tidyverse\n\n\n\n\n\n\nJul 18, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\n\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\n\n\nIntroduction to Version control for doing open science\n\n\n\n\n\n\nJul 11, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMNE-Python: EEG\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nIntroduction to Analysis Pipelines for EEG\n\n\n\n\n\n\nJun 22, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Code?\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nRationale for scripting with MNE-Python\n\n\n\n\n\n\nJun 8, 2022\n\n\nRyan Mears\n\n\n\n\n\n\n  \n\n\n\n\nCSEA MatLab tutorials\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\nMatlab\n\n\nEEG\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2022\n\n\nAK\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\n\n\n\n\n\n\nJun 1, 2022\n\n\nRPM\n\n\n\n\n\n\nNo matching items"
+    "text": "DeepLabCut GUI on HiPerGator Desktop\n\n\n\n\n\nSteps to start DeepLabCut in graphical user interface mode: 1. Log on to HiPerGator (HPG)  2. Use HPG OpenOnDemand to start the Interactive App: HiPerGator Desktop  3. Open Terminal to enter 3 lines of command-line code to start DLC GUI  4. Point DLC to a config.yaml file in existing project  5. Point DLC to a labeled videos directory and load the images\n\n\n\n\n\n\nNov 19, 2022\n\n\nR. Mears\n\n\n\n\n\n\n  \n\n\n\n\nSetup HiPerGator for DeepLabCut\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\n\n\nTips to setup your account so that you can use DeepLabCut\n\n\n\n\n\n\nOct 24, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR-tour in 6 pages\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\ndata wrangling\n\n\nslides\n\n\n\n\nIntroduction to Using R and Tidyverse\n\n\n\n\n\n\nJul 18, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\n\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\n\n\nIntroduction to Version control for doing open science\n\n\n\n\n\n\nJul 11, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMNE-Python: EEG\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nIntroduction to Analysis Pipelines for EEG\n\n\n\n\n\n\nJun 22, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Code?\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nRationale for scripting with MNE-Python\n\n\n\n\n\n\nJun 8, 2022\n\n\nRyan Mears\n\n\n\n\n\n\n  \n\n\n\n\nCSEA MatLab tutorials\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\nMatlab\n\n\nEEG\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2022\n\n\nAK\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\n\n\n\n\n\n\nJun 1, 2022\n\n\nRPM\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
