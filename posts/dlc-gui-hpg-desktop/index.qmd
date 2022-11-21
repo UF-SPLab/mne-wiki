@@ -87,7 +87,7 @@ In the **Terminal** (i.e., black, command line interface) type the following 3 l
 
 ## Point DLC to a *labeled videos* directory and *load* the "images"
 
-![](HPG_Desktop_2DLC/10-label-data.png)
+![](HPG_Desktop_2DLC/10-Label-data.png)
 
 ![](HPG_Desktop_2DLC/11-label-data-select-config.png)
 
