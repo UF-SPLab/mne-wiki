@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -137,15 +137,17 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
 <p><img src="HPG_Desktop_2DLC/dlc-gui.png" class="img-fluid"></p>
-<section id="steps-to-start-deeplabcut-in-graphical-user-interface-mode" class="level1">
+<section id="steps-to-start-deeplabcut-in-graphical-user-interface-mode" class="level1 page-columns page-full">
 <h1>Steps to start DeepLabCut in graphical user interface mode:</h1>
 <ol type="1">
 <li><a href="#log-on-to-hipergator-hpg">Log on to HiPerGator (HPG)</a></li>
@@ -157,19 +159,36 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li><a href="#point-dlc-to-a-labeled-videos-directory-and-load-the-images">Point DLC to a <em>labeled videos</em> directory and <em>load</em> the images</a></li>
 </ol>
-<section id="log-on-to-hipergator-hpg-openondemand" class="level2">
+<section id="log-on-to-hipergator-hpg-openondemand" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="log-on-to-hipergator-hpg-openondemand">Log on to HiPerGator (HPG) OpenOnDemand</h2>
 <p>Use a Chrome Browser for best results.<br>
 <em>Importantly,</em> <a href="https://help.rc.ufl.edu/doc/Open_OnDemand">go to (linked UFRC page) for details &amp; video on HiPerGator-OpenOnDemand</a></p>
-<p><strong>Type this address in the navigation bar</strong>: - <code>https://ondemand.rc.ufl.edu</code></p>
+<div id="fig-login" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="HPG_Desktop_2DLC/incommon.png" class="img-fluid figure-img" width="450"></p>
+</figure>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: Type then select your institution.</figcaption><p></p>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div id="fig-2fa" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="HPG_Desktop_2DLC/hpg2-factor.png" class="img-fluid figure-img" width="450"></p>
+</figure>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: Use 2-factor authentication just like Canvas or Gatormail.</figcaption><p></p>
+</figure>
+</div></div><p><strong>Type this address in the navigation bar</strong>: - <code>https://ondemand.rc.ufl.edu</code></p>
 <p>You will need to type then select <code>University of Florida</code> for your home organization.</p>
-<p><img src="HPG_Desktop_2DLC/incommon.png" class="img-fluid"></p>
-<p>Use 2-factor authentication just like Canvas or Gatormail.</p>
-<p><img src="HPG_Desktop_2DLC/hpg2-factor.png" class="img-fluid"></p>
 </section>
-<section id="use-hpg-openondemand-to-start-the-interactive-app-hipergator-desktop" class="level2">
+<section id="use-hpg-openondemand-to-start-the-interactive-app-hipergator-desktop" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="use-hpg-openondemand-to-start-the-interactive-app-hipergator-desktop">Use HPG OpenOnDemand to start the <em>Interactive App</em>: <em>HiPerGator Desktop</em></h2>
-<p>When options for the desktop are available (see 2nd next figure below):</p>
+<p>When options for the desktop are available (see settings figure below):</p>
 <ul>
 <li><strong>10</strong> or more Gb of Max Memory (third text box)<br>
 </li>
@@ -183,10 +202,29 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul></li>
 </ul>
-<p>After you have typed the settings click blue <strong>Launch</strong> button(s) as they appear (see the bottom of 2rd &amp; 3rd figures, below)</p>
-<p><img src="HPG_Desktop_2DLC/2-inertactApps.png" class="img-fluid"><br>
-<img src="HPG_Desktop_2DLC/3-hpg-desktop-settings.png" class="img-fluid"></p>
-<p><img src="HPG_Desktop_2DLC/4-hpg-desktop-open.png" class="img-fluid"></p>
+<p>After you have typed the settings click blue <strong>Launch</strong> button(s) as they appear.</p>
+
+<div class="no-row-height column-margin column-container"><div id="fig-hpgdesktop" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="HPG_Desktop_2DLC/2-inertactApps.png" class="img-fluid figure-img" width="450"></p>
+<p></p><figcaption class="figure-caption">HiPerGator Desktop</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="HPG_Desktop_2DLC/4-hpg-desktop-open.png" class="img-fluid figure-img" width="450"></p>
+</figure>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;3: Start HiPerGator Desktop with appropriate settings (see settings figure), then Launch.</figcaption><p></p>
+</figure>
+</div></div><div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="HPG_Desktop_2DLC/3-hpg-desktop-settings.png" class="img-fluid figure-img" width="600"></p>
+<p></p><figcaption class="figure-caption">Desktop Settings</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="open-terminal-to-enter-3-lines-of-command-line-code-to-start-dlc-gui" class="level2">
 <h2 class="anchored" data-anchor-id="open-terminal-to-enter-3-lines-of-command-line-code-to-start-dlc-gui">Open <em>Terminal</em> to enter 3 lines of command-line code to start DLC GUI</h2>
@@ -212,8 +250,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Then, click <strong>Load existing project</strong> &amp; <strong>Browse</strong> in order to find <em>config.yaml</em> settings file.</li>
 <li>The folder location is something like:
 <ul>
-<li><em>/blue/psy4911/<yourname>/try-dlc/DeepLabCut/examples/openfield-Pranav-2018-10-30/config.yaml</yourname></em><br>
-</li>
+<li><em>/blue/psy4911/</em><yourname>/try-dlc/DeepLabCut/examples/openfield-Pranav-2018-10-30/config.yaml<br>
+</yourname></li>
 </ul></li>
 <li>Once you select <em>config.yaml</em> click the open button and the click ok again.</li>
 </ul>
