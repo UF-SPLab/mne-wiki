@@ -15,7 +15,27 @@ editor:
     wrap: 72
 ---
 
-## Background
+## Custom Python Environments for Jupyter Notebooks
+
+To simply use the environment go to
+
+-   [The \<code\>\~/.condarc\</code\> configuration file]
+
+-   then to [Copy the \<code\>template_kernel\</code\> folder to your
+    path]
+
+For additional info about using Python virtual environments with Conda
+please go the the UFRC page or the Software Carpentries pages from which
+these procedures were derived.
+
+-   [UFRC: Customizing a Shared Python
+    Environment](https://help.rc.ufl.edu/doc/Managing_Python_environments_and_Jupyter_kernels)
+-   [Carpentries: Ch.2 Conda
+    Environments](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/02-working-with-environments/index.html)
+-   [Conda: Using the .condarc Configuration
+    file](https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html#)
+
+## Background (from UFRC page)
 
 Many projects that use `Python` code require careful management of the
 respective Python environments. Rapid changes in package dependencies,
@@ -39,6 +59,14 @@ you modify the file to work best on HiPerGator. First load of the
 <code>conda</code> environment module on HiPerGator will put the current
 ''best practice'' <code>.condarc</code> into your home directory.
 
+This path will be found in your home directory (i.e.,
+<code>Home/\<myname\></code> is usually symbolized as :
+<code>\~</code>).
+
+``` {.Bash .bash}
+Home/<myname>/.condarc
+```
+
 ### <code>conda</code> package cache location
 
 <code>conda</code> caches (keeps a copy) of all downloaded packages by
@@ -57,10 +85,9 @@ pkgs_dirs:
 :::
 
 ::: {.column width="5%"}
-... 
-  
-or  
+...
 
+or
 :::
 
 ::: {.column width="45%"}
@@ -102,10 +129,9 @@ envs_dirs:
 :::
 
 ::: {.column width="5%"}
-... 
-  
-or  
+...
 
+or
 :::
 
 ::: {.column width="45%"}
@@ -159,7 +185,6 @@ show_channel_urls: false
 Now that we have our environment ready, we can use it from the command
 line or a script using something like:
 
-
 ::: columns
 ::: {.column width="35%"}
 ``` bash
@@ -172,9 +197,9 @@ python amazing_script.py
 :::
 
 ::: {.column width="10%"}
-...    
-or   
-a path based setting: 
+...\
+or\
+a path based setting:
 :::
 
 ::: {.column width="55%"}
@@ -189,7 +214,6 @@ python amazing_script.py
 ```
 :::
 :::
-
 
 ## Setup a Jupyter Kernel for our environment
 
@@ -271,13 +295,13 @@ to make sure the environment is activated and run the command:
 <code>which python</code>
 
 The path it outputs should look something like:
-<code>/blue/group/share/conda/envs/mne_1_x/bin/python</code>
+<code>/blue/group/share/conda/envs/mne_1\_x/bin/python</code>
 
 Copy that path.
 
 Edit the <code>run.sh</code> file with <code>nano</code>:
 
-<code>nano \~/.local/share/jupyter/kernels/mne_1_x/run.sh</code>
+<code>nano \~/.local/share/jupyter/kernels/mne_1\_x/run.sh</code>
 
 The file should looks like this, *but with your path*:
 
@@ -303,19 +327,19 @@ with the same setup.
 
 To export an environment file from an existing environment, run:
 
-<code>conda env export \> mne_1_x.yml</code>
+<code>conda env export \> mne_1\_x.yml</code>
 
 You can inspect the contents of this file with <code>cat
-mne_1_x.yml</code>. This file defines the packages and versions that make
-up the environment as it is at this point in time. Note that it also
-includes packages that were installed via <code>pip</code>.
+mne_1\_x.yml</code>. This file defines the packages and versions that
+make up the environment as it is at this point in time. Note that it
+also includes packages that were installed via <code>pip</code>.
 
 ### Create an environment from a yaml file
 
 If you share the environment yaml file created above with another user,
 they can create a copy of your environment using the command:
 
-<code>conda env create --file mne_1_x.yml</code>
+<code>conda env create --file mne_1\_x.yml</code>
 
 They may need to edit the last line to change the location to match
 where they want their environment created.
