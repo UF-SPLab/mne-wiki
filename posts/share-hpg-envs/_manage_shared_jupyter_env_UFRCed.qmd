@@ -19,10 +19,9 @@ editor:
 
 To simply use the environment go to
 
--   [The \<code\>\~/.condarc\</code\> configuration file]
+-   [Getting Started: ~/.condarc configuration file](https://uf-splab.github.io/mne-wiki/posts/share-hpg-envs/#getting-started-conda-configuration)
 
--   then to [Copy the \<code\>template_kernel\</code\> folder to your
-    path]
+-   then to [Copy the template_kernelfolder to your path](https://uf-splab.github.io/mne-wiki/posts/share-hpg-envs/#copy-the-template_kernel-folder-to-your-path)
 
 For additional info about using Python virtual environments with Conda
 please go the the UFRC page or the Software Carpentries pages from which

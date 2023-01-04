@@ -74,7 +74,7 @@
     "href": "posts/share-hpg-envs/index.html",
     "title": "Using Custom Python environments for Jupyter Notebooks in HiPerGator",
     "section": "",
-    "text": "To simply use the environment go to\n\n[The <code>~/.condarc</code> configuration file]\nthen to [Copy the <code>template_kernel</code> folder to your path]\n\nFor additional info about using Python virtual environments with Conda please go the the UFRC page or the Software Carpentries pages from which these procedures were derived.\n\nUFRC: Customizing a Shared Python Environment\nCarpentries: Ch.2 Conda Environments\nConda: Using the .condarc Configuration file"
+    "text": "To simply use the environment go to\n\nGetting Started: ~/.condarc configuration file\nthen to Copy the template_kernelfolder to your path\n\nFor additional info about using Python virtual environments with Conda please go the the UFRC page or the Software Carpentries pages from which these procedures were derived.\n\nUFRC: Customizing a Shared Python Environment\nCarpentries: Ch.2 Conda Environments\nConda: Using the .condarc Configuration file"
   },
   {
     "objectID": "posts/share-hpg-envs/index.html#background-from-ufrc-page",
