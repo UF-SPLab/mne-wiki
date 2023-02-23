@@ -1,0 +1,9 @@
+---
+title: "hey check this out"
+description: "its cool i swear"
+author: Isabella Fleites
+date: 2/23/2023
+draft: "true"
+---
+![][](https://github.com/UF-SPLab/mne-wiki/blob/main/posts/isa%20folder/the%20great%20saiyaman.jpeg)
+[cool science stuff] (https://www.youtube.com/watch?v=dQw4w9WgXcQ)
