@@ -32,7 +32,7 @@
     "href": "posts/isa folder/index.html",
     "title": "hey check this out",
     "section": "",
-    "text": "[cool science stuff] (https://www.youtube.com/watch?v=dQw4w9WgXcQ)"
+    "text": "cool science stuff\n\n\n\n\n\nRelated information"
   },
   {
     "objectID": "posts/hpg_setup_mpfc_ket/index.html",
@@ -95,7 +95,7 @@
     "href": "posts/amanda_folder/index.html",
     "title": "UF-Open-Science-Wiki",
     "section": "",
-    "text": "Title: PySide6 DLC Error Author: Amanda Rodriguez Date: 2/23/2023 Description/Update: I’ve somehow managed to bypass the PySide6 error so while I have no idea how to solve it, I’ll attach a link to the article that helped me go around it:\nhttps://github.com/DeepLabCut/napari-deeplabcut"
+    "text": "I’ve somehow managed to bypass the PySide6 error so while I have no idea how to solve it, I’ll attach a link to the article that helped me go around it\nhttps://github.com/DeepLabCut/napari-deeplabcut"
   },
   {
     "objectID": "posts/6p-RTour/index.html",
