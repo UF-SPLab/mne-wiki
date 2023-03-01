@@ -1,0 +1,60 @@
+
+# from de_convolution.mlx
+##### Translate this function  from Matlab into Python
+### Matlab
+    
+onsets = zeros(1, 120); 
+onsets(2:11:end) = 1;
+kernel = (1./gamma(0.1:0.5:5))
+convolution  = conv(onsets, kernel); 
+kernel = (1./gamma(0.1:0.25:5)) % this Kernel is twice as long
+convolution  = conv(onsets, kernel); 
+    
+### Python
+
+onsets = np.zeros(120)
+onsets[1:11:1] = 1
+kernel = (1./gamma(np.arange(0.1,5.1,0.5)))
+convolution = np.convolve(onsets, kernel)
+kernel = (1./gamma(np.arange(0.1,5.1,0.25)))
+convolution = np.convolve(onsets, kernel)
+
+# from filters.mlx
+
+##### Translate this function  from Matlab into Python
+### Matlab
+    
+testdata = spatialPattern([1,2551],-2); 
+timeaxis = -3.6:0.002:1.5; 
+cutoff = 20/250
+[A, B] = butter(5, cutoff);
+filtered_data = filtfilt(A, B, testdata);
+cutoff = 2/250
+[Ah, Bh] = butter(5, cutoff, 'high'); 
+filtered_datah = filtfilt(Ah, Bh, filtered_data);
+
+FFT_orig = abs(fft(testdata)); 
+FFT_lp =  abs(fft(filtered_data)); 
+FFT_hp = abs(fft(filtered_datah)); 
+faxis = 0:1000/(length(testdata).*2):250; 
+
+### Python
+
+testdata = spatialPattern([1,2551],-2)
+timeaxis = np.arange(-3.6,1.5,0.002)
+cutoff = 20/250
+A, B = butter(5, cutoff)
+filtered_data = filtfilt(A, B, testdata)
+cutoff = 2/250
+Ah, Bh = butter(5, cutoff, 'high')
+filtered_datah = filtfilt(Ah, Bh, filtered_data)
+
+FFT_orig = abs(fft(testdata))
+FFT_lp =  abs(fft(filtered_data))
+FFT_hp = abs(fft(filtered_datah))
+
+
+
+
+
+
