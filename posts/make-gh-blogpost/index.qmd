@@ -5,4 +5,4 @@ date: "2023-03-01"
 draft: false
 ---
 
-![This is how to start a post.](posts/make-gh-blogpost/make-github-blogpost.gif)
+![This is how to start a post.](make-github-blogpost.gif)
