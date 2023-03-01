@@ -1,0 +1,8 @@
+---
+title: "Post template"
+author: "RPM"
+date: "2022-06-01"
+draft: true
+---
+
+This is a test post.
