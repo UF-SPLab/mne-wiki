@@ -14,11 +14,25 @@
     "text": "This is a post with executable code.\nMatlab Livescripts examples Folder\nThe following examples are in the GitHub folder:\n\nCrossfreq_coupling.mlx\nFourier_demo.mlx\nGrangerCausality.mlx\nHilbertPhaseDemo.mlx\nIRF_findsingletrialbetas.mlx\nMNE_SourceEstimation.mlx\nMicroSaCondiSpas.mlx\nde_convolution.mlx\nfilters.mlx\nwavelet_walkthru.mlx"
   },
   {
+    "objectID": "posts/make-gh-blogpost/index.html",
+    "href": "posts/make-gh-blogpost/index.html",
+    "title": "How to make a wiki document.",
+    "section": "",
+    "text": "This is how to start a post."
+  },
+  {
     "objectID": "posts/MNE-Python-EEG/index.html",
     "href": "posts/MNE-Python-EEG/index.html",
     "title": "MNE-Python: EEG",
     "section": "",
     "text": "MNE-Python: EEG Analysis"
+  },
+  {
+    "objectID": "posts/isa folder/index.html",
+    "href": "posts/isa folder/index.html",
+    "title": "hey check this out",
+    "section": "",
+    "text": "[cool science stuff] (https://www.youtube.com/watch?v=dQw4w9WgXcQ)"
   },
   {
     "objectID": "posts/hpg_setup_mpfc_ket/index.html",
@@ -47,6 +61,41 @@
     "title": "Setup HiPerGator for DeepLabCut",
     "section": "Clone all example material from GitHub to a folder on your Blue Drive",
     "text": "Clone all example material from GitHub to a folder on your Blue Drive\n\nFrom the chosen folder on your /blue/psy4911/yourname/ folder install DeepLabCut using the following commands in terminal:\n\nmodule load conda\ngit clone https://github.com/DeepLabCut/DeepLabCut.git\n\nNavigate to the new folder /blue/psy4911/yourname/DeepLabCut/ by typing cd DeepLabCut/deeplabcut\nto run from the command line type module load deeplabcut/2.2.1\nthen type ipython\nif you type ?deeplabcut on the command line you can see that everything in DeepLabCut 2.0 is available from the command line\ntype exit() to leave ipython\n\n\n\n\nNEXT go to the HiPerGator DeepLabCut Jupyter Notebooks tutorial…\n\nTo Run Napari from the remote GUI on HPG start HiperGator Desktop then open a terminal on the desktop and type:\n\nmodule spider Napari\nmodule load napari/0.4.7\nNapari"
+  },
+  {
+    "objectID": "posts/matlab2python_tutorials/jupyter_quarto_deconv/de_convolution.html#convolution-and-deconvolution-an-illustration",
+    "href": "posts/matlab2python_tutorials/jupyter_quarto_deconv/de_convolution.html#convolution-and-deconvolution-an-illustration",
+    "title": "Convolution and deconvolution: an Illustration",
+    "section": "Convolution and deconvolution: an Illustration",
+    "text": "Convolution and deconvolution: an Illustration\nThis live script visualizes some of the elements of convolution and deconvolution\n1) Convolution: a simple mathematical function that quantifies the similarity between a pattern (a “kernel”) such as the red square wave below with data (the blue rectangularish thingy below). The convolution (black line) reflects how similar the blue signal is with the kernel at any given time point. Convolution is thus used in all of digital signal processing.\n##\nThe math is simple. We take the kernel, move it to the first portion of the data by lining it up with the first sample point, then we multiply each element of the kernel with the data, sum the results into one new number and write that to that first sample point."
+  },
+  {
+    "objectID": "posts/matlab2python_tutorials/jupyter_quarto_deconv/de_convolution.html#convolution-in-signal-generation-and-in-fmri-research.",
+    "href": "posts/matlab2python_tutorials/jupyter_quarto_deconv/de_convolution.html#convolution-in-signal-generation-and-in-fmri-research.",
+    "title": "Convolution and deconvolution: an Illustration",
+    "section": "Convolution in signal generation and in fMRI research.",
+    "text": "Convolution in signal generation and in fMRI research.\nif we want to generate a signal where a certain pattern (the kernel) occurs at certain times, we can use convolution to achieve that. Thus, programs liek SPM use convolution of stimulus timinng info with a lernel that resembles the typical BOLD (fMRI) response as the kernel to generate fake, ideal, fMRI activation for comparison/correlation with the real data:\n{matlab eval=FALSE, include=FALSE} #First, make onsets for 120 MR images.  onsets = zeros(1, 120);  onsets(2:11:end) = 1; #simple case where a stimulus is on every 11 scans plot(onsets), title ('simulated stimulus onsets, every 11 scans')\n\n\n\n\n\n##\n```{matlab eval=FALSE, include=FALSE} # now we make a kernel # the inverted gamma function is nice because it looks like fMRI in V1 # let’s make one that is 10 scans long kernel = (1./math.gamma(0.1:0.5:5)) figure plt.plot(1./gamma(0.1:0.5:5)), title(‘an inverted gamma kernel, length 10’)\n\n\n::: {.cell execution_count=3}\n\n::: {.cell-output .cell-output-display}\n![](de_convolution_files/figure-revealjs/cell-4-output-1.png){}\n:::\n:::\n\n\n\\##\n\nNow we just convolve the onsets with the kernel and plot the result\n\n\n\n```{matlab eval=FALSE, include=FALSE}\nconvolution  = conv(onsets, kernel); \nfigure\nplot(convolution), title('onset vector convolved with canonical BOLD response')"
+  },
+  {
+    "objectID": "posts/matlab2python_tutorials/jupyter_quarto_deconv/de_convolution.html#section",
+    "href": "posts/matlab2python_tutorials/jupyter_quarto_deconv/de_convolution.html#section",
+    "title": "Convolution and deconvolution: an Illustration",
+    "section": "",
+    "text": "So this basically puts each 10 second kernel at the location where the onset is. There were 11 seconds between onsets, so this is like copy paste, but how about when the kernel is longer than the interval between onsets?\n```{matlab eval=FALSE, include=FALSE}\nkernel = (1./gamma(0.1:0.25:5)) # this Kernel is twice as long convolution = conv(onsets, kernel); figure plot(convolution), title(‘Convolution with temporal summation’)\n\n\n::: {.cell execution_count=5}\n\n::: {.cell-output .cell-output-display}\n![](de_convolution_files/figure-revealjs/cell-6-output-1.png){}\n:::\n:::\n\n\n\\##\n\nSo this basically puts each 10 second kernel at the location where the onset is. There were 11 seconds between onsets, so this is like copy paste, but how about when the kernel is longer than the interval between onsets?\n\n\n\n```{matlab eval=FALSE, include=FALSE}\n\nkernel = (1./gamma(0.1:0.25:5)) # this Kernel is twice as long\nconvolution  = conv(onsets, kernel); \nfigure\nplot(convolution), title('Convolution with temporal summation')\n\n\nWhen the convolution encounters overlap, then temporal summation results, because convolution is a process of shifting the kernel, multiplying element-wise, and summation to one new value, rinse and repeat. Because of the shifting and summing up portion of the algorithm, if the Kernel spans multiple, similar events, it will show temporal summation."
+  },
+  {
+    "objectID": "posts/matlab2python_tutorials/jupyter_quarto_deconv/de_convolution.html#section-1",
+    "href": "posts/matlab2python_tutorials/jupyter_quarto_deconv/de_convolution.html#section-1",
+    "title": "Convolution and deconvolution: an Illustration",
+    "section": "",
+    "text": "This is more interesting with variable inter-onset times.\n```{matlab eval=FALSE, include=FALSE}\nonsets = zeros(1, 120); onsets([3 14 22 36 46 50 66 86 91 106 115]) = 1; #simple case where a stimulus is on every 11 scans plot(onsets), title (‘simulated stimulus onsets, every 11 scans’)\n\n\n::: {.cell execution_count=7}\n\n::: {.cell-output .cell-output-stdout}\n(120, 1)\n:::\n\n::: {.cell-output .cell-output-display}\n![](de_convolution_files/figure-revealjs/cell-8-output-2.png){}\n:::\n:::\n\n\n\\##\n\nNow we convolve these onset times with the same kernel\n\n\n\n```{matlab eval=FALSE, include=FALSE}\n\nconvolution  = conv(onsets, kernel); \nfigure\nplot(convolution), title('Convolution of random ITIs')\n\n\n\n\n\n\nLonger intervals between onsets prompt complete reduction to baseline, temporal proximity prompts smeared, overlapping events. How about gamma-shaped responses to stimuli that are longer than one image?\n```{matlab eval=FALSE, include=FALSE}\nonsets = zeros(1, 120); onsets([3 14 22 36 46 50 66 86 91 106 115]) = 1;#simple case where a stimulus is on every 11 scans onsets([3 14 22 36 46 50 66 86 91 106 115]+1) = 1; onsets([3 14 22 36 46 50 66 86 91 106 115]+2) = 1; onsets([3 14 22 36 46 50 66 86 91 106 115]+3) = 1; plot(onsets), title (‘simulated stimulus onsets, every 11 scans’)\n\n\n::: {.cell execution_count=9}\n\n::: {.cell-output .cell-output-display}\n![](de_convolution_files/figure-revealjs/cell-10-output-1.png){}\n:::\n:::\n\n\n## \n\nNow we convolve these onset times with the same kernel\n\n\n\n```{matlab eval=FALSE, include=FALSE}\n\nconvolution  = conv(onsets, kernel); \nfigure\nplot(convolution), title('Convolution with 4-TR-long events'), ylabel('note the scale')"
+  },
+  {
+    "objectID": "posts/amanda_folder/index.html",
+    "href": "posts/amanda_folder/index.html",
+    "title": "UF-Open-Science-Wiki",
+    "section": "",
+    "text": "Title: PySide6 DLC Error Author: Amanda Rodriguez Date: 2/23/2023 Description/Update: I’ve somehow managed to bypass the PySide6 error so while I have no idea how to solve it, I’ll attach a link to the article that helped me go around it:\nhttps://github.com/DeepLabCut/napari-deeplabcut"
   },
   {
     "objectID": "posts/6p-RTour/index.html",
@@ -165,7 +214,7 @@
     "href": "index.html",
     "title": "UF-Open-Science-Wiki",
     "section": "",
-    "text": "Sharing Customized Python Environments\n\n\n\n\n\n\n\n\n\n\n\n\nDec 30, 2022\n\n\nRPM\n\n\n\n\n\n\n  \n\n\n\n\nDeepLabCut GUI on HiPerGator Desktop\n\n\n\n\n\nSteps to start DeepLabCut in graphical user interface mode: 1. Log on to HiPerGator (HPG)  2. Use HPG OpenOnDemand to start the Interactive App: HiPerGator Desktop  3. Open Terminal to enter 3 lines of command-line code to start DLC GUI  4. Point DLC to a config.yaml file in existing project  5. Point DLC to a labeled videos directory and load the images\n\n\n\n\n\n\nNov 19, 2022\n\n\nR. Mears\n\n\n\n\n\n\n  \n\n\n\n\nSetup HiPerGator for DeepLabCut\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\n\n\nTips to setup your account so that you can use DeepLabCut\n\n\n\n\n\n\nOct 24, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR-tour in 6 pages\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\ndata wrangling\n\n\nslides\n\n\n\n\nIntroduction to Using R and Tidyverse\n\n\n\n\n\n\nJul 18, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\n\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\n\n\nIntroduction to Version control for doing open science\n\n\n\n\n\n\nJul 11, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMNE-Python: EEG\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nIntroduction to Analysis Pipelines for EEG\n\n\n\n\n\n\nJun 22, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Code?\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nRationale for scripting with MNE-Python\n\n\n\n\n\n\nJun 8, 2022\n\n\nRyan Mears\n\n\n\n\n\n\n  \n\n\n\n\nCSEA MatLab tutorials\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\nMatlab\n\n\nEEG\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2022\n\n\nAK\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\n\n\n\n\n\n\nJun 1, 2022\n\n\nRPM\n\n\n\n\n\n\nNo matching items"
+    "text": "Convolution and deconvolution: an Illustration\n\n\nThis Jupyter notebook in a Quarto slideshow is translated from a Matlab LiveScript. The code visualizes some of the elements of convolution and deconvolution\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nHow to make a wiki document.\n\n\n\n\n\n\n\n\n\n\n\n\nMar 1, 2023\n\n\nRPM\n\n\n\n\n\n\n  \n\n\n\n\nhey check this out\n\n\n\n\n\nits cool i swear\n\n\n\n\n\n\nFeb 23, 2023\n\n\nIsabella Fleites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSharing Customized Python Environments\n\n\n\n\n\n\n\n\n\n\n\n\nDec 30, 2022\n\n\nRPM\n\n\n\n\n\n\n  \n\n\n\n\nDeepLabCut GUI on HiPerGator Desktop\n\n\n\n\n\nSteps to start DeepLabCut in graphical user interface mode: 1. Log on to HiPerGator (HPG)  2. Use HPG OpenOnDemand to start the Interactive App: HiPerGator Desktop  3. Open Terminal to enter 3 lines of command-line code to start DLC GUI  4. Point DLC to a config.yaml file in existing project  5. Point DLC to a labeled videos directory and load the images\n\n\n\n\n\n\nNov 19, 2022\n\n\nR. Mears\n\n\n\n\n\n\n  \n\n\n\n\nSetup HiPerGator for DeepLabCut\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\n\n\nTips to setup your account so that you can use DeepLabCut\n\n\n\n\n\n\nOct 24, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR-tour in 6 pages\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\ndata wrangling\n\n\nslides\n\n\n\n\nIntroduction to Using R and Tidyverse\n\n\n\n\n\n\nJul 18, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\n\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\n\n\nIntroduction to Version control for doing open science\n\n\n\n\n\n\nJul 11, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMNE-Python: EEG\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nIntroduction to Analysis Pipelines for EEG\n\n\n\n\n\n\nJun 22, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Code?\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nRationale for scripting with MNE-Python\n\n\n\n\n\n\nJun 8, 2022\n\n\nRyan Mears\n\n\n\n\n\n\n  \n\n\n\n\nCSEA MatLab tutorials\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\nMatlab\n\n\nEEG\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2022\n\n\nAK\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\n\n\n\n\n\n\nJun 1, 2022\n\n\nRPM\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",

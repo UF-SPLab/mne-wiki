@@ -2,6 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/matlab2python_tutorials/jupyter_quarto_deconv/de_convolution.html",
+      "/posts/amanda_folder/index.html",
+      "/posts/make-gh-blogpost/index.html",
+      "/posts/isa folder/index.html",
       "/posts/share-hpg-envs/index.html",
       "/posts/dlc-gui-hpg-desktop/index.html",
       "/posts/hpg_setup_mpfc_ket/index.html",
