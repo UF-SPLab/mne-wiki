@@ -1,7 +1,7 @@
 ---
 Title: "PySide6 DLC Error" 
 Author: "Amanda Rodriguez"
-Date: 2/23/2023
+Date: "2/23/2023"
 Description/Update: "DLC Napari fix for M1 MacBook Pro"
 ---
 ![](Subject.png)
