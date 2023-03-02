@@ -4,7 +4,7 @@ Author: "Amanda Rodriguez"
 Date: 2/23/2023
 Description/Update: "DLC Napari fix for M1 MacBook Pro"
 ---
-
+![](Subject.png)
 I've somehow managed to bypass the PySide6 error so while I have no idea how to solve it, I'll attach a link to the article that helped me go around it
 
 [https://github.com/DeepLabCut/napari-deeplabcut](https://github.com/DeepLabCut/napari-deeplabcut)
