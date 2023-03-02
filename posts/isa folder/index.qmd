@@ -4,13 +4,8 @@ description: "its cool i swear"
 author: Isabella Fleites
 date: 2/23/2023
 ---
-![](mrsuperhero.jpeg)
-
-
-
-
-
 [cool science stuff](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+![](mrsuperhero.jpeg)
 
 :::{.aside}
 [**Related information**](https://knowyourmeme.com/memes/rickroll)
