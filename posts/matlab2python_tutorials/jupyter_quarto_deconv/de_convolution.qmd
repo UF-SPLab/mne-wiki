@@ -5,19 +5,30 @@ format:
   revealjs:
     slide-number: true
     preview-links: auto
+    theme: serif
     smaller: false
     scrollable: true
 editor: visual
 jupyter: python3
 ---
 
-## Convolution and deconvolution: an Illustration
+# Convolution
 
-This live script visualizes some of the elements of convolution and deconvolution
+## 
 
-1\) Convolution: a simple mathematical function that quantifies the similarity between a pattern (a "kernel") such as the red square wave below with data (the blue rectangularish thingy below). The convolution (black line) reflects how similar the blue signal is with the kernel at any given time point. Convolution is thus used in all of digital signal processing.
+:::: {.columns}
+::: {.column  width="55%"}
+-   Convolution: a simple mathematical function that quantifies similarity between a pattern (a "kernel") such as the red square wave below with data ( blue rectangularish thingy below).
+:::
+::: {.column  width="45%"}
+The convolution (black line) reflects how similar the blue signal is with the kernel at any given time point. Convolution is thus used in all of digital signal processing.
 
-\##
+:::
+::::
+
+![](Convolution_of_spiky_function_with_box2.gif)
+
+## 
 
 The math is simple. We take the kernel, move it to the first portion of the data by lining it up with the first sample point, then we multiply each element of the kernel with the data, sum the results into one new number and write that to that first sample point.
 
@@ -29,90 +40,75 @@ import math
 import matplotlib.pyplot as plt
 ```
 
-## Convolution in signal generation and in fMRI research.
+## Convolution in signal generation and in fMRI research. {.smaller}
 
 if we want to generate a signal where a certain pattern (the kernel) occurs at certain times, we can use convolution to achieve that. Thus, programs liek SPM use convolution of stimulus timinng info with a lernel that resembles the typical BOLD (fMRI) response as the kernel to generate fake, ideal, fMRI activation for comparison/correlation with the real data:
 
-```{python, eval=F}
+```{python eval=T}
+#| echo: true
+#| output-location: column-fragment
 
 onsets = np.zeros(120)
 onsets[1:11:1] = 1
 plt.plot(onsets) #, title ('simulated stimulus onsets, every 11 scans')
+
 ```
 
-```{matlab eval=FALSE, include=FALSE}
-#First, make onsets for 120 MR images. 
-onsets = zeros(1, 120); 
-onsets(2:11:end) = 1; #simple case where a stimulus is on every 11 scans
-plot(onsets), title ('simulated stimulus onsets, every 11 scans')
-```
+## Make a Kernel {.smaller}
 
-\##
+-   Now we make a kernel.\
+-   the inverted gamma function is nice because it looks like fMRI in V1
+-   let's make one that is 10 scans long
 
 ```{python}
-# now we make a kernel
-# the inverted gamma function is nice because it looks like fMRI in V1
-# let's make one that is 10 scans long
+#| echo: true
+#| code-line-numbers: "1"
+#| output-location: column-fragment
+
 g_f = np.arange(0.1,5.1,0.5)
 kernel = [1./math.gamma(i) for i in g_f]
 plt.plot(kernel) #, title('an inverted gamma kernel, length 10')
-```
-
-```{matlab eval=FALSE, include=FALSE}
-# now we make a kernel
-# the inverted gamma function is nice because it looks like fMRI in V1
-# let's make one that is 10 scans long
-kernel = (1./math.gamma(0.1:0.5:5))
-figure
-plt.plot(1./gamma(0.1:0.5:5)), title('an inverted gamma kernel, length 10')
 
 ```
 
-\##
+## convolve
 
 Now we just convolve the onsets with the kernel and plot the result
 
 ```{python}
+#| echo: true
+#| code-line-numbers: "1"
+#| output-location: column-fragment
+
 g_f = np.arange(0.1,5,0.5)
-
 kernel = [1./math.gamma(i) for i in g_f]
-
-#figure
 plt.plot(kernel) #, title('an inverted gamma kernel, length 10')
+
 ```
 
-```{matlab eval=FALSE, include=FALSE}
-convolution  = conv(onsets, kernel); 
-figure
-plot(convolution), title('onset vector convolved with canonical BOLD response')
-```
-
-## 
+## longer onsets
 
 So this basically puts each 10 second kernel at the location where the onset is. There were 11 seconds between onsets, so this is like copy paste, but how about when the kernel is longer than the interval between onsets?
 
-```{python, eval=F}
+```{python, eval=T}
+#| echo: true
+#| code-line-numbers: "1"
+#| output-location: column-fragment
 
 convolution  = np.convolve(onsets, kernel); 
-#figure
+
 plt.plot(convolution) #, title('onset vector convolved with canonical BOLD response')
 
 ```
 
-```{matlab eval=FALSE, include=FALSE}
-
-kernel = (1./gamma(0.1:0.25:5)) # this Kernel is twice as long
-convolution  = conv(onsets, kernel); 
-figure
-plot(convolution), title('Convolution with temporal summation')
-
-```
-
-\##
+## but
 
 So this basically puts each 10 second kernel at the location where the onset is. There were 11 seconds between onsets, so this is like copy paste, but how about when the kernel is longer than the interval between onsets?
 
-```{python, eval=F}
+```{python, eval=T}
+#| echo: true
+#| code-line-numbers: "1"
+#| output-location: column-fragment
 
 g_f=np.arange(0.1,5.1,0.25)
 kernel = [1./math.gamma(i) for i in g_f] # this Kernel is twice as long
@@ -121,22 +117,19 @@ convolution  = np.convolve(onsets, kernel);
 plt.plot(convolution) #, title('Convolution with temporal summation')
 ```
 
-```{matlab eval=FALSE, include=FALSE}
-
-kernel = (1./gamma(0.1:0.25:5)) # this Kernel is twice as long
-convolution  = conv(onsets, kernel); 
-figure
-plot(convolution), title('Convolution with temporal summation')
-
-```
+## overlaps
 
 When the convolution encounters overlap, then temporal summation results, because convolution is a process of shifting the kernel, multiplying element-wise, and summation to one new value, rinse and repeat. Because of the shifting and summing up portion of the algorithm, if the Kernel spans multiple, similar events, it will show temporal summation.
 
-## 
+## even better...
 
 This is more interesting with variable inter-onset times.
 
-```{python, eval=F}
+```{python, eval=T}
+#| echo: true
+#| code-line-numbers: "1"
+#| output-location: column-fragment
+
 onsets = np.zeros((120,1))
 
 onsets[[3,14,22,36,46,50,66,86,91,106,115],] = 1; #simple case where a stimulus is on every 11 scans
@@ -144,36 +137,26 @@ print(onsets.shape)
 plt.plot(onsets) #, title ('simulated stimulus onsets, every 11 scans')
 ```
 
-```{matlab eval=FALSE, include=FALSE}
+## Now we convolve these onset times with the same kernel
 
-onsets = zeros(1, 120);
-onsets([3 14 22 36 46 50 66 86 91 106 115]) = 1; #simple case where a stimulus is on every 11 scans
-plot(onsets), title ('simulated stimulus onsets, every 11 scans')
-
-```
-
-\##
-
-Now we convolve these onset times with the same kernel
-
-```{python, eval=F}
+```{python, eval=T}
+#| echo: true
+#| code-line-numbers: "1"
+#| output-location: column-fragment
 
 convolution  = np.convolve(onsets.squeeze(), kernel); 
-#figure
 plt.plot(convolution) #, title('Convolution of random ITIs')
-```
-
-```{matlab eval=FALSE, include=FALSE}
-
-convolution  = conv(onsets, kernel); 
-figure
-plot(convolution), title('Convolution of random ITIs')
 
 ```
+
+## what happened?
 
 Longer intervals between onsets prompt complete reduction to baseline, temporal proximity prompts smeared, overlapping events. How about gamma-shaped responses to stimuli that are longer than one image?
 
-```{python, eval=F}
+```{python, eval=T}
+#| echo: true
+#| code-line-numbers: "2,3:5"
+#| output-location: column-fragment
 
 onsets = np.zeros((120,1))
 set0=[3,14,22,36,46,50,66,86,91,106,115];
@@ -191,32 +174,18 @@ plt.plot(onsets) #, title ('simulated stimulus onsets, every 11 scans')
 
 ```
 
-```{matlab eval=FALSE, include=FALSE}
-
-onsets = zeros(1, 120);
-onsets([3 14 22 36 46 50 66 86 91 106 115]) = 1;#simple case where a stimulus is on every 11 scans
-onsets([3 14 22 36 46 50 66 86 91 106 115]+1) = 1;
-onsets([3 14 22 36 46 50 66 86 91 106 115]+2) = 1;
-onsets([3 14 22 36 46 50 66 86 91 106 115]+3) = 1;
-plot(onsets), title ('simulated stimulus onsets, every 11 scans')
-
-```
-
-## 
+## next
 
 Now we convolve these onset times with the same kernel
 
-```{python, eval=F}
+```{python, eval=T}
+#| echo: true
+#| code-line-numbers: "1"
+#| output-location: column-fragment
+
 convolution  = np.convolve(onsets.squeeze(), kernel); 
-#figure
+
 plt.plot(convolution) #, title('Convolution with 4-TR-long events'), ylabel('note the scale')
-```
-
-```{matlab eval=FALSE, include=FALSE}
-
-convolution  = conv(onsets, kernel); 
-figure
-plot(convolution), title('Convolution with 4-TR-long events'), ylabel('note the scale')
 
 ```
 
@@ -224,82 +193,75 @@ plot(convolution), title('Convolution with 4-TR-long events'), ylabel('note the 
 
 And now something completely different
 
-\##
+## Deconvolution
 
 deconvolution is the process where we wish to estimate the Kernel from known data and known event-times. This is a version of the so-called inverse problem , and we solve it with a regression. Let's start with the simulated we we have:
 
-```{python eval=F}
-# for a regression, we need a "design matrix" X
-# X = zeros(length(convolution(1:120)), 20); # we know the convolution and the kernel we used had 20 values
-# temp = onsets';
-# for i=1:20
-# X(:,i) = temp;
-# temp = [0;temp(1:end-1)];
-# end
-# pcolor(X), colormap('gray') #, title('design matrix = predictor variables for each of the 120 scans')
-```
+```{python}
+#| echo: true
+#| code-line-numbers: "|4|7"
+#| output-location: column-fragment
 
-```{matlab eval=FALSE, include=FALSE}
+convolution = np.random.rand(200) # Replace with your own convolution array
+onsets = np.random.rand(120) # Replace with your own onsets array
 
-# for a regression, we need a "design matrix" X
-X = zeros(length(convolution(1:120)), 20); # we know the convolution and the kernel we used had 20 values
-temp = onsets';
-for i=1:20
-X(:,i) = temp;
-temp = [0;temp(1:end-1)];
-end
-pcolor(X), colormap('gray'), title('design matrix = predictor variables for each of the 120 scans')
+X = np.zeros((len(convolution[0:120]), 20))
+temp = onsets.copy()
+
+for i in range(20):
+    X[:, i] = temp
+    temp = np.concatenate(([0], temp[:-1]))
+
+plt.pcolor(X, cmap='gray')
+plt.show()
 
 ```
 
-\##
+##
 
-```{python eval=F}
-# now invert design matrix X
-# PX = pinv(X); size(PX), figure, pcolor(PX), colormap('gray')
-# 
-# # estimate kernel, h
-# h = PX* convolution(1:120)';
+```{python}
+#| echo: true
+#| code-line-numbers: "|1|4,7"
+#| output-location: column-fragment
+
+PX = np.linalg.pinv(X)
+
+plt.pcolor(PX, cmap='gray')
+plt.show()
+
+h = PX @ convolution[0:120].T
 ```
 
-```{matlab eval=FALSE, include=FALSE}
+## 
 
-# now invert design matrix X
-PX = pinv(X); size(PX), figure, pcolor(PX), colormap('gray')
+```{python}
+#| echo: true
+#| code-line-numbers: "|1,12|13,14|16"
+#| output-location: column-fragment
 
-# estimate kernel, h
-h = PX* convolution(1:120)';
 
-```
+def hrf_est(convolution, onsets, n):
+    X = np.zeros((len(convolution[0:120]), n))
+    temp = onsets.copy()
 
-\##
+    for i in range(n):
+        X[:,i] = temp
+        temp = np.concatenate(([0], temp[:-1]))
 
-```{python, eval=F}
+    PX = np.linalg.pinv(X)
+    h = PX @ convolution[0:120].T
+    return h
 
-# and now.... drum roll
-#figure, plot(h), hold on, plot(kernel+0.01)
 
-```
 
-```{matlab eval=FALSE, include=FALSE}
+convolution = np.random.rand(200) # Replace with your own convolution array
+onsets = [3, 14, 22, 36, 46, 50, 66, 86, 91, 106, 115]
 
-# and now.... drum roll
-figure, plot(h), hold on, plot(kernel+0.01)
+#h = hrf_est(convolution[0:120], onsets, 20)
+#plt.plot(h)
+#plt.show()
 
-```
-
-\##
-
-```{python, eval=F}
-# in short:
-#[h] = hrf_est(convolution(1:120)',[3 14 22 36 46 50 66 86 91 106 115], 20); 
-#plot(h)
-```
-
-```{matlab eval=FALSE, include=FALSE}
-
-# in short:
-[h] = hrf_est(convolution(1:120)',[3 14 22 36 46 50 66 86 91 106 115], 20); 
-plot(h)
+convolution
 
 ```
+

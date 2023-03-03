@@ -27,6 +27,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -331,194 +395,309 @@
 </div>
 
 </section>
-<section id="convolution-and-deconvolution-an-illustration" class="slide level2">
-<h2>Convolution and deconvolution: an Illustration</h2>
-<p>This live script visualizes some of the elements of convolution and deconvolution</p>
-<p>1) Convolution: a simple mathematical function that quantifies the similarity between a pattern (a “kernel”) such as the red square wave below with data (the blue rectangularish thingy below). The convolution (black line) reflects how similar the blue signal is with the kernel at any given time point. Convolution is thus used in all of digital signal processing.</p>
-<p>##</p>
+<section>
+<section id="convolution" class="title-slide slide level1 center">
+<h1>Convolution</h1>
+
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li>Convolution: a simple mathematical function that quantifies similarity between a pattern (a “kernel”) such as the red square wave below with data ( blue rectangularish thingy below).</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p>The convolution (black line) reflects how similar the blue signal is with the kernel at any given time point. Convolution is thus used in all of digital signal processing.</p>
+</div>
+</div>
+
+<img data-src="Convolution_of_spiky_function_with_box2.gif" class="r-stretch"></section>
+<section id="section-1" class="slide level2">
+<h2></h2>
 <p>The math is simple. We take the kernel, move it to the first portion of the data by lining it up with the first sample point, then we multiply each element of the kernel with the data, sum the results into one new number and write that to that first sample point.</p>
 </section>
-<section id="convolution-in-signal-generation-and-in-fmri-research." class="slide level2">
+<section id="convolution-in-signal-generation-and-in-fmri-research." class="slide level2 smaller">
 <h2>Convolution in signal generation and in fMRI research.</h2>
 <p>if we want to generate a signal where a certain pattern (the kernel) occurs at certain times, we can use convolution to achieve that. Thus, programs liek SPM use convolution of stimulus timinng info with a lernel that resembles the typical BOLD (fMRI) response as the kernel to generate fake, ideal, fMRI activation for comparison/correlation with the real data:</p>
-<p><code>{matlab eval=FALSE, include=FALSE} #First, make onsets for 120 MR images.  onsets = zeros(1, 120);  onsets(2:11:end) = 1; #simple case where a stimulus is on every 11 scans plot(onsets), title ('simulated stimulus onsets, every 11 scans')</code></p>
-<div class="cell" data-execution_count="2">
+<div class="cell columns column-output-location" data-execution_count="2">
+<div class="column">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>onsets <span class="op">=</span> np.zeros(<span class="dv">120</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>onsets[<span class="dv">1</span>:<span class="dv">11</span>:<span class="dv">1</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>plt.plot(onsets) <span class="co">#, title ('simulated stimulus onsets, every 11 scans')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
 <div class="cell-output cell-output-display">
 <p><img data-src="de_convolution_files/figure-revealjs/cell-3-output-1.png"></p>
 </div>
 </div>
-<p>##</p>
-<p>```{matlab eval=FALSE, include=FALSE} # now we make a kernel # the inverted gamma function is nice because it looks like fMRI in V1 # let’s make one that is 10 scans long kernel = (1./math.gamma(0.1:0.5:5)) figure plt.plot(1./gamma(0.1:0.5:5)), title(‘an inverted gamma kernel, length 10’)</p>
-<pre><code>
-
-::: {.cell execution_count=3}
-
-::: {.cell-output .cell-output-display}
-![](de_convolution_files/figure-revealjs/cell-4-output-1.png){}
-:::
-:::
-
-
-\##
-
-Now we just convolve the onsets with the kernel and plot the result
-
-
-
-```{matlab eval=FALSE, include=FALSE}
-convolution  = conv(onsets, kernel); 
-figure
-plot(convolution), title('onset vector convolved with canonical BOLD response')</code></pre>
-<div class="cell" data-execution_count="4">
+</div>
+</section>
+<section id="make-a-kernel" class="slide level2 smaller">
+<h2>Make a Kernel</h2>
+<ul>
+<li>Now we make a kernel.<br>
+</li>
+<li>the inverted gamma function is nice because it looks like fMRI in V1</li>
+<li>let’s make one that is 10 scans long</li>
+</ul>
+<div class="cell columns column-output-location" data-execution_count="3">
+<div class="column">
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>g_f <span class="op">=</span> np.arange(<span class="fl">0.1</span>,<span class="fl">5.1</span>,<span class="fl">0.5</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>kernel <span class="op">=</span> [<span class="fl">1.</span><span class="op">/</span>math.gamma(i) <span class="cf">for</span> i <span class="kw">in</span> g_f]</span>
+<span id="cb2-3"><a href="#cb2-3"></a>plt.plot(kernel) <span class="co">#, title('an inverted gamma kernel, length 10')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-display">
+<p><img data-src="de_convolution_files/figure-revealjs/cell-4-output-1.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="convolve" class="slide level2">
+<h2>convolve</h2>
+<p>Now we just convolve the onsets with the kernel and plot the result</p>
+<div class="cell columns column-output-location" data-execution_count="4">
+<div class="column">
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>g_f <span class="op">=</span> np.arange(<span class="fl">0.1</span>,<span class="dv">5</span>,<span class="fl">0.5</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>kernel <span class="op">=</span> [<span class="fl">1.</span><span class="op">/</span>math.gamma(i) <span class="cf">for</span> i <span class="kw">in</span> g_f]</span>
+<span id="cb3-3"><a href="#cb3-3"></a>plt.plot(kernel) <span class="co">#, title('an inverted gamma kernel, length 10')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
 <div class="cell-output cell-output-display">
 <p><img data-src="de_convolution_files/figure-revealjs/cell-5-output-1.png"></p>
 </div>
 </div>
+</div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="longer-onsets" class="slide level2">
+<h2>longer onsets</h2>
 <p>So this basically puts each 10 second kernel at the location where the onset is. There were 11 seconds between onsets, so this is like copy paste, but how about when the kernel is longer than the interval between onsets?</p>
-<p>```{matlab eval=FALSE, include=FALSE}</p>
-<p>kernel = (1./gamma(0.1:0.25:5)) # this Kernel is twice as long convolution = conv(onsets, kernel); figure plot(convolution), title(‘Convolution with temporal summation’)</p>
-<pre><code>
-
-::: {.cell execution_count=5}
-
-::: {.cell-output .cell-output-display}
-![](de_convolution_files/figure-revealjs/cell-6-output-1.png){}
-:::
-:::
-
-
-\##
-
-So this basically puts each 10 second kernel at the location where the onset is. There were 11 seconds between onsets, so this is like copy paste, but how about when the kernel is longer than the interval between onsets?
-
-
-
-```{matlab eval=FALSE, include=FALSE}
-
-kernel = (1./gamma(0.1:0.25:5)) # this Kernel is twice as long
-convolution  = conv(onsets, kernel); 
-figure
-plot(convolution), title('Convolution with temporal summation')
-</code></pre>
-
-<img data-src="de_convolution_files/figure-revealjs/cell-7-output-1.png" class="r-stretch"><p>When the convolution encounters overlap, then temporal summation results, because convolution is a process of shifting the kernel, multiplying element-wise, and summation to one new value, rinse and repeat. Because of the shifting and summing up portion of the algorithm, if the Kernel spans multiple, similar events, it will show temporal summation.</p>
+<div class="cell columns column-output-location" data-execution_count="5">
+<div class="column">
+<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>convolution  <span class="op">=</span> np.convolve(onsets, kernel)<span class="op">;</span> </span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>plt.plot(convolution) <span class="co">#, title('onset vector convolved with canonical BOLD response')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-display">
+<p><img data-src="de_convolution_files/figure-revealjs/cell-6-output-1.png"></p>
+</div>
+</div>
+</div>
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="but" class="slide level2">
+<h2>but</h2>
+<p>So this basically puts each 10 second kernel at the location where the onset is. There were 11 seconds between onsets, so this is like copy paste, but how about when the kernel is longer than the interval between onsets?</p>
+<div class="cell columns column-output-location" data-execution_count="6">
+<div class="column">
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>g_f<span class="op">=</span>np.arange(<span class="fl">0.1</span>,<span class="fl">5.1</span>,<span class="fl">0.25</span>)</span>
+<span id="cb5-2"><a href="#cb5-2"></a>kernel <span class="op">=</span> [<span class="fl">1.</span><span class="op">/</span>math.gamma(i) <span class="cf">for</span> i <span class="kw">in</span> g_f] <span class="co"># this Kernel is twice as long</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a>convolution  <span class="op">=</span> np.convolve(onsets, kernel)<span class="op">;</span> </span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co">#figure</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a>plt.plot(convolution) <span class="co">#, title('Convolution with temporal summation')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-display">
+<p><img data-src="de_convolution_files/figure-revealjs/cell-7-output-1.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="overlaps" class="slide level2">
+<h2>overlaps</h2>
+<p>When the convolution encounters overlap, then temporal summation results, because convolution is a process of shifting the kernel, multiplying element-wise, and summation to one new value, rinse and repeat. Because of the shifting and summing up portion of the algorithm, if the Kernel spans multiple, similar events, it will show temporal summation.</p>
+</section>
+<section id="even-better" class="slide level2">
+<h2>even better…</h2>
 <p>This is more interesting with variable inter-onset times.</p>
-<p>```{matlab eval=FALSE, include=FALSE}</p>
-<p>onsets = zeros(1, 120); onsets([3 14 22 36 46 50 66 86 91 106 115]) = 1; #simple case where a stimulus is on every 11 scans plot(onsets), title (‘simulated stimulus onsets, every 11 scans’)</p>
-<pre><code>
-
-::: {.cell execution_count=7}
-
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>(120, 1)</p>
-<pre><code>:::
-
-::: {.cell-output .cell-output-display}
-![](de_convolution_files/figure-revealjs/cell-8-output-2.png){}
-:::
-:::
-
-
-\##
-
-Now we convolve these onset times with the same kernel
-
-
-
-```{matlab eval=FALSE, include=FALSE}
-
-convolution  = conv(onsets, kernel); 
-figure
-plot(convolution), title('Convolution of random ITIs')
-</code></pre>
-<div class="cell" data-execution_count="8">
+<div class="cell columns column-output-location" data-execution_count="7">
+<div class="column">
+<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>onsets <span class="op">=</span> np.zeros((<span class="dv">120</span>,<span class="dv">1</span>))</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a>onsets[[<span class="dv">3</span>,<span class="dv">14</span>,<span class="dv">22</span>,<span class="dv">36</span>,<span class="dv">46</span>,<span class="dv">50</span>,<span class="dv">66</span>,<span class="dv">86</span>,<span class="dv">91</span>,<span class="dv">106</span>,<span class="dv">115</span>],] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> <span class="co">#simple case where a stimulus is on every 11 scans</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="bu">print</span>(onsets.shape)</span>
+<span id="cb6-5"><a href="#cb6-5"></a>plt.plot(onsets) <span class="co">#, title ('simulated stimulus onsets, every 11 scans')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code>(120, 1)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img data-src="de_convolution_files/figure-revealjs/cell-8-output-2.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="now-we-convolve-these-onset-times-with-the-same-kernel" class="slide level2">
+<h2>Now we convolve these onset times with the same kernel</h2>
+<div class="cell columns column-output-location" data-execution_count="8">
+<div class="column">
+<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>convolution  <span class="op">=</span> np.convolve(onsets.squeeze(), kernel)<span class="op">;</span> </span>
+<span id="cb8-2"><a href="#cb8-2"></a>plt.plot(convolution) <span class="co">#, title('Convolution of random ITIs')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
 <div class="cell-output cell-output-display">
 <p><img data-src="de_convolution_files/figure-revealjs/cell-9-output-1.png"></p>
 </div>
 </div>
+</div>
+</section>
+<section id="what-happened" class="slide level2">
+<h2>what happened?</h2>
 <p>Longer intervals between onsets prompt complete reduction to baseline, temporal proximity prompts smeared, overlapping events. How about gamma-shaped responses to stimuli that are longer than one image?</p>
-<p>```{matlab eval=FALSE, include=FALSE}</p>
-<p>onsets = zeros(1, 120); onsets([3 14 22 36 46 50 66 86 91 106 115]) = 1;#simple case where a stimulus is on every 11 scans onsets([3 14 22 36 46 50 66 86 91 106 115]+1) = 1; onsets([3 14 22 36 46 50 66 86 91 106 115]+2) = 1; onsets([3 14 22 36 46 50 66 86 91 106 115]+3) = 1; plot(onsets), title (‘simulated stimulus onsets, every 11 scans’)</p>
-<pre><code>
-
-::: {.cell execution_count=9}
-
-::: {.cell-output .cell-output-display}
-![](de_convolution_files/figure-revealjs/cell-10-output-1.png){}
-:::
-:::
-
-
-## 
-
-Now we convolve these onset times with the same kernel
-
-
-
-```{matlab eval=FALSE, include=FALSE}
-
-convolution  = conv(onsets, kernel); 
-figure
-plot(convolution), title('Convolution with 4-TR-long events'), ylabel('note the scale')
-</code></pre>
-<div class="cell" data-execution_count="10">
+<div class="cell columns column-output-location" data-execution_count="9">
+<div class="column">
+<div class="sourceCode cell-code" id="cb9" data-code-line-numbers="2,3:5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>onsets <span class="op">=</span> np.zeros((<span class="dv">120</span>,<span class="dv">1</span>))</span>
+<span id="cb9-2"><a href="#cb9-2"></a>set0<span class="op">=</span>[<span class="dv">3</span>,<span class="dv">14</span>,<span class="dv">22</span>,<span class="dv">36</span>,<span class="dv">46</span>,<span class="dv">50</span>,<span class="dv">66</span>,<span class="dv">86</span>,<span class="dv">91</span>,<span class="dv">106</span>,<span class="dv">115</span>]<span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>set1<span class="op">=</span>[i<span class="op">+</span><span class="dv">1</span> <span class="cf">for</span> i <span class="kw">in</span> set0]</span>
+<span id="cb9-4"><a href="#cb9-4"></a>set2<span class="op">=</span>[i<span class="op">+</span><span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> set0]</span>
+<span id="cb9-5"><a href="#cb9-5"></a>set3<span class="op">=</span>[i<span class="op">+</span><span class="dv">3</span> <span class="cf">for</span> i <span class="kw">in</span> set0]</span>
+<span id="cb9-6"><a href="#cb9-6"></a>onsets[set0,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> <span class="co">#simple case where a stimulus is on every 11 scans</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>onsets[set1,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a></span>
+<span id="cb9-9"><a href="#cb9-9"></a>onsets[set2,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span><span class="co">#simple case where a stimulus is on every 11 scans</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>onsets[set3,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a><span class="co">##onsets[[3, 14, 22, 36, 46, 50, 66, 86, 91, 106, 115]+2,] = 1;</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="co">#onsets[[3, 14, 22, 36, 46, 50, 66, 86, 91, 106, 115]+3,] = 1;</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a>plt.plot(onsets) <span class="co">#, title ('simulated stimulus onsets, every 11 scans')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-display">
+<p><img data-src="de_convolution_files/figure-revealjs/cell-10-output-1.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="next" class="slide level2">
+<h2>next</h2>
+<p>Now we convolve these onset times with the same kernel</p>
+<div class="cell columns column-output-location" data-execution_count="10">
+<div class="column">
+<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>convolution  <span class="op">=</span> np.convolve(onsets.squeeze(), kernel)<span class="op">;</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a>plt.plot(convolution) <span class="co">#, title('Convolution with 4-TR-long events'), ylabel('note the scale')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
 <div class="cell-output cell-output-display">
 <p><img data-src="de_convolution_files/figure-revealjs/cell-11-output-1.png"></p>
 </div>
 </div>
-</section>
+</div>
+</section></section>
+<section>
 <section id="deconvolution" class="title-slide slide level1 center">
 <h1>Deconvolution</h1>
 <p>And now something completely different</p>
-<p>##</p>
+</section>
+<section id="deconvolution-1" class="slide level2">
+<h2>Deconvolution</h2>
 <p>deconvolution is the process where we wish to estimate the Kernel from known data and known event-times. This is a version of the so-called inverse problem , and we solve it with a regression. Let’s start with the simulated we we have:</p>
-<p>```{matlab eval=FALSE, include=FALSE}</p>
+<div class="cell columns column-output-location" data-execution_count="11">
+<div class="column">
+<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="|4|7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>convolution <span class="op">=</span> np.random.rand(<span class="dv">200</span>) <span class="co"># Replace with your own convolution array</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>onsets <span class="op">=</span> np.random.rand(<span class="dv">120</span>) <span class="co"># Replace with your own onsets array</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a></span>
+<span id="cb11-4"><a href="#cb11-4"></a>X <span class="op">=</span> np.zeros((<span class="bu">len</span>(convolution[<span class="dv">0</span>:<span class="dv">120</span>]), <span class="dv">20</span>))</span>
+<span id="cb11-5"><a href="#cb11-5"></a>temp <span class="op">=</span> onsets.copy()</span>
+<span id="cb11-6"><a href="#cb11-6"></a></span>
+<span id="cb11-7"><a href="#cb11-7"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
+<span id="cb11-8"><a href="#cb11-8"></a>    X[:, i] <span class="op">=</span> temp</span>
+<span id="cb11-9"><a href="#cb11-9"></a>    temp <span class="op">=</span> np.concatenate(([<span class="dv">0</span>], temp[:<span class="op">-</span><span class="dv">1</span>]))</span>
+<span id="cb11-10"><a href="#cb11-10"></a></span>
+<span id="cb11-11"><a href="#cb11-11"></a>plt.pcolor(X, cmap<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb11-12"><a href="#cb11-12"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-display">
+<p><img data-src="de_convolution_files/figure-revealjs/cell-12-output-1.png"></p>
+</div>
+</div>
+</div>
 </section>
-
-<section id="for-a-regression-we-need-a-design-matrix-x" class="title-slide slide level1 center">
-<h1>for a regression, we need a “design matrix” X</h1>
-<p>X = zeros(length(convolution(1:120)), 20); # we know the convolution and the kernel we used had 20 values temp = onsets’; for i=1:20 X(:,i) = temp; temp = [0;temp(1:end-1)]; end pcolor(X), colormap(‘gray’), title(‘design matrix = predictor variables for each of the 120 scans’)</p>
-<pre><code>
-
-
-
-\##
-
-
-
-```{matlab eval=FALSE, include=FALSE}
-
-# now invert design matrix X
-PX = pinv(X); size(PX), figure, pcolor(PX), colormap('gray')
-
-# estimate kernel, h
-h = PX* convolution(1:120)';
-</code></pre>
-<p>##</p>
-<p>```{matlab eval=FALSE, include=FALSE}</p>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="cell columns column-output-location" data-execution_count="12">
+<div class="column">
+<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="|1|4,7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>PX <span class="op">=</span> np.linalg.pinv(X)</span>
+<span id="cb12-2"><a href="#cb12-2"></a></span>
+<span id="cb12-3"><a href="#cb12-3"></a>plt.pcolor(PX, cmap<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb12-4"><a href="#cb12-4"></a>plt.show()</span>
+<span id="cb12-5"><a href="#cb12-5"></a></span>
+<span id="cb12-6"><a href="#cb12-6"></a>h <span class="op">=</span> PX <span class="op">@</span> convolution[<span class="dv">0</span>:<span class="dv">120</span>].T</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-display">
+<p><img data-src="de_convolution_files/figure-revealjs/cell-13-output-1.png"></p>
+</div>
+</div>
+</div>
 </section>
-
-<section id="and-now.-drum-roll" class="title-slide slide level1 center">
-<h1>and now…. drum roll</h1>
-<p>figure, plot(h), hold on, plot(kernel+0.01)</p>
-<pre><code>
-```{matlab eval=FALSE, include=FALSE}
-
-# in short:
-[h] = hrf_est(convolution(1:120)',[3 14 22 36 46 50 66 86 91 106 115], 20); 
-plot(h)
-</code></pre>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<div class="cell columns column-output-location" data-execution_count="13">
+<div class="column">
+<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="|1,12|13,14|16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">def</span> hrf_est(convolution, onsets, n):</span>
+<span id="cb13-2"><a href="#cb13-2"></a>    X <span class="op">=</span> np.zeros((<span class="bu">len</span>(convolution[<span class="dv">0</span>:<span class="dv">120</span>]), n))</span>
+<span id="cb13-3"><a href="#cb13-3"></a>    temp <span class="op">=</span> onsets.copy()</span>
+<span id="cb13-4"><a href="#cb13-4"></a></span>
+<span id="cb13-5"><a href="#cb13-5"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb13-6"><a href="#cb13-6"></a>        X[:,i] <span class="op">=</span> temp</span>
+<span id="cb13-7"><a href="#cb13-7"></a>        temp <span class="op">=</span> np.concatenate(([<span class="dv">0</span>], temp[:<span class="op">-</span><span class="dv">1</span>]))</span>
+<span id="cb13-8"><a href="#cb13-8"></a></span>
+<span id="cb13-9"><a href="#cb13-9"></a>    PX <span class="op">=</span> np.linalg.pinv(X)</span>
+<span id="cb13-10"><a href="#cb13-10"></a>    h <span class="op">=</span> PX <span class="op">@</span> convolution[<span class="dv">0</span>:<span class="dv">120</span>].T</span>
+<span id="cb13-11"><a href="#cb13-11"></a>    <span class="cf">return</span> h</span>
+<span id="cb13-12"><a href="#cb13-12"></a></span>
+<span id="cb13-13"><a href="#cb13-13"></a></span>
+<span id="cb13-14"><a href="#cb13-14"></a></span>
+<span id="cb13-15"><a href="#cb13-15"></a>convolution <span class="op">=</span> np.random.rand(<span class="dv">200</span>) <span class="co"># Replace with your own convolution array</span></span>
+<span id="cb13-16"><a href="#cb13-16"></a>onsets <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">14</span>, <span class="dv">22</span>, <span class="dv">36</span>, <span class="dv">46</span>, <span class="dv">50</span>, <span class="dv">66</span>, <span class="dv">86</span>, <span class="dv">91</span>, <span class="dv">106</span>, <span class="dv">115</span>]</span>
+<span id="cb13-17"><a href="#cb13-17"></a></span>
+<span id="cb13-18"><a href="#cb13-18"></a><span class="co">#h = hrf_est(convolution[0:120], onsets, 20)</span></span>
+<span id="cb13-19"><a href="#cb13-19"></a><span class="co">#plt.plot(h)</span></span>
+<span id="cb13-20"><a href="#cb13-20"></a><span class="co">#plt.show()</span></span>
+<span id="cb13-21"><a href="#cb13-21"></a></span>
+<span id="cb13-22"><a href="#cb13-22"></a>convolution</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column fragment">
+<div class="cell-output cell-output-display" data-execution_count="78">
+<pre><code>array([0.31227047, 0.36725147, 0.04546227, 0.29136701, 0.75669452,
+       0.83290832, 0.35230937, 0.54105786, 0.16585391, 0.66803938,
+       0.59425868, 0.63948631, 0.79238452, 0.14647065, 0.18061537,
+       0.31456455, 0.26432539, 0.56629418, 0.71908877, 0.94441091,
+       0.01066684, 0.74441634, 0.53329193, 0.58100922, 0.28378334,
+       0.43038581, 0.59274404, 0.89326843, 0.37613119, 0.77526318,
+       0.40095181, 0.42837237, 0.76914332, 0.31723337, 0.69719955,
+       0.27794189, 0.64231581, 0.92578632, 0.16053705, 0.12940832,
+       0.28438306, 0.30516971, 0.91527627, 0.58075876, 0.0946737 ,
+       0.34849297, 0.85348843, 0.71620109, 0.52943011, 0.22438643,
+       0.0729463 , 0.12282209, 0.82416547, 0.46070593, 0.78433174,
+       0.87452207, 0.97068198, 0.78792151, 0.00261335, 0.76697835,
+       0.0610818 , 0.29385921, 0.80273433, 0.54506379, 0.86265396,
+       0.75454474, 0.7331248 , 0.85248399, 0.17823089, 0.00697547,
+       0.87332971, 0.5595396 , 0.92084491, 0.65820944, 0.91621235,
+       0.28900258, 0.95538776, 0.7446877 , 0.83351571, 0.16638416,
+       0.94230616, 0.9936886 , 0.15789909, 0.94715418, 0.9304468 ,
+       0.01501098, 0.88778955, 0.16947719, 0.92895629, 0.06036035,
+       0.87098292, 0.02179634, 0.3370194 , 0.80931652, 0.93097995,
+       0.05554652, 0.88663127, 0.18159799, 0.43124087, 0.74516713,
+       0.38935134, 0.11838899, 0.59816772, 0.9983227 , 0.80549776,
+       0.3755286 , 0.90510259, 0.40587136, 0.7610456 , 0.88086105,
+       0.95817381, 0.52652362, 0.20499371, 0.7930317 , 0.22612199,
+       0.69113388, 0.97722706, 0.28460429, 0.52635987, 0.48620151,
+       0.59534548, 0.51849022, 0.93661541, 0.96345042, 0.36246253,
+       0.0065225 , 0.84959676, 0.1935243 , 0.58025956, 0.76602593,
+       0.37712614, 0.84527618, 0.75608741, 0.41394046, 0.65671363,
+       0.21284784, 0.97746669, 0.80359468, 0.92178055, 0.55294849,
+       0.34398651, 0.19998217, 0.21155965, 0.1996093 , 0.9357094 ,
+       0.56122344, 0.53022708, 0.56951252, 0.10565044, 0.21872289,
+       0.97359389, 0.61288618, 0.92660408, 0.15725184, 0.38883257,
+       0.54473583, 0.03468674, 0.04499831, 0.6849714 , 0.06874274,
+       0.32244816, 0.80765523, 0.09835448, 0.04515715, 0.47092856,
+       0.45609111, 0.94598719, 0.83792575, 0.78585328, 0.25604461,
+       0.59705495, 0.03000192, 0.95400304, 0.19407581, 0.8169776 ,
+       0.77641489, 0.40372059, 0.81589827, 0.56117137, 0.56969666,
+       0.23596599, 0.30276232, 0.19068385, 0.63456702, 0.93952322,
+       0.43166334, 0.2327397 , 0.08006256, 0.07014018, 0.03861886,
+       0.17699282, 0.50955889, 0.61827258, 0.86253192, 0.54388359,
+       0.20989386, 0.76734762, 0.61337884, 0.43611847, 0.19454191])</code></pre>
+</div>
+</div>
+</div>
 
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
