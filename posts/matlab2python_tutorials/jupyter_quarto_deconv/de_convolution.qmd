@@ -239,29 +239,28 @@ h = PX @ convolution[0:120].T
 #| code-line-numbers: "|1,12|13,14|16"
 #| output-location: column-fragment
 
-
-def hrf_est(convolution, onsets, n):
-    X = np.zeros((len(convolution[0:120]), n))
-    temp = onsets.copy()
-
-    for i in range(n):
-        X[:,i] = temp
-        temp = np.concatenate(([0], temp[:-1]))
-
-    PX = np.linalg.pinv(X)
-    h = PX @ convolution[0:120].T
-    return h
-
-
-
 convolution = np.random.rand(200) # Replace with your own convolution array
 onsets = [3, 14, 22, 36, 46, 50, 66, 86, 91, 106, 115]
 
+### WHAT IS hrf_est()? ###
 #h = hrf_est(convolution[0:120], onsets, 20)
+
+# COULD IT BE?
+
+# def hrf_est(convolution, onsets, n):
+#     X = np.zeros(((convolution).,n))
+#     temp = onsets.copy()
+# 
+#     for i in range(n):
+#         X[:,i] = temp
+#         temp = np.concatenate(([0], temp[:-1]))
+# 
+#     PX = np.linalg.pinv(X)
+#     h = PX @ convolution[0:120].T
+#     return h
+
 #plt.plot(h)
 #plt.show()
-
-convolution
 
 ```
 
