@@ -1,8 +1,8 @@
 ---
-title: "Post template"
-author: "RPM"
-date: "2023-02-28"
+title: "My Wiki Document"
+author: Alison Ryan
+description: My trial wiki doc
+date: 2023-03-07
+categories: test
 draft: true
 ---
-
-This is a test post.
