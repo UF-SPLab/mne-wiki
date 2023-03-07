@@ -13,5 +13,6 @@ draft: true
 ##Quarto
 
 ##Creating a Folder
+![This is how to start a post.](make-github-blogpost.gif)
 
 ##Imbedding Code
