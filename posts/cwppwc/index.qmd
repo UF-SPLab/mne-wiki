@@ -1,13 +1,13 @@
 ---
 title: "Posting Wiki Content"
-author:
+author: 
 description: 
 date: `
 categories:
 draft: true
 ---
 ##Converting Markdown
-
+Markdown is a markup coding language that can be used to convert content written in a plain-text format into HTML. 
 ##Importance of YAML
 
 ##Quarto
