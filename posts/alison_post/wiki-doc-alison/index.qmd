@@ -2,5 +2,5 @@
 title: "My Wiki Document"
 author: "AMR"
 date: "2023-03-07"
-draft: true
+draft: false
 ---
