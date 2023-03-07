@@ -8,7 +8,7 @@ categories:
 ## Converting Markdown Syntax
 Markdown is a markup coding language that can be used to convert content written in a plain-text format into HTML. It can be used on Github to make easy to read webpages: like the one you're reading now!
 
-### Starting you Article in Markdown
+### Starting Your Article in Markdown
 The first thing you should do when creating any article is filling out the most basic information:
 `
 ---
@@ -46,6 +46,7 @@ Its also possible to inbed code directly into the text - but we'll be going over
 ## Quarto
 
 ## Creating a Folder
+In order to create an article, you first have to create a folder in which you will create an index.qmd file. The index.qmd file is where you will be writing in Markdown to create your article. The process of folder creation is depicted in the gif below.
 ![This is how to start a post.](make-github-blogpost.gif)
 
 ## Imbedding Code
