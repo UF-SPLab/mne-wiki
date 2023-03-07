@@ -1,8 +1,0 @@
----
-title: "MNE Walkthrough"
-author:
-description: 
-date:
-categories:
-draft: true
----
