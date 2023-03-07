@@ -6,19 +6,19 @@ date: Mar 7, 2023
 categories:
 draft: false
 ---
-#NEO/MNE: Evoked potentials & frequency analysis: medial prefrontal cortex 
-##Ketamine and haloperidol differentially influence auditory inhibitory gating, beta and gamma activity in rat medial prefrontal cortex 
-###Authors: (presenting italicized)
-###*Neven McBay*, *Amanda Rodriguez*, Isabella Fleites?, Sabrina Agic?, Hannah Engle?, Casey Cromwell, and Ryan Mears
+# NEO/MNE: Evoked potentials & frequency analysis: medial prefrontal cortex 
+## Ketamine and haloperidol differentially influence auditory inhibitory gating, beta and gamma activity in rat medial prefrontal cortex 
+### Authors: (presenting italicized)
+### *Neven McBay*, *Amanda Rodriguez*, Isabella Fleites?, Sabrina Agic?, Hannah Engle?, Casey Cromwell, and Ryan Mears
 
-####Background
+#### Background
 Subanesthetic ketamine is a rapid and effective treatment for depression in individuals who have not responded to other treatments.  Several lines of evidence demonstrate initial effects of ketamine in anterior cingulate/medial prefrontal cortex. Nonetheless, well-established, harmful effects of ketamine include dissociation, psychosis, and dependency with increasing dose and chronicity.
 
-####Methods
+#### Methods
 In this reproducible and open analysis pipeline the effects of sub-anesthetic doses of ketamine on auditory SG and spontaneous gamma in rats were investigated. Data for this computational study were previously collected at another institution where Sprague Dawley rats were injected (i.m.) in a multi-baseline (saline), counterbalanced alternating-treatments design of haloperidol (1 mg/kg), ketamine, and ketamine co-administered with haloperidol. The subanesthetic ketamine was administered between subjects in cohorts of 20 mg/kg, n=4 or 60 mg/kg, n=4. After initial surgery to implant microwire arrays bilaterally in medial prefrontal cortex, local field potentials were recorded in freely behaving animals. As computational reproducibility intermediate data and all code from this analysis pipeline is available including, pre-processing, data visualizations, and inferential statistics.
  
-####Results
+#### Results
 Ketamine reduced SG and increased the amplitude of baseline gamma-band activity in medial prefrontal cortex (mPFC) for both ketamine doses. Co-administration of the antipsychotic drug, haloperidol, partly reversed the reduction of SG in mPFC and partially reduced the observed increase of spontaneous beta and gamma band activity. Additionally, an increase of beta-band spontaneous activity occurred for the higher dose of ketamine (60 mg/kg), but not the lower dose. Co-administered ketamine and haloperidol blocked the increase of beta-band power for the high dose.  
 
-####Conclusions
+#### Conclusions
 These findings suggest that the observed increase in gamma power at each site was potentially mediated by a local circuit mechanism, and that evoked potentials related to SG in mPFC and spontaneous intrinsic beta rhythm might be independently modulated from gamma rhythm. Consistent with these multi-neurotransmitter and receptor findings, the rapid antidepressant action of ketamine appears to arise from effects secondary and subsequent to the NMDA antagonist site of action.
