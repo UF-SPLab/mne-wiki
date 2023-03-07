@@ -8,8 +8,8 @@ draft: false
 ---
 #NEO/MNE: Evoked potentials & frequency analysis: medial prefrontal cortex 
 ##Ketamine and haloperidol differentially influence auditory inhibitory gating, beta and gamma activity in rat medial prefrontal cortex 
-###Authors: (presenting *)
-###Neven McBay*, Amanda Rodriguez*, Isabella Fleites?, Sabrina Agic?, Hannah Engle?, Casey Cromwell, and Ryan Mears
+###Authors: (presenting italicized)
+###*Neven McBay*, *Amanda Rodriguez*, Isabella Fleites?, Sabrina Agic?, Hannah Engle?, Casey Cromwell, and Ryan Mears
 
 ####Background
 Subanesthetic ketamine is a rapid and effective treatment for depression in individuals who have not responded to other treatments.  Several lines of evidence demonstrate initial effects of ketamine in anterior cingulate/medial prefrontal cortex. Nonetheless, well-established, harmful effects of ketamine include dissociation, psychosis, and dependency with increasing dose and chronicity.
