@@ -1,0 +1,13 @@
+---
+title: "Collaborative Teaching"
+author: "R Mears"
+date: "2023-03-21"
+categories: [news,documentation]
+draft: true
+---
+
+Items: 
+- using ChatGPT to explain code
+- [ChatGPT](https://chat.openai.com/chat#)
+- [OpenAI API: Code](https://platform.openai.com/examples?category=code)
+
