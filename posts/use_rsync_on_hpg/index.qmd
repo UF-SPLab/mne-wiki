@@ -1,8 +1,8 @@
 ---
 title: "Post template"
 author: "RPM"
-date: "2022-06-01"
-draft: true
+date: "2023-03-29"
+draft: false
 ---
 
 A better way is to copy all the files from the "psy4911/share" folder to your HiPerGator (HPG) folder.
@@ -25,8 +25,8 @@ Required python packages:
 - MNE
    - [MNE Tutorial: importing data from NEO](https://mne.tools/stable/auto_examples/io/read_neo_format.html#sphx-glr-auto-examples-io-read-neo-format-py)
 
-
 Code for the file conversion:
 
 The main thing is that it takes 15 minutes per file on hipergator (HPG) when it's set up like a laptop computer. When you configure HPG to run your jupter notebook in high-performance mode, it takes only a minute or two per file. So, what would take 5 hours for 20 files, ends up taking only a half hour. 
+
 An even bigger savings comes when doing machine learning / AI with deeplabcut on HPG.

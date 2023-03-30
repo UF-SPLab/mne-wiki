@@ -1,10 +1,10 @@
 ---
 title: "Posting Wiki Content"
-author: Isabella Fleites
-description: 
-date: March 7, 2023
-categories:
+author: "Isabella Fleites"
+date: "March 7, 2023"
+draft: true
 ---
+
 ## Converting Markdown Syntax
 Markdown is a markup coding language that can be used to convert content written in a plain-text format into HTML. It can be used on Github to make easy to read webpages: like the one you're reading now!
 

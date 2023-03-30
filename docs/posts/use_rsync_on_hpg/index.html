@@ -6,11 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Isabella Fleites">
-<meta name="dcterms.date" content="2023-02-23">
-<meta name="description" content="its cool i swear">
+<meta name="author" content="RPM">
+<meta name="dcterms.date" content="2023-03-29">
 
-<title>UF-Open-Science-Wiki - hey check this out</title>
+<title>UF-Open-Science-Wiki - Post template</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -104,13 +103,8 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">hey check this out</h1>
-                  <div>
-        <div class="description">
-          its cool i swear
-        </div>
-      </div>
-                </div>
+      <h1 class="title">Post template</h1>
+                      </div>
   </div>
     
   
@@ -119,14 +113,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Isabella Fleites </p>
+               <p>RPM </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 23, 2023</p>
+        <p class="date">March 29, 2023</p>
       </div>
     </div>
     
@@ -137,23 +131,24 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">cool science stuff</a> <img src="mrsuperhero.jpeg" class="img-fluid"></p>
+<p>A better way is to copy all the files from the “psy4911/share” folder to your HiPerGator (HPG) folder. The rsync command for moving files between directories on HPG is described here. <a href="https://help.rc.ufl.edu/doc/Rsync#Copying_files_between_directories">Copying_files_between_directories with rsync</a> You will want to go to the shared folder on HPG first and open a terminal (see button outlined green in the schreenshot below). <img src="copydir.png" class="img-fluid" alt="ephys folders to copy from shared folder to your own folder"></p>
+<p>Then if you copy and paste these commands into terminal it will do the work for you: <code>rsync -av /blue/psy4911/share/ket_ephys/ket_annot /blue/psy4911/</code><em>yourusername</em><code>/ket_ephys/</code> <code>rsync -av /blue/psy4911/share/ket_ephys/ket_annot_segs /blue/psy4911/</code><em>yourusername</em><code>/ket_ephys/</code> <code>rsync -av /blue/psy4911/share/ket_ephys/hi-ket /blue/psy4911/</code><em>yourusername</em><code>/ket_ephys/</code></p>
+<p>For the files in the hi-ket folder there’s another script (and a package named NEO ) that’s required to convert them from .plx files to .fif files.</p>
+<p>Required python packages: - NEO - <a href="https://github.com/NeuralEnsemble/python-neo">NEO repo</a> - <a href="https://neo.readthedocs.io/en/latest/">NEO documentation</a> - MNE - <a href="https://mne.tools/stable/auto_examples/io/read_neo_format.html#sphx-glr-auto-examples-io-read-neo-format-py">MNE Tutorial: importing data from NEO</a></p>
+<p>Code for the file conversion:</p>
+<p>The main thing is that it takes 15 minutes per file on hipergator (HPG) when it’s set up like a laptop computer. When you configure HPG to run your jupter notebook in high-performance mode, it takes only a minute or two per file. So, what would take 5 hours for 20 files, ends up taking only a half hour.</p>
+<p>An even bigger savings comes when doing machine learning / AI with deeplabcut on HPG.</p>
 
 
 
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><a href="https://knowyourmeme.com/memes/rickroll"><strong>Related information</strong></a></p>
-</div></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
