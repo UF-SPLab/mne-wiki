@@ -2,7 +2,7 @@
 title: "MNE-Python: EEG"
 description: "Introduction to Analysis Pipelines for EEG"
 author: "R Mears"
-categories: [Python, code, pipeline, workflow, MNE, EEG, slides]
+categories: [Python, code, pipeline, workflow, MNE, EEG, slides, tutorial]
 date: "6/22/2022"
 ---
 

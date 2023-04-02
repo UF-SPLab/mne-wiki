@@ -2,7 +2,7 @@
 title: "R-tour in 6 pages"
 description: "Introduction to Using R and Tidyverse"
 author: "R Mears"
-categories: [R, code, data wrangling, slides]
+categories: [R, code, data wrangling, slides, tutorial]
 date: "7/18/2022"
 ---
 

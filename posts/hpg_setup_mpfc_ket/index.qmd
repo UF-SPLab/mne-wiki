@@ -2,7 +2,7 @@
 title: "Setup HiPerGator for DeepLabCut"
 description: "Tips to setup your account so that you can use DeepLabCut"
 author: "R Mears"
-categories: [Python, code, AI]
+categories: [Python, code, AI, tutorial]
 date: "10/24/2022"
 ---
 ![](hpgai.png)  

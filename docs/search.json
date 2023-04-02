@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "posts/cwppwc/index.html",
+    "href": "posts/cwppwc/index.html",
+    "title": "Posting Wiki Content",
+    "section": "",
+    "text": "Markdown is a markup coding language that can be used to convert content written in a plain-text format into HTML. It can be used on Github to make easy to read webpages: like the one you’re reading now!\n\n\nThe first thing you should do when creating any article is filling out the most basic information:\n\n\n\n```{yaml, eval=false}\n\n\n\n\ntitle: “Write the title of your article in quotes”\n\n\nauthor: your name goes here!\n\n\ndescription: what is your article about? briefly summarize it\n\n\ndate: write the date that you publish your article\n\n\n\n```\nAs shown above, you are always going to put these four basic pieces of information between a pair of three dashes. While the title, author, description, and date are always going to be in the section, you also have the option to add categories to this section: categories: [put your category names in a pair of brackets, seperate each category with a comma] Categories allow us to organize the articles on this wiki by topic. When you open the wiki, you will see a list of categories on the right-hand side. When you click on a category, you will be able to see any of the articles tagged with that specific category in the manner depicted above.\n\n\n\nIn addition to setting up important information about your article, markdown can be used to format your main body of text in a number of ways…\nYou can create a header by using a pound sign: # Heading\nYou can make a subheading, a sub-subheading, and onwards just by adding more pound signs: ## Subheading ### Sub-subheading\nYou can italicize or bold a sentence using asterisks: *This sentence is italicized* **This sentence is bolded**\nLinks and images can be inbedded like so: !(text)[link]\nIts also possible to inbed code directly into the text - but we’ll be going over that later."
+  },
+  {
+    "objectID": "posts/cwppwc/index.html#importance-of-yaml",
+    "href": "posts/cwppwc/index.html#importance-of-yaml",
+    "title": "Posting Wiki Content",
+    "section": "Importance of YAML",
+    "text": "Importance of YAML"
+  },
+  {
+    "objectID": "posts/cwppwc/index.html#quarto",
+    "href": "posts/cwppwc/index.html#quarto",
+    "title": "Posting Wiki Content",
+    "section": "Quarto",
+    "text": "Quarto"
+  },
+  {
+    "objectID": "posts/cwppwc/index.html#creating-a-folder",
+    "href": "posts/cwppwc/index.html#creating-a-folder",
+    "title": "Posting Wiki Content",
+    "section": "Creating a Folder",
+    "text": "Creating a Folder\nIn order to create an article, you first have to create a folder in which you will create an index.qmd file. The index.qmd file is where you will be writing in Markdown to create your article. The process of folder creation is depicted in the gif below."
+  },
+  {
+    "objectID": "posts/cwppwc/index.html#embedding-code",
+    "href": "posts/cwppwc/index.html#embedding-code",
+    "title": "Posting Wiki Content",
+    "section": "Embedding Code",
+    "text": "Embedding Code"
+  },
+  {
     "objectID": "posts/why-code/index.html",
     "href": "posts/why-code/index.html",
     "title": "Why Code?",
@@ -326,7 +361,7 @@
     "href": "index.html",
     "title": "UF-Open-Science-Wiki",
     "section": "",
-    "text": "Convolution and deconvolution: an Illustration\n\n\nThis Jupyter notebook in a Quarto slideshow is translated from a Matlab LiveScript. The code visualizes some of the elements of convolution and deconvolution\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\nStudent-Directed Research\n\n\n\n\n\n\n\n\n\n\n\n\nMar 29, 2023\n\n\nbot\n\n\n\n\n\n\n  \n\n\n\n\nPost template\n\n\n\n\n\n\n\n\n\n\n\n\nMar 29, 2023\n\n\nRPM\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Science: Best Practices for Repos\n\n\n\n\n\n\n\n\n\n\n\n\nMar 29, 2023\n\n\nbot\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy Wiki Document\n\n\n\n\n\nMy trial wiki doc\n\n\n\n\n\n\nMar 7, 2023\n\n\nAlison Ryan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMNE Abstract\n\n\n\n\n\n\n\n\n\n\n\n\nMar 7, 2023\n\n\nIsabella Fleites\n\n\n\n\n\n\n  \n\n\n\n\nHow to make a wiki document.\n\n\n\n\n\n\n\n\n\n\n\n\nMar 1, 2023\n\n\nRPM\n\n\n\n\n\n\n  \n\n\n\n\nhey check this out\n\n\n\n\n\nits cool i swear\n\n\n\n\n\n\nFeb 23, 2023\n\n\nIsabella Fleites\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSharing Customized Python Environments\n\n\n\n\n\n\n\n\n\n\n\n\nDec 30, 2022\n\n\nRPM\n\n\n\n\n\n\n  \n\n\n\n\nDeepLabCut GUI on HiPerGator Desktop\n\n\n\n\n\nSteps to start DeepLabCut in graphical user interface mode: 1. Log on to HiPerGator (HPG)  2. Use HPG OpenOnDemand to start the Interactive App: HiPerGator Desktop  3. Open Terminal to enter 3 lines of command-line code to start DLC GUI  4. Point DLC to a config.yaml file in existing project  5. Point DLC to a labeled videos directory and load the images\n\n\n\n\n\n\nNov 19, 2022\n\n\nR. Mears\n\n\n\n\n\n\n  \n\n\n\n\nSetup HiPerGator for DeepLabCut\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\n\n\nTips to setup your account so that you can use DeepLabCut\n\n\n\n\n\n\nOct 24, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nR-tour in 6 pages\n\n\n\n\n\n\n\nR\n\n\ncode\n\n\ndata wrangling\n\n\nslides\n\n\n\n\nIntroduction to Using R and Tidyverse\n\n\n\n\n\n\nJul 18, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\n\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\n\n\nIntroduction to Version control for doing open science\n\n\n\n\n\n\nJul 11, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMNE-Python: EEG\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nIntroduction to Analysis Pipelines for EEG\n\n\n\n\n\n\nJun 22, 2022\n\n\nR Mears\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Code?\n\n\n\n\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\n\nRationale for scripting with MNE-Python\n\n\n\n\n\n\nJun 8, 2022\n\n\nRyan Mears\n\n\n\n\n\n\n  \n\n\n\n\nCSEA MatLab tutorials\n\n\n\n\n\n\n\ncode\n\n\nanalysis\n\n\nMatlab\n\n\nEEG\n\n\n\n\n\n\n\n\n\n\n\nJun 8, 2022\n\n\nAK\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\n\n\n\n\n\n\nJun 1, 2022\n\n\nRPM\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nConvolution and deconvolution: an Illustration\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nStudent-Directed Research\n\n\n\n\n\n\nbot\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nOpen Science: Best Practices for Repos\n\n\n\n\n\n\nbot\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosting Wiki Content\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\n\n\n\n\nIsabella Fleites\n\n\nMar 7, 2023\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nMy Wiki Document\n\n\nMy trial wiki doc\n\n\n\nAlison Ryan\n\n\nMar 7, 2023\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nMNE Abstract\n\n\n\n\n\n\nIsabella Fleites\n\n\nMar 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to make a wiki document.\n\n\n\n\n\n\nRPM\n\n\nMar 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhey check this out\n\n\nits cool i swear\n\n\n\nIsabella Fleites\n\n\nFeb 23, 2023\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nSharing Customized Python Environments\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\n\n\n\n\nRPM\n\n\nDec 30, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeepLabCut GUI on HiPerGator Desktop\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\nSteps to start DeepLabCut in graphical user interface mode: 1. Log on to HiPerGator (HPG)  2. Use HPG OpenOnDemand to start the Interactive App: *HiPerGator…\n\n\n\nR. Mears\n\n\nNov 19, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetup HiPerGator for DeepLabCut\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\nTips to setup your account so that you can use DeepLabCut\n\n\n\nR Mears\n\n\nOct 24, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nR-tour in 6 pages\n\n\n\nR\n\n\ncode\n\n\ndata wrangling\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Using R and Tidyverse\n\n\n\nR Mears\n\n\nJul 18, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nIntroduction to GitHub for Open Science\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Version control for doing open science\n\n\n\nR Mears\n\n\nJul 11, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nMNE-Python: EEG\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Analysis Pipelines for EEG\n\n\n\nR Mears\n\n\nJun 22, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nWhy Code?\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\nRationale for scripting with MNE-Python\n\n\n\nRyan Mears\n\n\nJun 8, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCSEA MatLab tutorials\n\n\n\ncode\n\n\nanalysis\n\n\nMatlab\n\n\nEEG\n\n\n\n\n\n\n\nAK\n\n\nJun 8, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nJun 1, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",

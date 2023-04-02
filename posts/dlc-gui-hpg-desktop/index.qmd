@@ -3,6 +3,7 @@ title: "DeepLabCut GUI on HiPerGator Desktop"
 description: "**Steps to start DeepLabCut in graphical user interface mode**: </br>1. Log on to HiPerGator (HPG) </br> 2. Use HPG OpenOnDemand to start the *Interactive App*: *HiPerGator Desktop* </br> 3. Open *Terminal* to enter 3 lines of command-line code to start DLC GUI </br> 4. Point DLC to a *config.yaml* file in existing project </br> 5. Point DLC to a *labeled videos* directory and *load* the images"
 author: "R. Mears"
 date: "11/19/2022"
+categories: [Python, code, AI, tutorial]
 ---
 
 ![](HPG_Desktop_2DLC/dlc-gui.png)
