@@ -1,5 +1,5 @@
 ---
-title: "Post template"
+title: "Problem Solving Programming in 20 Questions"
 author: "RPM"
 date: "2023-04-30"
 draft: true
