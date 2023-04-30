@@ -1,5 +1,5 @@
 ---
-title: "Problem Solving Programming in 20 Questions"
+title: "Problem Solving Code in 20 Questions"
 author: "RPM"
 date: "2023-04-30"
 draft: true
