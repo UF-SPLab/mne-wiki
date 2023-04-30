@@ -1,0 +1,50 @@
+---
+title: "Mapping the directory tree"
+author: "bot"
+date: "2023-04-26"
+draft: true
+---
+
+# Install and load the required packages
+if (!requireNamespace("fs", quietly = TRUE)) {
+  install.packages("fs")
+}
+if (!requireNamespace("purrr", quietly = TRUE)) {
+  install.packages("purrr")
+}
+
+library(fs)
+library(purrr)
+
+display_tree <- function(path, depth = 0, prefix = "") {
+  if (fs::dir_exists(path)) {
+    # Print the directory name with a proper prefix
+    cat(paste0(prefix, if (depth > 0) "|--" else "", "[", fs::path_file(path), "]\n"))
+
+    # List all items in the directory
+    items <- fs::dir_ls(path)
+
+    # Sort items for a more readable tree structure
+    items <- sort(items)
+
+    # Iterate over each item in the directory
+    purrr::walk(items, function(item_path, index, n) {
+      # If the item is not the last one in the list, use '|' as a prefix
+      if (index < n) {
+        item_prefix <- paste0(prefix, if (depth > 0) "   " else "", "|  ")
+      } else {
+        item_prefix <- paste0(prefix, if (depth > 0) "   " else "", "   ")
+      }
+
+      # Recursively call the display_tree function to print the tree structure
+      display_tree(item_path, depth = depth + 1, prefix = item_prefix)
+    }, index = seq_along(items), n = length(items))
+  } else {
+    # Print the file name with a proper prefix
+    cat(paste0(prefix, "+--", fs::path_file(path), "\n"))
+  }
+}
+
+# Replace 'your_directory_path' with the path you want to display
+your_directory_path <- "/path/to/your/directory"
+display_tree(your_directory_path)

@@ -2,7 +2,7 @@
 title: "Problem Solving Code in 20 Questions"
 author: "RPM"
 date: "2023-04-30"
-draft: true
+draft: false
 ---
 
 AI helped me to solve an audio segmentation problem that has dogged me for the past year. 
