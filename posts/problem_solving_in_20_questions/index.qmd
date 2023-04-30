@@ -1,3 +1,14 @@
 ---
-
+title: "Post template"
+author: "RPM"
+date: "2023-04-30"
+draft: true
 ---
+
+AI helped me to solve an audio segmentation problem that has dogged me for the past year. 
+
+The problem was some videotapes where sound stimuli are clearly audible, but continuous random ambient noise interferes with any attempt to precisely isolate the stimuls onsets. I need stimulus event onset timestamps isolated around 16-33 millisecond precision - complicated by the fact that digital video conversion has numerous randomly dropped frames. (Thus, I cannot rely on elapsed time as a useful metric.) The past 7 months I have much code only to find reason after reason why this is a difficult problem to solve.
+
+Then, I found out how to ask how to solve the problem by telling chatGPT to ask me questions in a particular context until it has enough information to write a method to interface with an API of any program (but preferably python). The resultant method is simple. It does exactly what I needed it to do using a python library that I was previously aware of, but I really didn't know how to use the library. 
+
+This really is a game changer when it comes to teaching novices to code. I cannot make anyone want to learn to code, but the frustration level will certainly be different, because AI is really good with explaining concisely and/or overexplaining simple things. The difference from doing a Google search for answers is that you sort of need to know an answer in advance in order to come up with the right filtering parameters to eliminate all the junk information. Anyone in academia who sees AI as a threat to education has never really tried it. 
