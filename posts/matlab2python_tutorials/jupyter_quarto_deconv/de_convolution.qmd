@@ -16,15 +16,15 @@ jupyter: python3
 
 ## 
 
-:::: {.columns}
-::: {.column  width="55%"}
+::: columns
+::: {.column width="55%"}
 -   Convolution: a simple mathematical function that quantifies similarity between a pattern (a "kernel") such as the red square wave below with data ( blue rectangularish thingy below).
 :::
-::: {.column  width="45%"}
-The convolution (black line) reflects how similar the blue signal is with the kernel at any given time point. Convolution is thus used in all of digital signal processing.
 
+::: {.column width="45%"}
+The convolution (black line) reflects how similar the blue signal is with the kernel at any given time point. Convolution is thus used in all of digital signal processing.
 :::
-::::
+:::
 
 ![](Convolution_of_spiky_function_with_box2.gif)
 
@@ -217,7 +217,7 @@ plt.show()
 
 ```
 
-##
+## 
 
 ```{python}
 #| echo: true
@@ -263,4 +263,3 @@ onsets = [3, 14, 22, 36, 46, 50, 66, 86, 91, 106, 115]
 #plt.show()
 
 ```
-

@@ -2,21 +2,21 @@
 title: "SSH to HPG3 and run MNE-BIDS-Pipeline"
 author: "RPM"
 date: "2023-08-09"
-draft: true
+draft: false
 ---
 
 # connect to UF Research Computing HPG3 Cluster from terminal on macOS
 
 Type the following command in the terminal:
 
-`ssh mears@hpg.rc.ufl.edu`
+`ssh urgatoruser@hpg.rc.ufl.edu`
 
 Then, follow the prompts to enter your password and Duo two-factor authentication.
 
 ```bash
-(base) % ssh mears@hpg.rc.ufl.edu
+(base) % ssh urgatoruser@hpg.rc.ufl.edu
 Password: xxxxxxxx
-Duo two-factor login for mears@ufl.edu
+Duo two-factor login for urgatoruser@ufl.edu
 
 Enter a passcode or select one of the following options:
 
@@ -34,7 +34,7 @@ Works through the UF Single-sign on DUO app similar to for Canvas and gatormail.
 `srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i`
 
 ```bash 
-[mears@login1 ~]$ srun --pty -p hpg2-compute -n 1 -N 1 -t 90 --mem=2gb /bin/bash
+[mygatoruser@login1 ~]$ srun --pty -p hpg2-compute -n 1 -N 1 -t 90 --mem=2gb /bin/bash
 ```
 
 ## a single node 4 CPU core job with 28gb of RAM for 120 minutes can be started with the following command
@@ -50,7 +50,7 @@ srun: job 4572441 has been allocated resources
 Now you are on the compute node. You can check the hostname and the node list with the following commands:
 
 ```bash
-[mears@c0711a-s6 data]$ echo "Hello from $(hostname)"
+[mygatoruser@c0711a-s6 data]$ echo "Hello from $(hostname)"
 Hello from c0711a-s6.ufhpc
 
 echo $SLURM_JOB_NODELIST
@@ -70,7 +70,7 @@ conda activate mne_1_4_2
 
 Create a symbolic link to your group storage directory on Blue drive:
 
-`ln -s /blue/your_group/your_username/ blue`
+`ln -s /blue/your_group/urgatoruser/ blue`
 
 [Using OpenOn Demand for file management](https://help.rc.ufl.edu/doc/Open_OnDemand_Files)
 

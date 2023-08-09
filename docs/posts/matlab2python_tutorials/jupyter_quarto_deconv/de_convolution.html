@@ -416,18 +416,25 @@
 <section id="section-1" class="slide level2">
 <h2></h2>
 <p>The math is simple. We take the kernel, move it to the first portion of the data by lining it up with the first sample point, then we multiply each element of the kernel with the data, sum the results into one new number and write that to that first sample point.</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">%</span>matplotlib inline</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">import</span> math</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="convolution-in-signal-generation-and-in-fmri-research." class="slide level2 smaller">
 <h2>Convolution in signal generation and in fMRI research.</h2>
 <p>if we want to generate a signal where a certain pattern (the kernel) occurs at certain times, we can use convolution to achieve that. Thus, programs liek SPM use convolution of stimulus timinng info with a lernel that resembles the typical BOLD (fMRI) response as the kernel to generate fake, ideal, fMRI activation for comparison/correlation with the real data:</p>
 <div class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>onsets <span class="op">=</span> np.zeros(<span class="dv">120</span>)</span>
-<span id="cb1-2"><a href="#cb1-2"></a>onsets[<span class="dv">1</span>:<span class="dv">11</span>:<span class="dv">1</span>] <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>plt.plot(onsets) <span class="co">#, title ('simulated stimulus onsets, every 11 scans')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>onsets <span class="op">=</span> np.zeros(<span class="dv">120</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>onsets[<span class="dv">1</span>:<span class="dv">11</span>:<span class="dv">1</span>] <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>plt.plot(onsets) <span class="co">#, title ('simulated stimulus onsets, every 11 scans')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-display">
-<p><img data-src="de_convolution_files/figure-revealjs/cell-3-output-1.png"></p>
+<p><img data-src="de_convolution_files/figure-html/cell-3-output-1.png"></p>
 </div>
 </div>
 </div>
@@ -442,12 +449,12 @@
 </ul>
 <div class="cell columns column-output-location" data-execution_count="3">
 <div class="column">
-<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>g_f <span class="op">=</span> np.arange(<span class="fl">0.1</span>,<span class="fl">5.1</span>,<span class="fl">0.5</span>)</span>
-<span id="cb2-2"><a href="#cb2-2"></a>kernel <span class="op">=</span> [<span class="fl">1.</span><span class="op">/</span>math.gamma(i) <span class="cf">for</span> i <span class="kw">in</span> g_f]</span>
-<span id="cb2-3"><a href="#cb2-3"></a>plt.plot(kernel) <span class="co">#, title('an inverted gamma kernel, length 10')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>g_f <span class="op">=</span> np.arange(<span class="fl">0.1</span>,<span class="fl">5.1</span>,<span class="fl">0.5</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>kernel <span class="op">=</span> [<span class="fl">1.</span><span class="op">/</span>math.gamma(i) <span class="cf">for</span> i <span class="kw">in</span> g_f]</span>
+<span id="cb3-3"><a href="#cb3-3"></a>plt.plot(kernel) <span class="co">#, title('an inverted gamma kernel, length 10')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-display">
-<p><img data-src="de_convolution_files/figure-revealjs/cell-4-output-1.png"></p>
+<p><img data-src="de_convolution_files/figure-html/cell-4-output-1.png"></p>
 </div>
 </div>
 </div>
@@ -457,12 +464,12 @@
 <p>Now we just convolve the onsets with the kernel and plot the result</p>
 <div class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
-<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>g_f <span class="op">=</span> np.arange(<span class="fl">0.1</span>,<span class="dv">5</span>,<span class="fl">0.5</span>)</span>
-<span id="cb3-2"><a href="#cb3-2"></a>kernel <span class="op">=</span> [<span class="fl">1.</span><span class="op">/</span>math.gamma(i) <span class="cf">for</span> i <span class="kw">in</span> g_f]</span>
-<span id="cb3-3"><a href="#cb3-3"></a>plt.plot(kernel) <span class="co">#, title('an inverted gamma kernel, length 10')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>g_f <span class="op">=</span> np.arange(<span class="fl">0.1</span>,<span class="dv">5</span>,<span class="fl">0.5</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>kernel <span class="op">=</span> [<span class="fl">1.</span><span class="op">/</span>math.gamma(i) <span class="cf">for</span> i <span class="kw">in</span> g_f]</span>
+<span id="cb4-3"><a href="#cb4-3"></a>plt.plot(kernel) <span class="co">#, title('an inverted gamma kernel, length 10')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-display">
-<p><img data-src="de_convolution_files/figure-revealjs/cell-5-output-1.png"></p>
+<p><img data-src="de_convolution_files/figure-html/cell-5-output-1.png"></p>
 </div>
 </div>
 </div>
@@ -472,12 +479,12 @@
 <p>So this basically puts each 10 second kernel at the location where the onset is. There were 11 seconds between onsets, so this is like copy paste, but how about when the kernel is longer than the interval between onsets?</p>
 <div class="cell columns column-output-location" data-execution_count="5">
 <div class="column">
-<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>convolution  <span class="op">=</span> np.convolve(onsets, kernel)<span class="op">;</span> </span>
-<span id="cb4-2"><a href="#cb4-2"></a></span>
-<span id="cb4-3"><a href="#cb4-3"></a>plt.plot(convolution) <span class="co">#, title('onset vector convolved with canonical BOLD response')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>convolution  <span class="op">=</span> np.convolve(onsets, kernel)<span class="op">;</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a>plt.plot(convolution) <span class="co">#, title('onset vector convolved with canonical BOLD response')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-display">
-<p><img data-src="de_convolution_files/figure-revealjs/cell-6-output-1.png"></p>
+<p><img data-src="de_convolution_files/figure-html/cell-6-output-1.png"></p>
 </div>
 </div>
 </div>
@@ -487,14 +494,14 @@
 <p>So this basically puts each 10 second kernel at the location where the onset is. There were 11 seconds between onsets, so this is like copy paste, but how about when the kernel is longer than the interval between onsets?</p>
 <div class="cell columns column-output-location" data-execution_count="6">
 <div class="column">
-<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>g_f<span class="op">=</span>np.arange(<span class="fl">0.1</span>,<span class="fl">5.1</span>,<span class="fl">0.25</span>)</span>
-<span id="cb5-2"><a href="#cb5-2"></a>kernel <span class="op">=</span> [<span class="fl">1.</span><span class="op">/</span>math.gamma(i) <span class="cf">for</span> i <span class="kw">in</span> g_f] <span class="co"># this Kernel is twice as long</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>convolution  <span class="op">=</span> np.convolve(onsets, kernel)<span class="op">;</span> </span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="co">#figure</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>plt.plot(convolution) <span class="co">#, title('Convolution with temporal summation')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>g_f<span class="op">=</span>np.arange(<span class="fl">0.1</span>,<span class="fl">5.1</span>,<span class="fl">0.25</span>)</span>
+<span id="cb6-2"><a href="#cb6-2"></a>kernel <span class="op">=</span> [<span class="fl">1.</span><span class="op">/</span>math.gamma(i) <span class="cf">for</span> i <span class="kw">in</span> g_f] <span class="co"># this Kernel is twice as long</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>convolution  <span class="op">=</span> np.convolve(onsets, kernel)<span class="op">;</span> </span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="co">#figure</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>plt.plot(convolution) <span class="co">#, title('Convolution with temporal summation')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-display">
-<p><img data-src="de_convolution_files/figure-revealjs/cell-7-output-1.png"></p>
+<p><img data-src="de_convolution_files/figure-html/cell-7-output-1.png"></p>
 </div>
 </div>
 </div>
@@ -508,17 +515,17 @@
 <p>This is more interesting with variable inter-onset times.</p>
 <div class="cell columns column-output-location" data-execution_count="7">
 <div class="column">
-<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>onsets <span class="op">=</span> np.zeros((<span class="dv">120</span>,<span class="dv">1</span>))</span>
-<span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a>onsets[[<span class="dv">3</span>,<span class="dv">14</span>,<span class="dv">22</span>,<span class="dv">36</span>,<span class="dv">46</span>,<span class="dv">50</span>,<span class="dv">66</span>,<span class="dv">86</span>,<span class="dv">91</span>,<span class="dv">106</span>,<span class="dv">115</span>],] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> <span class="co">#simple case where a stimulus is on every 11 scans</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="bu">print</span>(onsets.shape)</span>
-<span id="cb6-5"><a href="#cb6-5"></a>plt.plot(onsets) <span class="co">#, title ('simulated stimulus onsets, every 11 scans')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>onsets <span class="op">=</span> np.zeros((<span class="dv">120</span>,<span class="dv">1</span>))</span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a>onsets[[<span class="dv">3</span>,<span class="dv">14</span>,<span class="dv">22</span>,<span class="dv">36</span>,<span class="dv">46</span>,<span class="dv">50</span>,<span class="dv">66</span>,<span class="dv">86</span>,<span class="dv">91</span>,<span class="dv">106</span>,<span class="dv">115</span>],] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> <span class="co">#simple case where a stimulus is on every 11 scans</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="bu">print</span>(onsets.shape)</span>
+<span id="cb7-5"><a href="#cb7-5"></a>plt.plot(onsets) <span class="co">#, title ('simulated stimulus onsets, every 11 scans')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
 <pre><code>(120, 1)</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img data-src="de_convolution_files/figure-revealjs/cell-8-output-2.png"></p>
+<p><img data-src="de_convolution_files/figure-html/cell-8-output-2.png"></p>
 </div>
 </div>
 </div>
@@ -527,11 +534,11 @@
 <h2>Now we convolve these onset times with the same kernel</h2>
 <div class="cell columns column-output-location" data-execution_count="8">
 <div class="column">
-<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>convolution  <span class="op">=</span> np.convolve(onsets.squeeze(), kernel)<span class="op">;</span> </span>
-<span id="cb8-2"><a href="#cb8-2"></a>plt.plot(convolution) <span class="co">#, title('Convolution of random ITIs')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>convolution  <span class="op">=</span> np.convolve(onsets.squeeze(), kernel)<span class="op">;</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>plt.plot(convolution) <span class="co">#, title('Convolution of random ITIs')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-display">
-<p><img data-src="de_convolution_files/figure-revealjs/cell-9-output-1.png"></p>
+<p><img data-src="de_convolution_files/figure-html/cell-9-output-1.png"></p>
 </div>
 </div>
 </div>
@@ -541,22 +548,22 @@
 <p>Longer intervals between onsets prompt complete reduction to baseline, temporal proximity prompts smeared, overlapping events. How about gamma-shaped responses to stimuli that are longer than one image?</p>
 <div class="cell columns column-output-location" data-execution_count="9">
 <div class="column">
-<div class="sourceCode cell-code" id="cb9" data-code-line-numbers="2,3:5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>onsets <span class="op">=</span> np.zeros((<span class="dv">120</span>,<span class="dv">1</span>))</span>
-<span id="cb9-2"><a href="#cb9-2"></a>set0<span class="op">=</span>[<span class="dv">3</span>,<span class="dv">14</span>,<span class="dv">22</span>,<span class="dv">36</span>,<span class="dv">46</span>,<span class="dv">50</span>,<span class="dv">66</span>,<span class="dv">86</span>,<span class="dv">91</span>,<span class="dv">106</span>,<span class="dv">115</span>]<span class="op">;</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>set1<span class="op">=</span>[i<span class="op">+</span><span class="dv">1</span> <span class="cf">for</span> i <span class="kw">in</span> set0]</span>
-<span id="cb9-4"><a href="#cb9-4"></a>set2<span class="op">=</span>[i<span class="op">+</span><span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> set0]</span>
-<span id="cb9-5"><a href="#cb9-5"></a>set3<span class="op">=</span>[i<span class="op">+</span><span class="dv">3</span> <span class="cf">for</span> i <span class="kw">in</span> set0]</span>
-<span id="cb9-6"><a href="#cb9-6"></a>onsets[set0,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> <span class="co">#simple case where a stimulus is on every 11 scans</span></span>
-<span id="cb9-7"><a href="#cb9-7"></a>onsets[set1,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
-<span id="cb9-8"><a href="#cb9-8"></a></span>
-<span id="cb9-9"><a href="#cb9-9"></a>onsets[set2,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span><span class="co">#simple case where a stimulus is on every 11 scans</span></span>
-<span id="cb9-10"><a href="#cb9-10"></a>onsets[set3,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
-<span id="cb9-11"><a href="#cb9-11"></a><span class="co">##onsets[[3, 14, 22, 36, 46, 50, 66, 86, 91, 106, 115]+2,] = 1;</span></span>
-<span id="cb9-12"><a href="#cb9-12"></a><span class="co">#onsets[[3, 14, 22, 36, 46, 50, 66, 86, 91, 106, 115]+3,] = 1;</span></span>
-<span id="cb9-13"><a href="#cb9-13"></a>plt.plot(onsets) <span class="co">#, title ('simulated stimulus onsets, every 11 scans')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="2,3:5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>onsets <span class="op">=</span> np.zeros((<span class="dv">120</span>,<span class="dv">1</span>))</span>
+<span id="cb10-2"><a href="#cb10-2"></a>set0<span class="op">=</span>[<span class="dv">3</span>,<span class="dv">14</span>,<span class="dv">22</span>,<span class="dv">36</span>,<span class="dv">46</span>,<span class="dv">50</span>,<span class="dv">66</span>,<span class="dv">86</span>,<span class="dv">91</span>,<span class="dv">106</span>,<span class="dv">115</span>]<span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>set1<span class="op">=</span>[i<span class="op">+</span><span class="dv">1</span> <span class="cf">for</span> i <span class="kw">in</span> set0]</span>
+<span id="cb10-4"><a href="#cb10-4"></a>set2<span class="op">=</span>[i<span class="op">+</span><span class="dv">2</span> <span class="cf">for</span> i <span class="kw">in</span> set0]</span>
+<span id="cb10-5"><a href="#cb10-5"></a>set3<span class="op">=</span>[i<span class="op">+</span><span class="dv">3</span> <span class="cf">for</span> i <span class="kw">in</span> set0]</span>
+<span id="cb10-6"><a href="#cb10-6"></a>onsets[set0,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> <span class="co">#simple case where a stimulus is on every 11 scans</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a>onsets[set1,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb10-8"><a href="#cb10-8"></a></span>
+<span id="cb10-9"><a href="#cb10-9"></a>onsets[set2,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span><span class="co">#simple case where a stimulus is on every 11 scans</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a>onsets[set3,] <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a><span class="co">##onsets[[3, 14, 22, 36, 46, 50, 66, 86, 91, 106, 115]+2,] = 1;</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a><span class="co">#onsets[[3, 14, 22, 36, 46, 50, 66, 86, 91, 106, 115]+3,] = 1;</span></span>
+<span id="cb10-13"><a href="#cb10-13"></a>plt.plot(onsets) <span class="co">#, title ('simulated stimulus onsets, every 11 scans')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-display">
-<p><img data-src="de_convolution_files/figure-revealjs/cell-10-output-1.png"></p>
+<p><img data-src="de_convolution_files/figure-html/cell-10-output-1.png"></p>
 </div>
 </div>
 </div>
@@ -566,12 +573,12 @@
 <p>Now we convolve these onset times with the same kernel</p>
 <div class="cell columns column-output-location" data-execution_count="10">
 <div class="column">
-<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>convolution  <span class="op">=</span> np.convolve(onsets.squeeze(), kernel)<span class="op">;</span> </span>
-<span id="cb10-2"><a href="#cb10-2"></a></span>
-<span id="cb10-3"><a href="#cb10-3"></a>plt.plot(convolution) <span class="co">#, title('Convolution with 4-TR-long events'), ylabel('note the scale')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>convolution  <span class="op">=</span> np.convolve(onsets.squeeze(), kernel)<span class="op">;</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>plt.plot(convolution) <span class="co">#, title('Convolution with 4-TR-long events'), ylabel('note the scale')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-display">
-<p><img data-src="de_convolution_files/figure-revealjs/cell-11-output-1.png"></p>
+<p><img data-src="de_convolution_files/figure-html/cell-11-output-1.png"></p>
 </div>
 </div>
 </div>
@@ -586,21 +593,21 @@
 <p>deconvolution is the process where we wish to estimate the Kernel from known data and known event-times. This is a version of the so-called inverse problem , and we solve it with a regression. Let’s start with the simulated we we have:</p>
 <div class="cell columns column-output-location" data-execution_count="11">
 <div class="column">
-<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="|4|7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>convolution <span class="op">=</span> np.random.rand(<span class="dv">200</span>) <span class="co"># Replace with your own convolution array</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>onsets <span class="op">=</span> np.random.rand(<span class="dv">120</span>) <span class="co"># Replace with your own onsets array</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a></span>
-<span id="cb11-4"><a href="#cb11-4"></a>X <span class="op">=</span> np.zeros((<span class="bu">len</span>(convolution[<span class="dv">0</span>:<span class="dv">120</span>]), <span class="dv">20</span>))</span>
-<span id="cb11-5"><a href="#cb11-5"></a>temp <span class="op">=</span> onsets.copy()</span>
-<span id="cb11-6"><a href="#cb11-6"></a></span>
-<span id="cb11-7"><a href="#cb11-7"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
-<span id="cb11-8"><a href="#cb11-8"></a>    X[:, i] <span class="op">=</span> temp</span>
-<span id="cb11-9"><a href="#cb11-9"></a>    temp <span class="op">=</span> np.concatenate(([<span class="dv">0</span>], temp[:<span class="op">-</span><span class="dv">1</span>]))</span>
-<span id="cb11-10"><a href="#cb11-10"></a></span>
-<span id="cb11-11"><a href="#cb11-11"></a>plt.pcolor(X, cmap<span class="op">=</span><span class="st">'gray'</span>)</span>
-<span id="cb11-12"><a href="#cb11-12"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="|4|7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>convolution <span class="op">=</span> np.random.rand(<span class="dv">200</span>) <span class="co"># Replace with your own convolution array</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>onsets <span class="op">=</span> np.random.rand(<span class="dv">120</span>) <span class="co"># Replace with your own onsets array</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a></span>
+<span id="cb12-4"><a href="#cb12-4"></a>X <span class="op">=</span> np.zeros((<span class="bu">len</span>(convolution[<span class="dv">0</span>:<span class="dv">120</span>]), <span class="dv">20</span>))</span>
+<span id="cb12-5"><a href="#cb12-5"></a>temp <span class="op">=</span> onsets.copy()</span>
+<span id="cb12-6"><a href="#cb12-6"></a></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>):</span>
+<span id="cb12-8"><a href="#cb12-8"></a>    X[:, i] <span class="op">=</span> temp</span>
+<span id="cb12-9"><a href="#cb12-9"></a>    temp <span class="op">=</span> np.concatenate(([<span class="dv">0</span>], temp[:<span class="op">-</span><span class="dv">1</span>]))</span>
+<span id="cb12-10"><a href="#cb12-10"></a></span>
+<span id="cb12-11"><a href="#cb12-11"></a>plt.pcolor(X, cmap<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb12-12"><a href="#cb12-12"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-display">
-<p><img data-src="de_convolution_files/figure-revealjs/cell-12-output-1.png"></p>
+<p><img data-src="de_convolution_files/figure-html/cell-12-output-1.png"></p>
 </div>
 </div>
 </div>
@@ -609,15 +616,15 @@
 <h2></h2>
 <div class="cell columns column-output-location" data-execution_count="12">
 <div class="column">
-<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="|1|4,7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a>PX <span class="op">=</span> np.linalg.pinv(X)</span>
-<span id="cb12-2"><a href="#cb12-2"></a></span>
-<span id="cb12-3"><a href="#cb12-3"></a>plt.pcolor(PX, cmap<span class="op">=</span><span class="st">'gray'</span>)</span>
-<span id="cb12-4"><a href="#cb12-4"></a>plt.show()</span>
-<span id="cb12-5"><a href="#cb12-5"></a></span>
-<span id="cb12-6"><a href="#cb12-6"></a>h <span class="op">=</span> PX <span class="op">@</span> convolution[<span class="dv">0</span>:<span class="dv">120</span>].T</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="|1|4,7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>PX <span class="op">=</span> np.linalg.pinv(X)</span>
+<span id="cb13-2"><a href="#cb13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3"></a>plt.pcolor(PX, cmap<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb13-4"><a href="#cb13-4"></a>plt.show()</span>
+<span id="cb13-5"><a href="#cb13-5"></a></span>
+<span id="cb13-6"><a href="#cb13-6"></a>h <span class="op">=</span> PX <span class="op">@</span> convolution[<span class="dv">0</span>:<span class="dv">120</span>].T</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-display">
-<p><img data-src="de_convolution_files/figure-revealjs/cell-13-output-1.png"></p>
+<p><img data-src="de_convolution_files/figure-html/cell-13-output-1.png"></p>
 </div>
 </div>
 </div>
@@ -626,28 +633,28 @@
 <h2></h2>
 <div class="cell columns column-output-location" data-execution_count="13">
 <div class="column">
-<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="|1,12|13,14|16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>convolution <span class="op">=</span> np.random.rand(<span class="dv">200</span>) <span class="co"># Replace with your own convolution array</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>onsets <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">14</span>, <span class="dv">22</span>, <span class="dv">36</span>, <span class="dv">46</span>, <span class="dv">50</span>, <span class="dv">66</span>, <span class="dv">86</span>, <span class="dv">91</span>, <span class="dv">106</span>, <span class="dv">115</span>]</span>
-<span id="cb13-3"><a href="#cb13-3"></a></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="co">### WHAT IS hrf_est()? </span><span class="al">###</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a><span class="co">#h = hrf_est(convolution[0:120], onsets, 20)</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a></span>
-<span id="cb13-7"><a href="#cb13-7"></a><span class="co"># COULD IT BE?</span></span>
-<span id="cb13-8"><a href="#cb13-8"></a></span>
-<span id="cb13-9"><a href="#cb13-9"></a><span class="co"># def hrf_est(convolution, onsets, n):</span></span>
-<span id="cb13-10"><a href="#cb13-10"></a><span class="co">#     X = np.zeros(((convolution).,n))</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a><span class="co">#     temp = onsets.copy()</span></span>
-<span id="cb13-12"><a href="#cb13-12"></a><span class="co"># </span></span>
-<span id="cb13-13"><a href="#cb13-13"></a><span class="co">#     for i in range(n):</span></span>
-<span id="cb13-14"><a href="#cb13-14"></a><span class="co">#         X[:,i] = temp</span></span>
-<span id="cb13-15"><a href="#cb13-15"></a><span class="co">#         temp = np.concatenate(([0], temp[:-1]))</span></span>
-<span id="cb13-16"><a href="#cb13-16"></a><span class="co"># </span></span>
-<span id="cb13-17"><a href="#cb13-17"></a><span class="co">#     PX = np.linalg.pinv(X)</span></span>
-<span id="cb13-18"><a href="#cb13-18"></a><span class="co">#     h = PX @ convolution[0:120].T</span></span>
-<span id="cb13-19"><a href="#cb13-19"></a><span class="co">#     return h</span></span>
-<span id="cb13-20"><a href="#cb13-20"></a></span>
-<span id="cb13-21"><a href="#cb13-21"></a><span class="co">#plt.plot(h)</span></span>
-<span id="cb13-22"><a href="#cb13-22"></a><span class="co">#plt.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="|1,12|13,14|16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>convolution <span class="op">=</span> np.random.rand(<span class="dv">200</span>) <span class="co"># Replace with your own convolution array</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>onsets <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">14</span>, <span class="dv">22</span>, <span class="dv">36</span>, <span class="dv">46</span>, <span class="dv">50</span>, <span class="dv">66</span>, <span class="dv">86</span>, <span class="dv">91</span>, <span class="dv">106</span>, <span class="dv">115</span>]</span>
+<span id="cb14-3"><a href="#cb14-3"></a></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="co">### WHAT IS hrf_est()? </span><span class="al">###</span></span>
+<span id="cb14-5"><a href="#cb14-5"></a><span class="co">#h = hrf_est(convolution[0:120], onsets, 20)</span></span>
+<span id="cb14-6"><a href="#cb14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7"></a><span class="co"># COULD IT BE?</span></span>
+<span id="cb14-8"><a href="#cb14-8"></a></span>
+<span id="cb14-9"><a href="#cb14-9"></a><span class="co"># def hrf_est(convolution, onsets, n):</span></span>
+<span id="cb14-10"><a href="#cb14-10"></a><span class="co">#     X = np.zeros(((convolution).,n))</span></span>
+<span id="cb14-11"><a href="#cb14-11"></a><span class="co">#     temp = onsets.copy()</span></span>
+<span id="cb14-12"><a href="#cb14-12"></a><span class="co"># </span></span>
+<span id="cb14-13"><a href="#cb14-13"></a><span class="co">#     for i in range(n):</span></span>
+<span id="cb14-14"><a href="#cb14-14"></a><span class="co">#         X[:,i] = temp</span></span>
+<span id="cb14-15"><a href="#cb14-15"></a><span class="co">#         temp = np.concatenate(([0], temp[:-1]))</span></span>
+<span id="cb14-16"><a href="#cb14-16"></a><span class="co"># </span></span>
+<span id="cb14-17"><a href="#cb14-17"></a><span class="co">#     PX = np.linalg.pinv(X)</span></span>
+<span id="cb14-18"><a href="#cb14-18"></a><span class="co">#     h = PX @ convolution[0:120].T</span></span>
+<span id="cb14-19"><a href="#cb14-19"></a><span class="co">#     return h</span></span>
+<span id="cb14-20"><a href="#cb14-20"></a></span>
+<span id="cb14-21"><a href="#cb14-21"></a><span class="co">#plt.plot(h)</span></span>
+<span id="cb14-22"><a href="#cb14-22"></a><span class="co">#plt.show()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 
 </div>
