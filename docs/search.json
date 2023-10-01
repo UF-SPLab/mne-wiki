@@ -1,115 +1,52 @@
 [
   {
-    "objectID": "posts/cwppwc/index.html",
-    "href": "posts/cwppwc/index.html",
-    "title": "Posting Wiki Content",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Markdown is a markup coding language that can be used to convert content written in a plain-text format into HTML. It can be used on Github to make easy to read webpages: like the one you’re reading now!\n\n\nThe first thing you should do when creating any article is filling out the most basic information:\n\n\n\n```{yaml, eval=false}\n\n\n\n\ntitle: “Write the title of your article in quotes”\n\n\nauthor: your name goes here!\n\n\ndescription: what is your article about? briefly summarize it\n\n\ndate: write the date that you publish your article\n\n\n\n```\nAs shown above, you are always going to put these four basic pieces of information between a pair of three dashes. While the title, author, description, and date are always going to be in the section, you also have the option to add categories to this section: categories: [put your category names in a pair of brackets, seperate each category with a comma] Categories allow us to organize the articles on this wiki by topic. When you open the wiki, you will see a list of categories on the right-hand side. When you click on a category, you will be able to see any of the articles tagged with that specific category in the manner depicted above.\n\n\n\nIn addition to setting up important information about your article, markdown can be used to format your main body of text in a number of ways…\nYou can create a header by using a pound sign: # Heading\nYou can make a subheading, a sub-subheading, and onwards just by adding more pound signs: ## Subheading ### Sub-subheading\nYou can italicize or bold a sentence using asterisks: *This sentence is italicized* **This sentence is bolded**\nLinks and images can be inbedded like so: !(text)[link]\nIts also possible to inbed code directly into the text - but we’ll be going over that later."
+    "text": "About this blog"
   },
   {
-    "objectID": "posts/cwppwc/index.html#importance-of-yaml",
-    "href": "posts/cwppwc/index.html#importance-of-yaml",
-    "title": "Posting Wiki Content",
-    "section": "Importance of YAML",
-    "text": "Importance of YAML"
-  },
-  {
-    "objectID": "posts/cwppwc/index.html#quarto",
-    "href": "posts/cwppwc/index.html#quarto",
-    "title": "Posting Wiki Content",
-    "section": "Quarto",
-    "text": "Quarto"
-  },
-  {
-    "objectID": "posts/cwppwc/index.html#creating-a-folder",
-    "href": "posts/cwppwc/index.html#creating-a-folder",
-    "title": "Posting Wiki Content",
-    "section": "Creating a Folder",
-    "text": "Creating a Folder\nIn order to create an article, you first have to create a folder in which you will create an index.qmd file. The index.qmd file is where you will be writing in Markdown to create your article. The process of folder creation is depicted in the gif below."
-  },
-  {
-    "objectID": "posts/cwppwc/index.html#embedding-code",
-    "href": "posts/cwppwc/index.html#embedding-code",
-    "title": "Posting Wiki Content",
-    "section": "Embedding Code",
-    "text": "Embedding Code"
-  },
-  {
-    "objectID": "posts/why-code/index.html",
-    "href": "posts/why-code/index.html",
-    "title": "Why Code?",
+    "objectID": "posts/mne abstract/index.html",
+    "href": "posts/mne abstract/index.html",
+    "title": "MNE Abstract",
     "section": "",
-    "text": "This talk introduced advantages and potential obstacles to using script-based pipelines. We discussed how capabilities of scientific python ecosystem are leveraged and organized in MNE in order to compose reproducible analysis pipelines that are easy to understand and efficient to use. The extensive documentation of the MNE website provides instructions for installation and configuration. Extensive examples and tutorials on the MNE documentation website allows users to benefit directly by searching, downloading, testing and incrementally adapting code.\nIntroduction to Scripting with MNE-Python"
+    "text": "Subanesthetic ketamine is a rapid and effective treatment for depression in individuals who have not responded to other treatments. Several lines of evidence demonstrate initial effects of ketamine in anterior cingulate/medial prefrontal cortex. Nonetheless, well-established, harmful effects of ketamine include dissociation, psychosis, and dependency with increasing dose and chronicity.\n\n\n\nIn this reproducible and open analysis pipeline the effects of sub-anesthetic doses of ketamine on auditory SG and spontaneous gamma in rats were investigated. Data for this computational study were previously collected at another institution where Sprague Dawley rats were injected (i.m.) in a multi-baseline (saline), counterbalanced alternating-treatments design of haloperidol (1 mg/kg), ketamine, and ketamine co-administered with haloperidol. The subanesthetic ketamine was administered between subjects in cohorts of 20 mg/kg, n=4 or 60 mg/kg, n=4. After initial surgery to implant microwire arrays bilaterally in medial prefrontal cortex, local field potentials were recorded in freely behaving animals. As computational reproducibility intermediate data and all code from this analysis pipeline is available including, pre-processing, data visualizations, and inferential statistics.\n\n\n\nKetamine reduced SG and increased the amplitude of baseline gamma-band activity in medial prefrontal cortex (mPFC) for both ketamine doses. Co-administration of the antipsychotic drug, haloperidol, partly reversed the reduction of SG in mPFC and partially reduced the observed increase of spontaneous beta and gamma band activity. Additionally, an increase of beta-band spontaneous activity occurred for the higher dose of ketamine (60 mg/kg), but not the lower dose. Co-administered ketamine and haloperidol blocked the increase of beta-band power for the high dose.\n\n\n\nThese findings suggest that the observed increase in gamma power at each site was potentially mediated by a local circuit mechanism, and that evoked potentials related to SG in mPFC and spontaneous intrinsic beta rhythm might be independently modulated from gamma rhythm. Consistent with these multi-neurotransmitter and receptor findings, the rapid antidepressant action of ketamine appears to arise from effects secondary and subsequent to the NMDA antagonist site of action."
   },
   {
-    "objectID": "posts/csea-matlab-tutorial-links/index.html",
-    "href": "posts/csea-matlab-tutorial-links/index.html",
-    "title": "CSEA MatLab tutorials",
+    "objectID": "posts/mne abstract/index.html#ketamine-and-haloperidol-differentially-influence-auditory-inhibitory-gating-beta-and-gamma-activity-in-rat-medial-prefrontal-cortex",
+    "href": "posts/mne abstract/index.html#ketamine-and-haloperidol-differentially-influence-auditory-inhibitory-gating-beta-and-gamma-activity-in-rat-medial-prefrontal-cortex",
+    "title": "MNE Abstract",
     "section": "",
-    "text": "This is a post with executable code.\nMatlab Livescripts examples Folder\nThe following examples are in the GitHub folder:\n\nCrossfreq_coupling.mlx\nFourier_demo.mlx\nGrangerCausality.mlx\nHilbertPhaseDemo.mlx\nIRF_findsingletrialbetas.mlx\nMNE_SourceEstimation.mlx\nMicroSaCondiSpas.mlx\nde_convolution.mlx\nfilters.mlx\nwavelet_walkthru.mlx"
+    "text": "Subanesthetic ketamine is a rapid and effective treatment for depression in individuals who have not responded to other treatments. Several lines of evidence demonstrate initial effects of ketamine in anterior cingulate/medial prefrontal cortex. Nonetheless, well-established, harmful effects of ketamine include dissociation, psychosis, and dependency with increasing dose and chronicity.\n\n\n\nIn this reproducible and open analysis pipeline the effects of sub-anesthetic doses of ketamine on auditory SG and spontaneous gamma in rats were investigated. Data for this computational study were previously collected at another institution where Sprague Dawley rats were injected (i.m.) in a multi-baseline (saline), counterbalanced alternating-treatments design of haloperidol (1 mg/kg), ketamine, and ketamine co-administered with haloperidol. The subanesthetic ketamine was administered between subjects in cohorts of 20 mg/kg, n=4 or 60 mg/kg, n=4. After initial surgery to implant microwire arrays bilaterally in medial prefrontal cortex, local field potentials were recorded in freely behaving animals. As computational reproducibility intermediate data and all code from this analysis pipeline is available including, pre-processing, data visualizations, and inferential statistics.\n\n\n\nKetamine reduced SG and increased the amplitude of baseline gamma-band activity in medial prefrontal cortex (mPFC) for both ketamine doses. Co-administration of the antipsychotic drug, haloperidol, partly reversed the reduction of SG in mPFC and partially reduced the observed increase of spontaneous beta and gamma band activity. Additionally, an increase of beta-band spontaneous activity occurred for the higher dose of ketamine (60 mg/kg), but not the lower dose. Co-administered ketamine and haloperidol blocked the increase of beta-band power for the high dose.\n\n\n\nThese findings suggest that the observed increase in gamma power at each site was potentially mediated by a local circuit mechanism, and that evoked potentials related to SG in mPFC and spontaneous intrinsic beta rhythm might be independently modulated from gamma rhythm. Consistent with these multi-neurotransmitter and receptor findings, the rapid antidepressant action of ketamine appears to arise from effects secondary and subsequent to the NMDA antagonist site of action."
   },
   {
-    "objectID": "posts/make-gh-blogpost/index.html",
-    "href": "posts/make-gh-blogpost/index.html",
-    "title": "How to make a wiki document.",
+    "objectID": "posts/test_post/index.html",
+    "href": "posts/test_post/index.html",
+    "title": "Post template",
     "section": "",
-    "text": "This is how to start a post."
+    "text": "This is a test post."
   },
   {
-    "objectID": "posts/MNE-Python-EEG/index.html",
-    "href": "posts/MNE-Python-EEG/index.html",
-    "title": "MNE-Python: EEG",
+    "objectID": "posts/problem_solving_in_20_questions/index.html",
+    "href": "posts/problem_solving_in_20_questions/index.html",
+    "title": "Problem Solving Code in 20 Questions",
     "section": "",
-    "text": "MNE-Python: EEG Analysis"
+    "text": "AI helped me to solve an audio segmentation problem that has dogged me for the past year.\nThe problem was some videotapes where sound stimuli are clearly audible, but continuous random ambient noise interferes with any attempt to precisely isolate the stimuls onsets. I need stimulus event onset timestamps isolated around 16-33 millisecond precision - complicated by the fact that digital video conversion has numerous randomly dropped frames. (Thus, I cannot rely on elapsed time as a useful metric.) The past 7 months I have much code only to find reason after reason why this is a difficult problem to solve.\nThen, I found out how to ask how to solve the problem by telling chatGPT to ask me questions in a particular context until it has enough information to write a method to interface with an API of any program (but preferably python). The resultant method is simple. It does exactly what I needed it to do using a python library that I was previously aware of, but I really didn’t know how to use the library.\nThis really is a game changer when it comes to teaching novices to code. I cannot make anyone want to learn to code, but the frustration level will certainly be different, because AI is really good with explaining concisely and/or overexplaining simple things. The difference from doing a Google search for answers is that you sort of need to know an answer in advance in order to come up with the right filtering parameters to eliminate all the junk information. Anyone in academia who sees AI as a threat to education has never really tried it."
   },
   {
-    "objectID": "posts/isa folder/index.html",
-    "href": "posts/isa folder/index.html",
-    "title": "hey check this out",
+    "objectID": "posts/use_rsync_on_hpg/index.html",
+    "href": "posts/use_rsync_on_hpg/index.html",
+    "title": "Post template",
     "section": "",
-    "text": "cool science stuff \n\n\n\n\n\nRelated information"
+    "text": "A better way is to copy all the files from the “psy4911/share” folder to your HiPerGator (HPG) folder. The rsync command for moving files between directories on HPG is described here. Copying_files_between_directories with rsync You will want to go to the shared folder on HPG first and open a terminal (see button outlined green in the schreenshot below). \nThen if you copy and paste these commands into terminal it will do the work for you: rsync -av /blue/psy4911/share/ket_ephys/ket_annot /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/ket_annot_segs /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/hi-ket /blue/psy4911/yourusername/ket_ephys/\nFor the files in the hi-ket folder there’s another script (and a package named NEO ) that’s required to convert them from .plx files to .fif files.\nRequired python packages: - NEO - NEO repo - NEO documentation - MNE - MNE Tutorial: importing data from NEO\nCode for the file conversion:\nThe main thing is that it takes 15 minutes per file on hipergator (HPG) when it’s set up like a laptop computer. When you configure HPG to run your jupter notebook in high-performance mode, it takes only a minute or two per file. So, what would take 5 hours for 20 files, ends up taking only a half hour.\nAn even bigger savings comes when doing machine learning / AI with deeplabcut on HPG."
   },
   {
-    "objectID": "posts/use_ssh_hpg3/index.html",
-    "href": "posts/use_ssh_hpg3/index.html",
-    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
+    "objectID": "posts/6p-RTour/index.html",
+    "href": "posts/6p-RTour/index.html",
+    "title": "R-tour in 6 pages",
     "section": "",
-    "text": "Type the following command in the terminal:\nssh urgatoruser@hpg.rc.ufl.edu\nThen, follow the prompts to enter your password and Duo two-factor authentication.\n(base) % ssh urgatoruser@hpg.rc.ufl.edu\nPassword: xxxxxxxx\nDuo two-factor login for urgatoruser@ufl.edu\n\nEnter a passcode or select one of the following options:\n\n 1. Duo Push to XXX-XXX-1809\n 2. Phone call to XXX-XXX-1809\n\nPasscode or option (1-2): 1\nWorks through the UF Single-sign on DUO app similar to for Canvas and gatormail.\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i\n[mygatoruser@login1 ~]$ srun --pty -p hpg2-compute -n 1 -N 1 -t 90 --mem=2gb /bin/bash\n\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun: job 4572441 queued and waiting for resources\nsrun: job 4572441 has been allocated resources\nNow you are on the compute node. You can check the hostname and the node list with the following commands:\n[mygatoruser@c0711a-s6 data]$ echo \"Hello from $(hostname)\"\nHello from c0711a-s6.ufhpc\n\necho $SLURM_JOB_NODELIST\nc0711a-s6"
-  },
-  {
-    "objectID": "posts/use_ssh_hpg3/index.html#random-tips",
-    "href": "posts/use_ssh_hpg3/index.html#random-tips",
-    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
-    "section": "Random Tips:",
-    "text": "Random Tips:\nCreate a symbolic link to your group storage directory on Blue drive:\nln -s /blue/your_group/urgatoruser/ blue\nUsing OpenOn Demand for file management\nTroubleshooting HPG3 Open OnDemand\nUsing rsync to copy/move files on HPG3\nmacOS Development Environment: iTerm2, oh-my-zsh, and VS Code"
-  },
-  {
-    "objectID": "posts/hpg_setup_mpfc_ket/index.html",
-    "href": "posts/hpg_setup_mpfc_ket/index.html",
-    "title": "Setup HiPerGator for DeepLabCut",
-    "section": "",
-    "text": "UF Research Computing Help & Documentation (link)"
-  },
-  {
-    "objectID": "posts/hpg_setup_mpfc_ket/index.html#navigate-to-hipergator-through-openondemand",
-    "href": "posts/hpg_setup_mpfc_ket/index.html#navigate-to-hipergator-through-openondemand",
-    "title": "Setup HiPerGator for DeepLabCut",
-    "section": "Navigate to HiPerGator through OpenOnDemand",
-    "text": "Navigate to HiPerGator through OpenOnDemand\n\nTo start off, type in your browser: https://ood.rc.ufl.edu\nIf this is the first time going to OpenOnDemand in your browser there will be a page re-direct to InCommon.org\n\nFrom this re-direct website type Florida in the institution and select “University of Florida” from the dropdown menu.\nFrom here you would login with 2-factor authentication as you typically would for Canvas.\n\nAfter OpenOnDemand successfully loads select the Files dropdown\n\nSelect /blue/psy4911\n\nNext, when you are in the correct location you can open a terminal to create a shortcut so that you can always find your blue-folder\n\nType a symlink command in the terminal: ln -s /blue/psy4911 blue_psy4911\n\nConfirm that the shortcut was made by typing: find . -maxdepth l type l -ls"
-  },
-  {
-    "objectID": "posts/hpg_setup_mpfc_ket/index.html#create-a-folder-for-downloading-files-and-examples-to-your-blue-drive-for-learning-deeplabcut",
-    "href": "posts/hpg_setup_mpfc_ket/index.html#create-a-folder-for-downloading-files-and-examples-to-your-blue-drive-for-learning-deeplabcut",
-    "title": "Setup HiPerGator for DeepLabCut",
-    "section": "Create a folder for downloading files and examples to your blue drive for learning DeepLabCut",
-    "text": "Create a folder for downloading files and examples to your blue drive for learning DeepLabCut\n\nThere are two ways to navigate the blue drive filesystem: OpenOnDemand GUI & Terminal (command line)\n\nif you’re not sure how to navigate to a directory from the command line go to these links:\n\nIntro to command line\nCommand line tips\nUnderstanding file paths from the command line\n\n\nCreate a new folder so that you can do DeepLabCut tutorials and examples\n\n\nNavigate to your blue drive personal folder “/blue/psy4911/yourname/” then make a folder named try-dlc\n\n\nThe easiest way to start out in terminal from OOD is to click on the folder that you made\n\n…then from that location click Open in Terminal"
-  },
-  {
-    "objectID": "posts/hpg_setup_mpfc_ket/index.html#clone-all-example-material-from-github-to-a-folder-on-your-blue-drive",
-    "href": "posts/hpg_setup_mpfc_ket/index.html#clone-all-example-material-from-github-to-a-folder-on-your-blue-drive",
-    "title": "Setup HiPerGator for DeepLabCut",
-    "section": "Clone all example material from GitHub to a folder on your Blue Drive",
-    "text": "Clone all example material from GitHub to a folder on your Blue Drive\n\nFrom the chosen folder on your /blue/psy4911/yourname/ folder install DeepLabCut using the following commands in terminal:\n\nmodule load conda\ngit clone https://github.com/DeepLabCut/DeepLabCut.git\n\nNavigate to the new folder /blue/psy4911/yourname/DeepLabCut/ by typing cd DeepLabCut/deeplabcut\nto run from the command line type module load deeplabcut/2.2.1\nthen type ipython\nif you type ?deeplabcut on the command line you can see that everything in DeepLabCut 2.0 is available from the command line\ntype exit() to leave ipython\n\n\n\n\nNEXT go to the HiPerGator DeepLabCut Jupyter Notebooks tutorial…\n\nTo Run Napari from the remote GUI on HPG start HiperGator Desktop then open a terminal on the desktop and type:\n\nmodule spider Napari\nmodule load napari/0.4.7\nNapari"
+    "text": "RCSTour6p Slides"
   },
   {
     "objectID": "posts/matlab2python_tutorials/jupyter_quarto_deconv/de_convolution.html#section",
@@ -217,32 +154,130 @@
     "text": "convolution = np.random.rand(200) # Replace with your own convolution array\nonsets = [3, 14, 22, 36, 46, 50, 66, 86, 91, 106, 115]\n\n### WHAT IS hrf_est()? ###\n#h = hrf_est(convolution[0:120], onsets, 20)\n\n# COULD IT BE?\n\n# def hrf_est(convolution, onsets, n):\n#     X = np.zeros(((convolution).,n))\n#     temp = onsets.copy()\n# \n#     for i in range(n):\n#         X[:,i] = temp\n#         temp = np.concatenate(([0], temp[:-1]))\n# \n#     PX = np.linalg.pinv(X)\n#     h = PX @ convolution[0:120].T\n#     return h\n\n#plt.plot(h)\n#plt.show()"
   },
   {
-    "objectID": "posts/student_directed_research/index.html",
-    "href": "posts/student_directed_research/index.html",
-    "title": "Student-Directed Research",
+    "objectID": "posts/use_ssh_hpg3/index.html",
+    "href": "posts/use_ssh_hpg3/index.html",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
     "section": "",
-    "text": "Q: How does student-directed research work?\nA: Student-directed research, also known as self-directed or inquiry-based learning, is an educational approach that puts students at the center of the learning process, giving them the autonomy and responsibility to explore topics that interest them, formulate research questions, and seek answers through independent investigation. This approach is designed to foster critical thinking, problem-solving, creativity, and communication skills in students. Here’s how student-directed research typically works:\nThroughout the process, teachers act as facilitators, offering guidance and support when needed, but allowing students the freedom to direct their own learning. Student-directed research can be implemented in various educational settings, from K-12 classrooms to higher education institutions, and across different subject areas."
+    "text": "Type the following command in the terminal:\nssh urgatoruser@hpg.rc.ufl.edu\nThen, follow the prompts to enter your password and Duo two-factor authentication.\n(base) % ssh urgatoruser@hpg.rc.ufl.edu\nPassword: xxxxxxxx\nDuo two-factor login for urgatoruser@ufl.edu\n\nEnter a passcode or select one of the following options:\n\n 1. Duo Push to XXX-XXX-1809\n 2. Phone call to XXX-XXX-1809\n\nPasscode or option (1-2): 1\nWorks through the UF Single-sign on DUO app similar to for Canvas and gatormail.\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i\n[mygatoruser@login1 ~]$ srun --pty -p hpg2-compute -n 1 -N 1 -t 90 --mem=2gb /bin/bash\n\n\n\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun: job 4572441 queued and waiting for resources\nsrun: job 4572441 has been allocated resources\nNow you are on the compute node. You can check the hostname and the node list with the following commands:\n[mygatoruser@c0711a-s6 data]$ echo \"Hello from $(hostname)\"\nHello from c0711a-s6.ufhpc\n\necho $SLURM_JOB_NODELIST\nc0711a-s6"
   },
   {
-    "objectID": "posts/student_directed_research/index.html#scoring-rubric",
-    "href": "posts/student_directed_research/index.html#scoring-rubric",
-    "title": "Student-Directed Research",
-    "section": "Scoring Rubric",
-    "text": "Scoring Rubric\nQ: Construct a grading rubric for evaluating the effort, processes, and outcomes of student-directed research.\nA: A grading rubric for student-directed research can be designed to assess various aspects of the research process, including effort, organization, critical thinking, communication, and outcomes. Here is a sample rubric with five categories, each scored on a scale of 1 (poor) to 5 (excellent):\n\n\nTable 1: Total possible points: 25. To use this rubric, evaluate each category on a scale of 1-5, then add up the scores to obtain a total score. This grading system can be adapted to fit different educational contexts or modified to include additional categories or more detailed criteria, depending on the specific requirements of the student-directed research project.\n\n\n\n\n\n\n\n\n\n\nCategory\n1 point\n2\n3 points\n4\n5 points\n\n\n\n\nTopic Selection and Research Question(s)\nThe topic is unclear or unrelated to the student’s interests; research question(s) are unfocused, unoriginal, or missing.\n\nThe topic is somewhat related to the student’s interests; research question(s) are somewhat focused and original.\n\nThe topic is clearly related to the student’s interests; research question(s) are well-focused, original, and thought-provoking.\n\n\nResearch Planning and Organization\nThe research plan is disorganized, with no clear goals, deadlines, or milestones; sources and methods are not identified or unsuitable.\n\nThe research plan includes some goals, deadlines, and milestones; sources and methods are somewhat appropriate for the research question(s).\n\nThe research plan is well-organized, with clear goals, deadlines, and milestones; sources and methods are appropriate and well-suited for the research question(s).\n\n\nInformation Gathering and Critical Analysis\nMinimal effort in gathering information; sources are not credible or relevant; little or no evidence of critical analysis.\n\nModerate effort in gathering information; sources are mostly credible and relevant; some evidence of critical analysis.\n\nStrong effort in gathering information; sources are highly credible and relevant; thorough and insightful critical analysis.\n\n\nConclusions and Communication of Findings\nConclusions are weak, unsupported, or missing; findings are poorly communicated, with significant errors or omissions.\n\nConclusions are somewhat supported by the analysis; findings are communicated clearly, with minor errors or omissions.\n\nConclusions are well-supported by the analysis; findings are communicated clearly, effectively, and creatively, with no significant errors or omissions.\n\n\nReflection and Self-Assessment\nLittle or no evidence of reflection on the research process; no identification of strengths, weaknesses, or areas for improvement.\n\nSome evidence of reflection on the research process; identification of some strengths, weaknesses, and areas for improvement.\n\nThorough and thoughtful reflection on the research process; clear identification of strengths, weaknesses, and areas for improvement."
+    "objectID": "posts/use_ssh_hpg3/index.html#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command",
+    "href": "posts/use_ssh_hpg3/index.html#a-single-node-2-cpu-core-job-with-2gb-of-ram-for-90-minutes-can-be-started-with-the-following-command",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
+    "section": "",
+    "text": "srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=2 --mem=2gb -t 90 --pty bash -i\n[mygatoruser@login1 ~]$ srun --pty -p hpg2-compute -n 1 -N 1 -t 90 --mem=2gb /bin/bash"
   },
   {
-    "objectID": "posts/amanda_folder/index.html",
-    "href": "posts/amanda_folder/index.html",
-    "title": "UF-Open-Science-Wiki",
+    "objectID": "posts/use_ssh_hpg3/index.html#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command",
+    "href": "posts/use_ssh_hpg3/index.html#a-single-node-4-cpu-core-job-with-28gb-of-ram-for-120-minutes-can-be-started-with-the-following-command",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
     "section": "",
-    "text": "I’ve somehow managed to bypass the PySide6 error so while I have no idea how to solve it, I’ll attach a link to the article that helped me go around it\nhttps://github.com/DeepLabCut/napari-deeplabcut"
+    "text": "srun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun --account=psb4934 --qos=psb4934 --ntasks=1 --cpus-per-task=4 --mem=28gb -t 60 --pty bash -i\nsrun: job 4572441 queued and waiting for resources\nsrun: job 4572441 has been allocated resources\nNow you are on the compute node. You can check the hostname and the node list with the following commands:\n[mygatoruser@c0711a-s6 data]$ echo \"Hello from $(hostname)\"\nHello from c0711a-s6.ufhpc\n\necho $SLURM_JOB_NODELIST\nc0711a-s6"
   },
   {
-    "objectID": "posts/6p-RTour/index.html",
-    "href": "posts/6p-RTour/index.html",
-    "title": "R-tour in 6 pages",
+    "objectID": "posts/use_ssh_hpg3/index.html#random-tips",
+    "href": "posts/use_ssh_hpg3/index.html#random-tips",
+    "title": "SSH to HPG3 and run MNE-BIDS-Pipeline",
+    "section": "Random Tips:",
+    "text": "Random Tips:\nCreate a symbolic link to your group storage directory on Blue drive:\nln -s /blue/your_group/urgatoruser/ blue\nUsing OpenOn Demand for file management\nTroubleshooting HPG3 Open OnDemand\nUsing rsync to copy/move files on HPG3\nmacOS Development Environment: iTerm2, oh-my-zsh, and VS Code"
+  },
+  {
+    "objectID": "posts/MNE-Python-EEG/index.html",
+    "href": "posts/MNE-Python-EEG/index.html",
+    "title": "MNE-Python: EEG",
     "section": "",
-    "text": "RCSTour6p Slides"
+    "text": "MNE-Python: EEG Analysis"
+  },
+  {
+    "objectID": "posts/csea-matlab-tutorial-links/index.html",
+    "href": "posts/csea-matlab-tutorial-links/index.html",
+    "title": "CSEA MatLab tutorials",
+    "section": "",
+    "text": "This is a post with executable code.\nMatlab Livescripts examples Folder\nThe following examples are in the GitHub folder:\n\nCrossfreq_coupling.mlx\nFourier_demo.mlx\nGrangerCausality.mlx\nHilbertPhaseDemo.mlx\nIRF_findsingletrialbetas.mlx\nMNE_SourceEstimation.mlx\nMicroSaCondiSpas.mlx\nde_convolution.mlx\nfilters.mlx\nwavelet_walkthru.mlx"
+  },
+  {
+    "objectID": "posts/why-code/index.html",
+    "href": "posts/why-code/index.html",
+    "title": "Why Code?",
+    "section": "",
+    "text": "This talk introduced advantages and potential obstacles to using script-based pipelines. We discussed how capabilities of scientific python ecosystem are leveraged and organized in MNE in order to compose reproducible analysis pipelines that are easy to understand and efficient to use. The extensive documentation of the MNE website provides instructions for installation and configuration. Extensive examples and tutorials on the MNE documentation website allows users to benefit directly by searching, downloading, testing and incrementally adapting code.\nIntroduction to Scripting with MNE-Python"
+  },
+  {
+    "objectID": "posts/cwppwc/index.html",
+    "href": "posts/cwppwc/index.html",
+    "title": "Posting Wiki Content",
+    "section": "",
+    "text": "Markdown is a markup coding language that can be used to convert content written in a plain-text format into HTML. It can be used on Github to make easy to read webpages: like the one you’re reading now!\n\n\nThe first thing you should do when creating any article is filling out the most basic information:\n\n\n\n```{yaml, eval=false}\n\n\n\n\ntitle: “Write the title of your article in quotes”\n\n\nauthor: your name goes here!\n\n\ndescription: what is your article about? briefly summarize it\n\n\ndate: write the date that you publish your article\n\n\n\n```\nAs shown above, you are always going to put these four basic pieces of information between a pair of three dashes. While the title, author, description, and date are always going to be in the section, you also have the option to add categories to this section: categories: [put your category names in a pair of brackets, seperate each category with a comma] Categories allow us to organize the articles on this wiki by topic. When you open the wiki, you will see a list of categories on the right-hand side. When you click on a category, you will be able to see any of the articles tagged with that specific category in the manner depicted above.\n\n\n\nIn addition to setting up important information about your article, markdown can be used to format your main body of text in a number of ways…\nYou can create a header by using a pound sign: # Heading\nYou can make a subheading, a sub-subheading, and onwards just by adding more pound signs: ## Subheading ### Sub-subheading\nYou can italicize or bold a sentence using asterisks: *This sentence is italicized* **This sentence is bolded**\nLinks and images can be inbedded like so: !(text)[link]\nIts also possible to inbed code directly into the text - but we’ll be going over that later."
+  },
+  {
+    "objectID": "posts/cwppwc/index.html#converting-markdown-syntax",
+    "href": "posts/cwppwc/index.html#converting-markdown-syntax",
+    "title": "Posting Wiki Content",
+    "section": "",
+    "text": "Markdown is a markup coding language that can be used to convert content written in a plain-text format into HTML. It can be used on Github to make easy to read webpages: like the one you’re reading now!\n\n\nThe first thing you should do when creating any article is filling out the most basic information:\n\n\n\n```{yaml, eval=false}\n\n\n\n\ntitle: “Write the title of your article in quotes”\n\n\nauthor: your name goes here!\n\n\ndescription: what is your article about? briefly summarize it\n\n\ndate: write the date that you publish your article\n\n\n\n```\nAs shown above, you are always going to put these four basic pieces of information between a pair of three dashes. While the title, author, description, and date are always going to be in the section, you also have the option to add categories to this section: categories: [put your category names in a pair of brackets, seperate each category with a comma] Categories allow us to organize the articles on this wiki by topic. When you open the wiki, you will see a list of categories on the right-hand side. When you click on a category, you will be able to see any of the articles tagged with that specific category in the manner depicted above.\n\n\n\nIn addition to setting up important information about your article, markdown can be used to format your main body of text in a number of ways…\nYou can create a header by using a pound sign: # Heading\nYou can make a subheading, a sub-subheading, and onwards just by adding more pound signs: ## Subheading ### Sub-subheading\nYou can italicize or bold a sentence using asterisks: *This sentence is italicized* **This sentence is bolded**\nLinks and images can be inbedded like so: !(text)[link]\nIts also possible to inbed code directly into the text - but we’ll be going over that later."
+  },
+  {
+    "objectID": "posts/cwppwc/index.html#importance-of-yaml",
+    "href": "posts/cwppwc/index.html#importance-of-yaml",
+    "title": "Posting Wiki Content",
+    "section": "Importance of YAML",
+    "text": "Importance of YAML"
+  },
+  {
+    "objectID": "posts/cwppwc/index.html#quarto",
+    "href": "posts/cwppwc/index.html#quarto",
+    "title": "Posting Wiki Content",
+    "section": "Quarto",
+    "text": "Quarto"
+  },
+  {
+    "objectID": "posts/cwppwc/index.html#creating-a-folder",
+    "href": "posts/cwppwc/index.html#creating-a-folder",
+    "title": "Posting Wiki Content",
+    "section": "Creating a Folder",
+    "text": "Creating a Folder\nIn order to create an article, you first have to create a folder in which you will create an index.qmd file. The index.qmd file is where you will be writing in Markdown to create your article. The process of folder creation is depicted in the gif below."
+  },
+  {
+    "objectID": "posts/cwppwc/index.html#embedding-code",
+    "href": "posts/cwppwc/index.html#embedding-code",
+    "title": "Posting Wiki Content",
+    "section": "Embedding Code",
+    "text": "Embedding Code"
+  },
+  {
+    "objectID": "posts/make-gh-blogpost/index.html",
+    "href": "posts/make-gh-blogpost/index.html",
+    "title": "How to make a wiki document.",
+    "section": "",
+    "text": "This is how to start a post."
+  },
+  {
+    "objectID": "posts/hpg_setup_mpfc_ket/index.html",
+    "href": "posts/hpg_setup_mpfc_ket/index.html",
+    "title": "Setup HiPerGator for DeepLabCut",
+    "section": "",
+    "text": "UF Research Computing Help & Documentation (link)"
+  },
+  {
+    "objectID": "posts/hpg_setup_mpfc_ket/index.html#navigate-to-hipergator-through-openondemand",
+    "href": "posts/hpg_setup_mpfc_ket/index.html#navigate-to-hipergator-through-openondemand",
+    "title": "Setup HiPerGator for DeepLabCut",
+    "section": "Navigate to HiPerGator through OpenOnDemand",
+    "text": "Navigate to HiPerGator through OpenOnDemand\n\nTo start off, type in your browser: https://ood.rc.ufl.edu\nIf this is the first time going to OpenOnDemand in your browser there will be a page re-direct to InCommon.org\n\nFrom this re-direct website type Florida in the institution and select “University of Florida” from the dropdown menu.\nFrom here you would login with 2-factor authentication as you typically would for Canvas.\n\nAfter OpenOnDemand successfully loads select the Files dropdown\n\nSelect /blue/psy4911\n\nNext, when you are in the correct location you can open a terminal to create a shortcut so that you can always find your blue-folder\n\nType a symlink command in the terminal: ln -s /blue/psy4911 blue_psy4911\n\nConfirm that the shortcut was made by typing: find . -maxdepth l type l -ls"
+  },
+  {
+    "objectID": "posts/hpg_setup_mpfc_ket/index.html#create-a-folder-for-downloading-files-and-examples-to-your-blue-drive-for-learning-deeplabcut",
+    "href": "posts/hpg_setup_mpfc_ket/index.html#create-a-folder-for-downloading-files-and-examples-to-your-blue-drive-for-learning-deeplabcut",
+    "title": "Setup HiPerGator for DeepLabCut",
+    "section": "Create a folder for downloading files and examples to your blue drive for learning DeepLabCut",
+    "text": "Create a folder for downloading files and examples to your blue drive for learning DeepLabCut\n\nThere are two ways to navigate the blue drive filesystem: OpenOnDemand GUI & Terminal (command line)\n\nif you’re not sure how to navigate to a directory from the command line go to these links:\n\nIntro to command line\nCommand line tips\nUnderstanding file paths from the command line\n\n\nCreate a new folder so that you can do DeepLabCut tutorials and examples\n\n\nNavigate to your blue drive personal folder “/blue/psy4911/yourname/” then make a folder named try-dlc\n\n\nThe easiest way to start out in terminal from OOD is to click on the folder that you made\n\n…then from that location click Open in Terminal"
+  },
+  {
+    "objectID": "posts/hpg_setup_mpfc_ket/index.html#clone-all-example-material-from-github-to-a-folder-on-your-blue-drive",
+    "href": "posts/hpg_setup_mpfc_ket/index.html#clone-all-example-material-from-github-to-a-folder-on-your-blue-drive",
+    "title": "Setup HiPerGator for DeepLabCut",
+    "section": "Clone all example material from GitHub to a folder on your Blue Drive",
+    "text": "Clone all example material from GitHub to a folder on your Blue Drive\n\nFrom the chosen folder on your /blue/psy4911/yourname/ folder install DeepLabCut using the following commands in terminal:\n\nmodule load conda\ngit clone https://github.com/DeepLabCut/DeepLabCut.git\n\nNavigate to the new folder /blue/psy4911/yourname/DeepLabCut/ by typing cd DeepLabCut/deeplabcut\nto run from the command line type module load deeplabcut/2.2.1\nthen type ipython\nif you type ?deeplabcut on the command line you can see that everything in DeepLabCut 2.0 is available from the command line\ntype exit() to leave ipython\n\n\n\n\nNEXT go to the HiPerGator DeepLabCut Jupyter Notebooks tutorial…\n\nTo Run Napari from the remote GUI on HPG start HiperGator Desktop then open a terminal on the desktop and type:\n\nmodule spider Napari\nmodule load napari/0.4.7\nNapari"
   },
   {
     "objectID": "posts/open-sci-github-intro/index.html",
@@ -259,15 +294,15 @@
     "text": "Overview\nMuch of open science requires some technical knowledge that many novices find to be initially burdensome and confusing. Open source analysis tools are usually a work in progress. Documentation for these tools, if present at all, will be incomplete or out of date. The purpose of this slideshow is to explore concepts that will enable team coordination on software usage and code development projects. The hope is that users will be able to find the information that they need from development notes and communication between code authors. In the long-term, notes and comments about the intended function, rationale, and usage of code will be useful for outsiders but also for the project organizers and code developers themselves."
   },
   {
-    "objectID": "posts/use_rsync_on_hpg/index.html",
-    "href": "posts/use_rsync_on_hpg/index.html",
-    "title": "Post template",
-    "section": "",
-    "text": "A better way is to copy all the files from the “psy4911/share” folder to your HiPerGator (HPG) folder. The rsync command for moving files between directories on HPG is described here. Copying_files_between_directories with rsync You will want to go to the shared folder on HPG first and open a terminal (see button outlined green in the schreenshot below). \nThen if you copy and paste these commands into terminal it will do the work for you: rsync -av /blue/psy4911/share/ket_ephys/ket_annot /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/ket_annot_segs /blue/psy4911/yourusername/ket_ephys/ rsync -av /blue/psy4911/share/ket_ephys/hi-ket /blue/psy4911/yourusername/ket_ephys/\nFor the files in the hi-ket folder there’s another script (and a package named NEO ) that’s required to convert them from .plx files to .fif files.\nRequired python packages: - NEO - NEO repo - NEO documentation - MNE - MNE Tutorial: importing data from NEO\nCode for the file conversion:\nThe main thing is that it takes 15 minutes per file on hipergator (HPG) when it’s set up like a laptop computer. When you configure HPG to run your jupter notebook in high-performance mode, it takes only a minute or two per file. So, what would take 5 hours for 20 files, ends up taking only a half hour.\nAn even bigger savings comes when doing machine learning / AI with deeplabcut on HPG."
-  },
-  {
     "objectID": "posts/share-hpg-envs/index.html",
     "href": "posts/share-hpg-envs/index.html",
+    "title": "Using Custom Python environments for Jupyter Notebooks in HiPerGator",
+    "section": "",
+    "text": "To simply use the environment go to\n\nGetting Started: ~/.condarc configuration file\nthen to Copy the template_kernelfolder to your path\n\nFor additional info about using Python virtual environments with Conda please go the the UFRC page or the Software Carpentries pages from which these procedures were derived.\n\nUFRC: Customizing a Shared Python Environment\nCarpentries: Ch.2 Conda Environments\nConda: Using the .condarc Configuration file"
+  },
+  {
+    "objectID": "posts/share-hpg-envs/index.html#custom-python-environments-for-jupyter-notebooks",
+    "href": "posts/share-hpg-envs/index.html#custom-python-environments-for-jupyter-notebooks",
     "title": "Using Custom Python environments for Jupyter Notebooks in HiPerGator",
     "section": "",
     "text": "To simply use the environment go to\n\nGetting Started: ~/.condarc configuration file\nthen to Copy the template_kernelfolder to your path\n\nFor additional info about using Python virtual environments with Conda please go the the UFRC page or the Software Carpentries pages from which these procedures were derived.\n\nUFRC: Customizing a Shared Python Environment\nCarpentries: Ch.2 Conda Environments\nConda: Using the .condarc Configuration file"
@@ -284,7 +319,7 @@
     "href": "posts/share-hpg-envs/index.html#getting-started-conda-configuration",
     "title": "Using Custom Python environments for Jupyter Notebooks in HiPerGator",
     "section": "Getting Started: Conda Configuration",
-    "text": "Getting Started: Conda Configuration\n\nThe ~/.condarc configuration file\nconda‘s behavior is controlled by a configuration file in your home directory called .condarc. The dot at the start of the name means that the file is hidden from ’ls’ file listing command by default. If you have not run conda before, you won’t have this file. Whether the file exists or not, the steps here will help you modify the file to work best on HiPerGator. First load of the conda environment module on HiPerGator will put the current ‘’best practice’’ .condarc into your home directory.\nThis path will be found in your home directory (i.e., Home/<myname> is usually symbolized as : ~).\nHome/<myname>/.condarc\n\n\nconda package cache location\nconda caches (keeps a copy) of all downloaded packages by default in the ~/.conda/pkgs directory tree. If you install a lot of packages you may end up filling up your home quota. You can change the default package cache path. To do so, add or change the pkgs_dirs setting in your ~/.condarc configuration file e.g.:\n\n\npkgs_dirs:\n  - /blue/akeil/share/conda/pkgs\n\n…\nor\n\n  - /blue/akeil/$USER/conda/pkgs\n\n\nReplace akeil or mygroup with your actual group name.\n\n\nconda environment location\nconda puts all packages installed in a particular environment into a single directory. By default ‘’named’’ conda environments are created in the ~/.conda/envs directory tree. They can quickly grow in size and, especially if you have many environments, fill the 40GB home directory quota. For example, the environment we will create in this training is 5.3GB in size. As such, it is important to use ‘’path’’ based (conda create -p PATH) conda environments, which allow you to use any path for a particular environment for example allowing you to keep a project-specific conda environment close to the project data in /blue/ where you group has terrabyte(s) of space.\nYou can also change the default path for the ‘’name’’ environments (conda create -n NAME) if you prefer to keep all conda environments in the same directory tree. To do so, add or change the envs_dirs setting in the ~/.condarc configuration file e.g.:\n\n\nenvs_dirs:\n  - /blue/akeil/share/conda/envs\n\n…\nor\n\n- /blue/akeil/$USER/conda/envs\n\n\nReplace mygroup with your actual group name.\n\n\nEditing your ~/.condarc file.\nOne way to edit your ~/.condarc file is to type:\nnano ~/.condarc\nIf the file is empty, paste in the text below, editing the env_dirs: and pkg_dirs: as below. If the file has contents, update those lines.\n\n\n\n\n\n\nNote\n\n\n\nYour ~/.condarc should look something like this when you are done editing (again, replacing group-akeil and USER in the paths with your actual group and username).\n\n\n\nchannels: \n  - conda-forge \n  - bioconda \n  - defaults \nenvs_dirs: \n  - /blue/akeil/USER/conda/envs \npkgs_dirs: \n  - /blue/akeil/USER/conda/pkgs \nauto_activate_base: false \nauto_update_conda: false \nalways_yes: false \nshow_channel_urls: false"
+    "text": "Getting Started: Conda Configuration\n\nThe ~/.condarc configuration file\nconda‘s behavior is controlled by a configuration file in your home directory called .condarc. The dot at the start of the name means that the file is hidden from ’ls’ file listing command by default. If you have not run conda before, you won’t have this file. Whether the file exists or not, the steps here will help you modify the file to work best on HiPerGator. First load of the conda environment module on HiPerGator will put the current ‘’best practice’’ .condarc into your home directory.\nThis path will be found in your home directory (i.e., Home/&lt;myname&gt; is usually symbolized as : ~).\nHome/&lt;myname&gt;/.condarc\n\n\nconda package cache location\nconda caches (keeps a copy) of all downloaded packages by default in the ~/.conda/pkgs directory tree. If you install a lot of packages you may end up filling up your home quota. You can change the default package cache path. To do so, add or change the pkgs_dirs setting in your ~/.condarc configuration file e.g.:\n\n\npkgs_dirs:\n  - /blue/akeil/share/conda/pkgs\n\n…\nor\n\n  - /blue/akeil/$USER/conda/pkgs\n\n\nReplace akeil or mygroup with your actual group name.\n\n\nconda environment location\nconda puts all packages installed in a particular environment into a single directory. By default ‘’named’’ conda environments are created in the ~/.conda/envs directory tree. They can quickly grow in size and, especially if you have many environments, fill the 40GB home directory quota. For example, the environment we will create in this training is 5.3GB in size. As such, it is important to use ‘’path’’ based (conda create -p PATH) conda environments, which allow you to use any path for a particular environment for example allowing you to keep a project-specific conda environment close to the project data in /blue/ where you group has terrabyte(s) of space.\nYou can also change the default path for the ‘’name’’ environments (conda create -n NAME) if you prefer to keep all conda environments in the same directory tree. To do so, add or change the envs_dirs setting in the ~/.condarc configuration file e.g.:\n\n\nenvs_dirs:\n  - /blue/akeil/share/conda/envs\n\n…\nor\n\n- /blue/akeil/$USER/conda/envs\n\n\nReplace mygroup with your actual group name.\n\n\nEditing your ~/.condarc file.\nOne way to edit your ~/.condarc file is to type:\nnano ~/.condarc\nIf the file is empty, paste in the text below, editing the env_dirs: and pkg_dirs: as below. If the file has contents, update those lines.\n\n\n\n\n\n\nNote\n\n\n\nYour ~/.condarc should look something like this when you are done editing (again, replacing group-akeil and USER in the paths with your actual group and username).\n\n\n\nchannels: \n  - conda-forge \n  - bioconda \n  - defaults \nenvs_dirs: \n  - /blue/akeil/USER/conda/envs \npkgs_dirs: \n  - /blue/akeil/USER/conda/pkgs \nauto_activate_base: false \nauto_update_conda: false \nalways_yes: false \nshow_channel_urls: false"
   },
   {
     "objectID": "posts/share-hpg-envs/index.html#use-your-kernel-from-command-line-or-scripts",
@@ -305,7 +340,7 @@
     "href": "posts/share-hpg-envs/index.html#working-with-yml-files",
     "title": "Using Custom Python environments for Jupyter Notebooks in HiPerGator",
     "section": "Working with yml files",
-    "text": "Working with yml files\n\nExport your environment to an environment.yml file\nNow that you have your environment working, you may want to document its contents and/or share it with others. The environment.yml file defines the environment and can be used to build a new environment with the same setup.\nTo export an environment file from an existing environment, run:\nconda env export > mne_1_x.yml\nYou can inspect the contents of this file with cat mne_1_x.yml. This file defines the packages and versions that make up the environment as it is at this point in time. Note that it also includes packages that were installed via pip.\n\n\nCreate an environment from a yaml file\nIf you share the environment yaml file created above with another user, they can create a copy of your environment using the command:\nconda env create –file mne_1_x.yml\nThey may need to edit the last line to change the location to match where they want their environment created."
+    "text": "Working with yml files\n\nExport your environment to an environment.yml file\nNow that you have your environment working, you may want to document its contents and/or share it with others. The environment.yml file defines the environment and can be used to build a new environment with the same setup.\nTo export an environment file from an existing environment, run:\nconda env export &gt; mne_1_x.yml\nYou can inspect the contents of this file with cat mne_1_x.yml. This file defines the packages and versions that make up the environment as it is at this point in time. Note that it also includes packages that were installed via pip.\n\n\nCreate an environment from a yaml file\nIf you share the environment yaml file created above with another user, they can create a copy of your environment using the command:\nconda env create –file mne_1_x.yml\nThey may need to edit the last line to change the location to match where they want their environment created."
   },
   {
     "objectID": "posts/share-hpg-envs/index.html#group-environments",
@@ -315,25 +350,11 @@
     "text": "Group environments\nIt is possible to create a shared environment accessed by a group on HiPerGator, storing the environment in, for example, /blue/akeil/share/conda. In general, this works best if only one user has write access to the environment. All installs should be made by that one user and should be communicated with the other users in the group."
   },
   {
-    "objectID": "posts/problem_solving_in_20_questions/index.html",
-    "href": "posts/problem_solving_in_20_questions/index.html",
-    "title": "Problem Solving Code in 20 Questions",
-    "section": "",
-    "text": "AI helped me to solve an audio segmentation problem that has dogged me for the past year.\nThe problem was some videotapes where sound stimuli are clearly audible, but continuous random ambient noise interferes with any attempt to precisely isolate the stimuls onsets. I need stimulus event onset timestamps isolated around 16-33 millisecond precision - complicated by the fact that digital video conversion has numerous randomly dropped frames. (Thus, I cannot rely on elapsed time as a useful metric.) The past 7 months I have much code only to find reason after reason why this is a difficult problem to solve.\nThen, I found out how to ask how to solve the problem by telling chatGPT to ask me questions in a particular context until it has enough information to write a method to interface with an API of any program (but preferably python). The resultant method is simple. It does exactly what I needed it to do using a python library that I was previously aware of, but I really didn’t know how to use the library.\nThis really is a game changer when it comes to teaching novices to code. I cannot make anyone want to learn to code, but the frustration level will certainly be different, because AI is really good with explaining concisely and/or overexplaining simple things. The difference from doing a Google search for answers is that you sort of need to know an answer in advance in order to come up with the right filtering parameters to eliminate all the junk information. Anyone in academia who sees AI as a threat to education has never really tried it."
-  },
-  {
     "objectID": "posts/repo_best_practices/index.html",
     "href": "posts/repo_best_practices/index.html",
     "title": "Open Science: Best Practices for Repos",
     "section": "",
     "text": "Q: How does someone use a repo to accelerate onboarding, improve accessibility and integration, and overall reduce technical burden?\nA: Using a repository (repo) can be an effective way to accelerate onboarding, improve accessibility and integration, and reduce technical burden. Here are some steps to achieve these goals:\n\nClear documentation:\n\nProvide a well-structured README.md that serves as a guide to the repo. It should include an overview of the project, its purpose, key features, and how to set it up.\n\nInclude a comprehensive wiki or documentation folder with detailed instructions on installation, usage, APIs, code examples, and troubleshooting tips.\n\nStructured and organized code:\n\nOrganize the codebase into logical and modular components, with clear separation of concerns.\nFollow consistent coding conventions and naming conventions.\n\nInclude comments throughout the code to explain the purpose and logic of each section.\n\nVersion control and branching strategy:\n\nUse a version control system like Git to maintain a clean and organized commit history.\nImplement a branching strategy that makes it easy for new team members to understand the workflow, submit changes, and merge code.\n\nAutomated testing and continuous integration:\n\nSet up automated tests to ensure code quality and prevent regressions.\nUse a continuous integration (CI) system to automatically build and test code changes.\n\nAccessible dependencies and resources:\n\nClearly list and document all dependencies and required resources, like libraries, frameworks, or APIs.\n\nMake it easy to manage and install dependencies using package managers like npm, pip, or Maven.\n\nIssue tracking and collaboration:\n\nUse an issue tracking system to manage bugs, enhancements, and other tasks.\n\nEncourage collaboration through pull requests, code reviews, and discussions on issues.\n\nTraining and support:\n\nOffer training materials, like videos or tutorials, to help new team members get up to speed.\nProvide a support channel, like a dedicated Slack or Discord group, where new members can ask questions and get assistance.\n\nAPI and data integration:\n\nDesign well-structured and consistent APIs for easy integration with other systems.\nDocument API usage, including authentication, endpoints, and example requests/responses.\nEnsure data formats are consistent and well-documented for seamless integration with other tools and systems.\n\n\nSummary: By following these steps, you can create a repo that accelerates onboarding, improves accessibility and integration, and overall reduces technical burden for your team."
-  },
-  {
-    "objectID": "posts/test_post/index.html",
-    "href": "posts/test_post/index.html",
-    "title": "Post template",
-    "section": "",
-    "text": "This is a test post."
   },
   {
     "objectID": "posts/dlc-gui-hpg-desktop/index.html#log-on-to-hipergator-hpg-openondemand",
@@ -371,24 +392,10 @@
     "text": "Point DLC to a labeled videos directory and load the “images”"
   },
   {
-    "objectID": "posts/mne abstract/index.html",
-    "href": "posts/mne abstract/index.html",
-    "title": "MNE Abstract",
-    "section": "",
-    "text": "Subanesthetic ketamine is a rapid and effective treatment for depression in individuals who have not responded to other treatments. Several lines of evidence demonstrate initial effects of ketamine in anterior cingulate/medial prefrontal cortex. Nonetheless, well-established, harmful effects of ketamine include dissociation, psychosis, and dependency with increasing dose and chronicity.\n\n\n\nIn this reproducible and open analysis pipeline the effects of sub-anesthetic doses of ketamine on auditory SG and spontaneous gamma in rats were investigated. Data for this computational study were previously collected at another institution where Sprague Dawley rats were injected (i.m.) in a multi-baseline (saline), counterbalanced alternating-treatments design of haloperidol (1 mg/kg), ketamine, and ketamine co-administered with haloperidol. The subanesthetic ketamine was administered between subjects in cohorts of 20 mg/kg, n=4 or 60 mg/kg, n=4. After initial surgery to implant microwire arrays bilaterally in medial prefrontal cortex, local field potentials were recorded in freely behaving animals. As computational reproducibility intermediate data and all code from this analysis pipeline is available including, pre-processing, data visualizations, and inferential statistics.\n\n\n\nKetamine reduced SG and increased the amplitude of baseline gamma-band activity in medial prefrontal cortex (mPFC) for both ketamine doses. Co-administration of the antipsychotic drug, haloperidol, partly reversed the reduction of SG in mPFC and partially reduced the observed increase of spontaneous beta and gamma band activity. Additionally, an increase of beta-band spontaneous activity occurred for the higher dose of ketamine (60 mg/kg), but not the lower dose. Co-administered ketamine and haloperidol blocked the increase of beta-band power for the high dose.\n\n\n\nThese findings suggest that the observed increase in gamma power at each site was potentially mediated by a local circuit mechanism, and that evoked potentials related to SG in mPFC and spontaneous intrinsic beta rhythm might be independently modulated from gamma rhythm. Consistent with these multi-neurotransmitter and receptor findings, the rapid antidepressant action of ketamine appears to arise from effects secondary and subsequent to the NMDA antagonist site of action."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "UF-Open-Science-Wiki",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nConvolution and deconvolution: an Illustration\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nSSH to HPG3 and run MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nAug 9, 2023\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nProblem Solving Code in 20 Questions\n\n\n\n\n\n\nRPM\n\n\nApr 30, 2023\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nStudent-Directed Research\n\n\n\n\n\n\nbot\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nOpen Science: Best Practices for Repos\n\n\n\n\n\n\nbot\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPosting Wiki Content\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\n\n\n\n\nIsabella Fleites\n\n\nMar 7, 2023\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nMy Wiki Document\n\n\nMy trial wiki doc\n\n\n\nAlison Ryan\n\n\nMar 7, 2023\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nMNE Abstract\n\n\n\n\n\n\nIsabella Fleites\n\n\nMar 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow to make a wiki document.\n\n\n\n\n\n\nRPM\n\n\nMar 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhey check this out\n\n\nits cool i swear\n\n\n\nIsabella Fleites\n\n\nFeb 23, 2023\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nSharing Customized Python Environments\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\n\n\n\n\nRPM\n\n\nDec 30, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDeepLabCut GUI on HiPerGator Desktop\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\nSteps to start DeepLabCut in graphical user interface mode: 1. Log on to HiPerGator (HPG)  2. Use HPG OpenOnDemand to start the Interactive App: *HiPerGator…\n\n\n\nR. Mears\n\n\nNov 19, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSetup HiPerGator for DeepLabCut\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\nTips to setup your account so that you can use DeepLabCut\n\n\n\nR Mears\n\n\nOct 24, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nR-tour in 6 pages\n\n\n\nR\n\n\ncode\n\n\ndata wrangling\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Using R and Tidyverse\n\n\n\nR Mears\n\n\nJul 18, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nIntroduction to GitHub for Open Science\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Version control for doing open science\n\n\n\nR Mears\n\n\nJul 11, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nMNE-Python: EEG\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Analysis Pipelines for EEG\n\n\n\nR Mears\n\n\nJun 22, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nWhy Code?\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\nRationale for scripting with MNE-Python\n\n\n\nRyan Mears\n\n\nJun 8, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCSEA MatLab tutorials\n\n\n\ncode\n\n\nanalysis\n\n\nMatlab\n\n\nEEG\n\n\n\n\n\n\n\nAK\n\n\nJun 8, 2022\n\n\n\n\n\n\n\n\n\n\n \n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nJun 1, 2022\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this blog"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nConvolution and deconvolution: an Illustration\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSSH to HPG3 and run MNE-BIDS-Pipeline\n\n\n\n\n\n\nRPM\n\n\nAug 9, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nProblem Solving Code in 20 Questions\n\n\n\n\n\n\nRPM\n\n\nApr 30, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nOpen Science: Best Practices for Repos\n\n\n\n\n\n\nbot\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nPosting Wiki Content\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\n\n\n\n\nIsabella Fleites\n\n\nMar 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMy Wiki Document\n\n\nMy trial wiki doc\n\n\n\nAlison Ryan\n\n\nMar 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nMNE Abstract\n\n\n\n\n\n\nIsabella Fleites\n\n\nMar 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nHow to make a wiki document.\n\n\n\n\n\n\nRPM\n\n\nMar 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nSharing Customized Python Environments\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\n\n\n\n\nRPM\n\n\nDec 30, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nDeepLabCut GUI on HiPerGator Desktop\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\nSteps to start DeepLabCut in graphical user interface mode: 1. Log on to HiPerGator (HPG)  2. Use HPG OpenOnDemand to start the Interactive App: *HiPerGator…\n\n\n\nR. Mears\n\n\nNov 19, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nSetup HiPerGator for DeepLabCut\n\n\n\nPython\n\n\ncode\n\n\nAI\n\n\ntutorial\n\n\n\nTips to setup your account so that you can use DeepLabCut\n\n\n\nR Mears\n\n\nOct 24, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nR-tour in 6 pages\n\n\n\nR\n\n\ncode\n\n\ndata wrangling\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Using R and Tidyverse\n\n\n\nR Mears\n\n\nJul 18, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to GitHub for Open Science\n\n\n\ncode\n\n\ndevelopment\n\n\norganization\n\n\nversion control\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Version control for doing open science\n\n\n\nR Mears\n\n\nJul 11, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nMNE-Python: EEG\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\ntutorial\n\n\n\nIntroduction to Analysis Pipelines for EEG\n\n\n\nR Mears\n\n\nJun 22, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nWhy Code?\n\n\n\nPython\n\n\ncode\n\n\npipeline\n\n\nworkflow\n\n\nMNE\n\n\nEEG\n\n\nslides\n\n\n\nRationale for scripting with MNE-Python\n\n\n\nRyan Mears\n\n\nJun 8, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCSEA MatLab tutorials\n\n\n\ncode\n\n\nanalysis\n\n\nMatlab\n\n\nEEG\n\n\n\n\n\n\n\nAK\n\n\nJun 8, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nPost template\n\n\n\n\n\n\nRPM\n\n\nJun 1, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
