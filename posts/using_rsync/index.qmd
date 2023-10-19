@@ -57,5 +57,11 @@ https://unix.stackexchange.com/questions/536080/rsync-recursively-copy-files-dow
 find miso-project-pipeline/processed/bids_eeg/derivatives/mne-bids-pipeline -name 'sub-*_task-genaudi3_ave.fif' -type f -exec cp {} bids_getfiles/ \;
 ```
 
+```bash
+find miso-project-pipeline/processed/bids_eeg/derivatives/mne-bids-pipeline -name 'sub-*_task-genaudi3_proc-clean_epo.fif' -type f -exec cp {} bids_getfiles/clean_epo/ \;
+```
+
+
+
 
 
