@@ -48,3 +48,14 @@ rsync -av -e "ssh -p PORT" /path/to/source/directory/ user@remote_host:/path/to/
 This command will copy the contents of the source directory to a remote directory on a different network. Replace PORT with the SSH port number (usually 22), user with the remote user, and remote_host with the remote host's IP address or hostname. The -e option is used to specify the remote shell to use (ssh in this case) and any additional options for the remote shell (like the port number). Make sure you have SSH access to the remote system.
 
 Remember that the trailing slashes in the source paths are important. If you include a trailing slash, rsync will copy the contents of the source directory, while if you exclude it, the source directory itself will be copied.
+
+## Links: 
+
+https://unix.stackexchange.com/questions/536080/rsync-recursively-copy-files-downstream-of-subdirectories-matching-pattern
+
+```bash
+find miso-project-pipeline/processed/bids_eeg/derivatives/mne-bids-pipeline -name 'sub-*_task-genaudi3_ave.fif' -type f -exec cp {} bids_getfiles/ \;
+```
+
+
+
