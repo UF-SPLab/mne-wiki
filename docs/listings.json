@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/matlab2python_tutorials/jupyter_quarto_deconv/de_convolution.html",
+      "/posts/main_mne_bids_pipeline/index.html",
       "/posts/use_ssh_hpg3/index.html",
       "/posts/problem_solving_in_20_questions/index.html",
       "/posts/use_rsync_on_hpg/index.html",

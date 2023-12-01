@@ -202,8 +202,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rsync</span> <span class="at">-av</span> <span class="at">-e</span> <span class="st">"ssh -p PORT"</span> /path/to/source/directory/ user@remote_host:/path/to/remote/directory/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This command will copy the contents of the source directory to a remote directory on a different network. Replace PORT with the SSH port number (usually 22), user with the remote user, and remote_host with the remote host’s IP address or hostname. The -e option is used to specify the remote shell to use (ssh in this case) and any additional options for the remote shell (like the port number). Make sure you have SSH access to the remote system.</p>
 <p>Remember that the trailing slashes in the source paths are important. If you include a trailing slash, rsync will copy the contents of the source directory, while if you exclude it, the source directory itself will be copied.</p>
+<section id="links" class="level2">
+<h2 class="anchored" data-anchor-id="links">Links:</h2>
+<p>https://unix.stackexchange.com/questions/536080/rsync-recursively-copy-files-downstream-of-subdirectories-matching-pattern</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> miso-project-pipeline/processed/bids_eeg/derivatives/mne-bids-pipeline <span class="at">-name</span> <span class="st">'sub-*_task-genaudi3_ave.fif'</span> <span class="at">-type</span> f <span class="at">-exec</span> cp {} bids_getfiles/ <span class="dt">\;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find</span> miso-project-pipeline/processed/bids_eeg/derivatives/mne-bids-pipeline <span class="at">-name</span> <span class="st">'sub-*_task-genaudi3_proc-clean_epo.fif'</span> <span class="at">-type</span> f <span class="at">-exec</span> cp {} bids_getfiles/clean_epo/ <span class="dt">\;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
